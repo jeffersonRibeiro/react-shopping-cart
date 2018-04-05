@@ -4,6 +4,8 @@
   "description": "Teste de recrutamento Netshoes",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-scripts": "1.1.4"
@@ -12,11 +14,26 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon --watch public server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonRibeiro/react-store.git"
   },
   "keywords": [
-    "Netshoes", "React", "Commerce", "Recruitment-test"
+    "Netshoes",
+    "React",
+    "Commerce",
+    "Recruitment-test"
   ],
   "author": "Jefferson Ribeiro",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  },
+  "bugs": {
+    "url": "https://github.com/jeffersonRibeiro/react-store/issues"
+  },
+  "homepage": "https://github.com/jeffersonRibeiro/react-store#readme"
 }
