@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: 'Roboto', sans-serif; }
+
 .shelfContainer {
-  padding: 0 2%; }
+  padding: 0 2%;
+  max-width: 1200px;
+  margin: 0 auto; }
   .shelfContainer .item {
     float: left;
     width: 25%;
@@ -14,7 +20,8 @@
         background-color: #eabf00; }
     .shelfContainer .item__title {
       position: relative;
-      padding: 10px 0; }
+      padding: 0 20px;
+      height: 45px; }
       .shelfContainer .item__title::before {
         content: '';
         width: 20px;
@@ -24,6 +31,13 @@
         bottom: 0;
         left: 50%;
         margin-left: -10px; }
+    .shelfContainer .item__price {
+      height: 60px; }
+      .shelfContainer .item__price .val b {
+        font-size: 1.5em;
+        margin-left: 5px; }
+      .shelfContainer .item__price .installment {
+        color: #9c9b9b; }
     .shelfContainer .item__buy-btn {
       background-color: #1b1a20;
       color: #fff;

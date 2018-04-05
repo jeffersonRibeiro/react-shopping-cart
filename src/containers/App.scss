@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .shelfContainer {
     padding: 0 2%;
+    max-width: 1200px;
+    margin: 0 auto;
 
     .item {
         float: left;
@@ -20,7 +28,8 @@
 
         &__title {
             position: relative;
-            padding: 10px 0;
+            padding: 0 20px;
+            height: 45px;
 
             &::before {
                 content: '';
@@ -31,6 +40,21 @@
                 bottom: 0;
                 left: 50%;
                 margin-left: -10px;
+            }
+        }
+
+        &__price {
+            height: 60px;
+
+            .val {
+                b {
+                    font-size: 1.5em;
+                    margin-left: 5px;
+                }
+            }
+
+            .installment {
+                color: #9c9b9b;
             }
         }
 
