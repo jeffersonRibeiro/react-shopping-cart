@@ -23,12 +23,12 @@ const Product = (props) => {
   /* TODO: fazer a separação da casa decimal para estilização de forma mais limpa */
 
   return (
-    <div className="item" data-sku={product.sku}>
-      <div className="item__thumb">
+    <div className="shelf-item" data-sku={product.sku}>
+      <div className="shelf-item__thumb">
         <img src={require(`../static/products/${product.sku}_1.jpg`)} alt={product.title} />
       </div>
-      <p className="item__title">{product.title}</p>
-      <div className="item__price">
+      <p className="shelf-item__title">{product.title}</p>
+      <div className="shelf-item__price">
         <div className="val"><small>R$</small>
         
           <b>
@@ -40,7 +40,7 @@ const Product = (props) => {
         </div>
         {productInstallment}
       </div>
-      <div onClick={() => props.addToCart(product.sku)} className="item__buy-btn">Adicionar ao carrinho</div>
+      <div onClick={() => props.addToCart(product.sku)} className="shelf-item__buy-btn">Adicionar ao carrinho</div>
     </div>
   );
 }

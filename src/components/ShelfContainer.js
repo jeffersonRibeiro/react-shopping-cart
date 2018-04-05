@@ -32,6 +32,7 @@ class ShelfContainer extends Component {
   }
 
   addToCart(sku){
+    this.props.openFloatCart();
     console.log(sku);
   }
 
@@ -47,7 +48,7 @@ class ShelfContainer extends Component {
     });
 
     return (
-      <div className="shelfContainer">
+      <div className="shelf-container">
         {products}
       </div>
     );

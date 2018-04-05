@@ -4,12 +4,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.shelfContainer {
+.clearfix {
+    clear: both;
+}
+
+.shelf-container {
     padding: 0 2%;
     max-width: 1200px;
     margin: 0 auto;
 
-    .item {
+    .shelf-item {
         float: left;
         width: 25%;
         text-align: center;
@@ -21,8 +25,14 @@ body {
         &:hover {
             border: 1px solid #eee;
             
-            .item__buy-btn {
+            .shelf-item__buy-btn {
                 background-color: #eabf00;
+            }
+        }
+
+        &__thumb {
+            img {
+                width: 90%; 
             }
         }
 
@@ -67,6 +77,174 @@ body {
             // border-bottom: 2px solid #151419;
 
             transition: background-color 0.2s;
+        }
+    }
+}
+
+.float-cart {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 450px;
+    height: 100%;
+    background-color: #1b1a20;
+    box-sizing: border-box;
+    
+    transition: right 0.2s;
+
+    &--open {
+        right: 0;
+    }
+
+    &__close-btn {
+        width: 50px;
+        height: 50px;
+        color: #ececec;
+        background-color: #1b1a20;
+        text-align: center;
+        line-height: 50px;
+        position: absolute;
+        top: 0;
+        left: -50px;
+        cursor: pointer;
+
+        &:hover {
+            // background-color: #212027;
+        }
+    }
+
+    &__header {
+        color: #ececec;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 45px 0;
+
+        .bag {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+            background-image: url('../static/bag-icon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            &__quantity {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                color: #0c0b10;
+                font-weight: bold;
+                font-size: 0.7em;
+                text-align: center;
+                line-height: 18px;
+                border-radius: 50%;
+                background-color: #eabf00;
+                position: absolute;
+                bottom: -5px;
+                right: 0px;
+            }
+        }
+
+        .header-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            vertical-align: middle;
+        }
+    }
+
+    &__shelf-container {
+        height: 200px;
+
+        .shelf-item {
+            position: relative;
+            box-sizing: border-box;
+            padding: 5%;
+
+            &::before {
+                content: '';
+                width: 90%;
+                height: 2px;
+                background-color: #0c0b10;
+                position: absolute;
+                top: 0;
+                left: 5%;
+            }
+
+            &__thumb, &__details, &__price {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            &__thumb {
+                vertical-align: middle;
+                width: 15%;
+            }
+            &__details {
+                width: 60%;
+
+                .title {
+                    color: #ececec;
+                    margin: 0;
+                }
+
+                .desc {
+                    color: #5b5a5e;
+                    margin: 0;
+                }
+            }
+            &__price {
+                color: #eabf00;
+                text-align: right;
+                width: 25%;
+            }
+        }
+    }
+
+    &__footer {
+        box-sizing: border-box;
+        padding: 5%;
+
+        .sub, .sub-price {
+            color: #5b5a5e;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .sub {
+            width: 20%;
+        }
+
+        .sub-price {
+            width: 80%;
+            text-align: right;
+
+            &__val, &__installment {
+                margin: 0;
+            }
+
+            &__val {
+                color: #eabf00;
+                font-size: 22px;
+            }
+        }
+
+        .buy-btn {
+            color: #ececec;
+            text-transform: uppercase;
+            background-color: #0c0b10;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            cursor: pointer;
+
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #000;
+            }
         }
     }
 }
