@@ -1,0 +1,33 @@
+.shelfContainer {
+  padding: 0 2%; }
+  .shelfContainer .item {
+    float: left;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid transparent; }
+    .shelfContainer .item:hover {
+      border: 1px solid #eee; }
+      .shelfContainer .item:hover .item__buy-btn {
+        background-color: #eabf00; }
+    .shelfContainer .item__title {
+      position: relative;
+      padding: 10px 0; }
+      .shelfContainer .item__title::before {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: #eabf00;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -10px; }
+    .shelfContainer .item__buy-btn {
+      background-color: #1b1a20;
+      color: #fff;
+      padding: 15px 0;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s; }
