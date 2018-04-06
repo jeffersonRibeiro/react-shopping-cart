@@ -8,6 +8,25 @@ body {
     clear: both;
 }
 
+/* MAC scrollbar para desktop*/
+@media screen and (min-width: 1000px){
+    .float-cart__content::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        background-color: rgba(0,0,0,0.2);
+        padding: 10px;
+    }
+    .float-cart__content::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #0c0b10;
+    }
+}
+
+.float-cart__content {
+    height: 100%;
+    overflow-y: auto;
+}
+
 .shelf-container {
     padding: 0 2%;
     max-width: 1200px;
@@ -156,7 +175,9 @@ body {
     }
 
     &__shelf-container {
-        height: 200px;
+        // max-height: 300px;
+        // overflow: auto;
+        
 
         .shelf-item {
             position: relative;
@@ -167,7 +188,7 @@ body {
                 content: '';
                 width: 90%;
                 height: 2px;
-                background-color: #0c0b10;
+                background-color: rgba(0, 0, 0, 0.2);
                 position: absolute;
                 top: 0;
                 left: 5%;
@@ -206,6 +227,7 @@ body {
     &__footer {
         box-sizing: border-box;
         padding: 5%;
+        box-shadow: 0px -0.5em 1em rgba(0, 0, 0, 0.3);
 
         .sub, .sub-price {
             color: #5b5a5e;
