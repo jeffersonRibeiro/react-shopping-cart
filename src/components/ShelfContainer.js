@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/productActions';
+import { addProduct } from '../actions/floatCartActions';
 
 import Product from './Product';
 
@@ -12,18 +13,12 @@ class ShelfContainer extends Component {
     this.props.fetchProducts();
   }
 
-
-  addToCart(sku){
-    this.props.openFloatCart();
-    console.log(sku);
-  }
-
   render() {
     const products = this.props.products.map(p => {
       return (
         <Product
           product={p}
-          addToCart={this.addToCart}
+          addProduct={this.props.addProduct}
           key={p.sku}
         />
       );
@@ -37,13 +32,14 @@ class ShelfContainer extends Component {
   }
 }
 
-ShelfContainer.PropTypes = {
+ShelfContainer.propTypes = {
   fetchProducts: PropTypes.func.isRequired,
-  products: PropTypes.array.isRequired
+  products: PropTypes.array.isRequired,
+  addProduct: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
   products: state.products.items
 })
 
-export default connect(mapStateToProps, { fetchProducts })(ShelfContainer);
+export default connect(mapStateToProps, { fetchProducts, addProduct })(ShelfContainer);

@@ -5,6 +5,7 @@ import util from '../util';
 
 const Product = (props) => {
   const product = props.product;
+  product.quantity = 1;
   let productInstallment;
 
   let formattedPrice = util.formatPrice(product.price);
@@ -40,7 +41,7 @@ const Product = (props) => {
         </div>
         {productInstallment}
       </div>
-      <div onClick={() => props.addToCart(product.sku)} className="shelf-item__buy-btn">Adicionar ao carrinho</div>
+      <div onClick={() => props.addProduct(product)} className="shelf-item__buy-btn">Adicionar ao carrinho</div>
     </div>
   );
 }

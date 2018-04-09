@@ -139,9 +139,13 @@ body {
       vertical-align: middle; }
     .float-cart__shelf-container .shelf-item__thumb {
       vertical-align: middle;
-      width: 15%; }
+      width: 15%;
+      margin-right: 3%; }
+      .float-cart__shelf-container .shelf-item__thumb img {
+        width: 100%;
+        height: auto; }
     .float-cart__shelf-container .shelf-item__details {
-      width: 60%; }
+      width: 57%; }
       .float-cart__shelf-container .shelf-item__details .title {
         color: #ececec;
         margin: 0; }

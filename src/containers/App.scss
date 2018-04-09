@@ -202,9 +202,15 @@ body {
             &__thumb {
                 vertical-align: middle;
                 width: 15%;
+                 margin-right: 3%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
             &__details {
-                width: 60%;
+                width: 57%;
 
                 .title {
                     color: #ececec;
