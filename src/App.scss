@@ -192,7 +192,7 @@ body {
     }
 
     &__shelf-container {
-        min-height: 300px;
+        min-height: 280px;
 
         .shelf-empty {
             color: #ececec;
@@ -331,6 +331,60 @@ body {
             &:hover {
                 background-color: #000;
             }
+        }
+    }
+}
+
+@media only screen and (max-width : 1024px) {
+    .shelf-container {
+        .shelf-item {
+            width: 33.33%;
+
+            &__title {
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    .shelf-container {
+        .shelf-item {
+            width: 50%;
+            padding: 10px;
+
+            &__title {
+                margin-top: 5px;
+                padding: 0;
+            }
+        }
+    }
+
+    .float-cart {
+        width: 100%;
+        right: -100%;
+
+        &--open {
+            right: 0;
+        }
+
+        &__close-btn {
+            left: 0px;
+            z-index: 2;
+            background-color: #1b1a20;
+        }
+
+        &__header {
+            padding: 25px 0;
+        }
+
+        
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    .shelf-container {
+        .shelf-item {
+            width: 100%;
         }
     }
 }

@@ -72,7 +72,6 @@ class FloatCart extends Component {
     this.setState({cartTotals});
 
 
-    console.log('quant:', productQuantity);
   }
 
   addProduct(product){
@@ -117,8 +116,6 @@ class FloatCart extends Component {
   render() {
     const cartTotals = this.state.cartTotals;
 
-    console.log(cartTotals.installments);
-
     const cartProducts = this.props.cartProducts.map(p => {
       return <CartProduct
         product={p}
@@ -160,7 +157,7 @@ class FloatCart extends Component {
           <div className="float-cart__shelf-container">
             {cartProducts}
             {!cartProducts.length &&
-              <p className="shelf-empty">Carrinho vazio <br/>:(</p>
+              <p className="shelf-empty">Adicione algum produto na sacola <br/>:)</p>
             }
           </div>
 
