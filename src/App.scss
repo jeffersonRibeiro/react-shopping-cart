@@ -24,7 +24,7 @@ body {
 
 .float-cart__content {
     height: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .shelf-container {
@@ -103,7 +103,7 @@ body {
 .float-cart {
     position: fixed;
     top: 0;
-    right: -500px;
+    right: -450px;
     width: 450px;
     height: 100%;
     background-color: #1b1a20;
@@ -128,7 +128,51 @@ body {
         cursor: pointer;
 
         &:hover {
-            // background-color: #212027;
+            background-color: #212027;
+        }
+    }
+
+    .bag {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+        background-image: url('./static/bag-icon.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &--float-cart-closed {
+            position: absolute;
+            background-color: #000;
+            background-size: 50%;
+            left: -60px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+
+            .bag__quantity {
+                bottom: 5px;
+                right: 10px;
+            }
+        }
+
+        &__quantity {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            color: #0c0b10;
+            font-weight: bold;
+            font-size: 0.7em;
+            text-align: center;
+            line-height: 18px;
+            border-radius: 50%;
+            background-color: #eabf00;
+            position: absolute;
+            bottom: -5px;
+            right: 0px;
         }
     }
 
@@ -138,34 +182,7 @@ body {
         text-align: center;
         padding: 45px 0;
 
-        .bag {
-            width: 40px;
-            height: 40px;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 15px;
-            background-image: url('../static/bag-icon.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-
-            &__quantity {
-                display: inline-block;
-                width: 18px;
-                height: 18px;
-                color: #0c0b10;
-                font-weight: bold;
-                font-size: 0.7em;
-                text-align: center;
-                line-height: 18px;
-                border-radius: 50%;
-                background-color: #eabf00;
-                position: absolute;
-                bottom: -5px;
-                right: 0px;
-            }
-        }
+        
 
         .header-title {
             font-weight: bold;
@@ -175,14 +192,20 @@ body {
     }
 
     &__shelf-container {
-        // max-height: 300px;
-        // overflow: auto;
-        
+        min-height: 300px;
+
+        .shelf-empty {
+            color: #ececec;
+            text-align: center;
+            line-height: 40px;
+        }
 
         .shelf-item {
             position: relative;
             box-sizing: border-box;
             padding: 5%;
+
+            transition: background-color 0.2s, opacity 0.2s;
 
             &::before {
                 content: '';
@@ -192,6 +215,41 @@ body {
                 position: absolute;
                 top: 0;
                 left: 5%;
+            }
+            
+            &--mouseover {
+                background: #0c0b10;
+
+                .shelf-item__details {
+                    .title, .desc {
+                        text-decoration: line-through;
+                        opacity: 0.6;
+                    }
+                }
+
+                .shelf-item__price {
+                    text-decoration: line-through;
+                    opacity: 0.6;
+                }
+            }
+
+            &__del {
+                width: 16px;
+                height: 16px;
+                top: 15px;
+                right: 5%;
+                border-radius: 50%;
+                position: absolute;
+                background-size: auto 100%;
+                background-image: url('./static/sprite_delete-icon.png');
+                background-repeat: no-repeat;
+                z-index: 2;
+                cursor: pointer;
+
+
+                &:hover {
+                    background-position-x: -17px;
+                }
             }
 
             &__thumb, &__details, &__price {

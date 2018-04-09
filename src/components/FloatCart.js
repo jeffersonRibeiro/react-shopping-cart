@@ -57,7 +57,6 @@ class FloatCart extends Component {
     }, 0);
 
     let installments = this.props.cartProducts.reduce((greater, p) => {
-      console.log(p);
       greater = p.installments > greater ? p.installments : greater;
       return greater;
     }, 0);
@@ -106,17 +105,19 @@ class FloatCart extends Component {
   }
 
   openFloatCart() {
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
     this.setState({ isOpen: true });
   }
 
   closeFloatCart() {
-    document.body.style.overflow = "initial";
+    // document.body.style.overflow = "initial";
     this.setState({ isOpen: false });
   }
 
   render() {
     const cartTotals = this.state.cartTotals;
+
+    console.log(cartTotals.installments);
 
     const cartProducts = this.props.cartProducts.map(p => {
       return <CartProduct
@@ -135,9 +136,17 @@ class FloatCart extends Component {
 
 
     return <div className={classes.join(" ")}>
-        <div onClick={() => this.closeFloatCart()} className="float-cart__close-btn">
-          X
-        </div>
+        {this.state.isOpen &&
+          <div onClick={() => this.closeFloatCart()} className="float-cart__close-btn">X</div>
+        }
+        
+        {!this.state.isOpen &&
+          <span onClick={() => this.openFloatCart()} className="bag bag--float-cart-closed">
+            <span className="bag__quantity">
+              {cartTotals.productQuantity}
+            </span>
+          </span>
+        }
         <div className="float-cart__content">
           <div className="float-cart__header">
             <span className="bag">
@@ -148,7 +157,12 @@ class FloatCart extends Component {
             <span className="header-title">SACOLA</span>
           </div>
 
-          <div className="float-cart__shelf-container">{cartProducts}</div>
+          <div className="float-cart__shelf-container">
+            {cartProducts}
+            {!cartProducts.length &&
+              <p className="shelf-empty">Carrinho vazio <br/>:(</p>
+            }
+          </div>
 
           <div className="float-cart__footer">
             <div className="sub">SUBTOTAL</div>
@@ -157,7 +171,9 @@ class FloatCart extends Component {
                 R$ {util.formatPrice(cartTotals.totalPrice)}
               </p>
               <small className="sub-price__installment">
-                OU EM ATÉ {cartTotals.installments} x R$ {util.formatPrice(cartTotals.totalPrice / cartTotals.installments)}
+                {!!cartTotals.installments &&
+                  <span>OU EM ATÉ {cartTotals.installments} x R$ {util.formatPrice(cartTotals.totalPrice / cartTotals.installments)}</span>
+                }
               </small>
             </div>
             <div className="buy-btn">Finalizar Pedido</div>

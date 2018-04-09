@@ -3,11 +3,33 @@ import React, { Component } from 'react';
 import util from '../util';
 
 class CartProduct extends Component {
+  constructor(){
+    super();
+
+    this.state = {
+      isMouseOver: false
+    }
+  }
+
+  handleMouseOver() {
+    this.setState({isMouseOver: true});
+  }
+
+  handleMouseOut() {
+    this.setState({isMouseOver: false});
+  }
+
+
   render(){
     const product = this.props.product;
 
-    return (
-      <div onClick={() => this.props.removeProduct(product)} className="shelf-item">
+    const classes = ['shelf-item'];
+    if(!!this.state.isMouseOver){
+      classes.push('shelf-item--mouseover');
+    }
+
+    return <div className={classes.join(' ')}>
+        <div onMouseOver={() => this.handleMouseOver()} onMouseOut={() => this.handleMouseOut()} onClick={() => this.props.removeProduct(product)} className="shelf-item__del" />
         <div className="shelf-item__thumb">
           <img src={require(`../static/products/${product.sku}_2.jpg`)} alt={product.title} />
         </div>
@@ -22,8 +44,7 @@ class CartProduct extends Component {
           <p>R$ {util.formatPrice(product.price)}</p>
         </div>
         <div className="clearfix" />
-      </div>
-    )
+      </div>;
   }
 }
 
