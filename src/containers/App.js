@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import { Provider } from 'react-redux';
+
+
 import ShelfContainer from '../components/ShelfContainer';
 import FloatCart from '../components/FloatCart';
+
+import store from '../store';
+
+
 
 class App extends Component {
   constructor() {
@@ -28,13 +35,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <ShelfContainer openFloatCart={this.openFloatCart} />
-        <FloatCart
-          closeFloatCart={this.closeFloatCart}
-          isOpen={this.state.isFloatCartOpen}
-        />
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <ShelfContainer openFloatCart={this.openFloatCart} />
+          <FloatCart
+            closeFloatCart={this.closeFloatCart}
+            isOpen={this.state.isFloatCartOpen}
+          />
+        </div>
+      </Provider>
     );
   }
 }
