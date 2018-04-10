@@ -1,5 +1,6 @@
 import { FETCH_PRODUCTS } from '../actions/types';
 
+
 const initialState = {
   items: []
 }

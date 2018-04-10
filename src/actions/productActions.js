@@ -1,7 +1,10 @@
-import { FETCH_PRODUCTS } from "./types";
+import { FETCH_PRODUCTS } from './types';
+
+
+const productsAPI = '//localhost:8001/api/products';
 
 async function _fetch(callback){
-  const res = await fetch('//localhost:8001/api/products');
+  const res = await fetch(productsAPI);
   const json = await res.json();
 
   return json;
@@ -15,6 +18,6 @@ export const fetchProducts = () => dispatch => {
     }))
     .catch(err => {
       console.log(err);
-      throw new Error("Não foi possível obter os prodtos. Tente novamente mais tarde.");
+      throw new Error('Não foi possível obter os prodtos. Tente novamente mais tarde.');
     });
 }

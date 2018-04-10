@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
-import util from '../util';
+import Thumb from "./../Thumb";
+
+import util from '../../util';
+
 
 class CartProduct extends Component {
   constructor(){
@@ -24,28 +28,45 @@ class CartProduct extends Component {
     const product = this.props.product;
 
     const classes = ['shelf-item'];
+
     if(!!this.state.isMouseOver){
       classes.push('shelf-item--mouseover');
     }
 
-    return <div className={classes.join(" ")}>
-        <div onMouseOver={() => this.handleMouseOver()} onMouseOut={() => this.handleMouseOut()} onClick={() => this.props.removeProduct(product)} className="shelf-item__del" />
-        <div className="shelf-item__thumb">
-          <img src={require(`../static/products/${product.sku}_2.jpg`)} alt={product.title} />
-        </div>
+    return (
+      <div className={classes.join(" ")}>
+        <div
+          className="shelf-item__del"
+          onMouseOver={() => this.handleMouseOver()}
+          onMouseOut={() => this.handleMouseOut()}
+          onClick={() => this.props.removeProduct(product)}
+        />
+        <Thumb
+          classes="shelf-item__thumb"
+          src={require(`../../static/products/${product.sku}_2.jpg`)}
+          alt={product.title}
+        />
         <div className="shelf-item__details">
           <p className="title">{product.title}</p>
           <p className="desc">
-            {product.availableSizes[0]} | {product.style}<br />
+            {product.availableSizes[0]} | {product.style} <br />
             Quantidade: {product.quantity}
           </p>
         </div>
         <div className="shelf-item__price">
           <p>R$ {util.formatPrice(product.price)}</p>
         </div>
+
         <div className="clearfix" />
-      </div>;
+      </div>
+    );
   }
 }
+
+
+CartProduct.propTypes = {
+  product: PropTypes.object.isRequired,
+  removeProduct: PropTypes.func.isRequired,
+};
 
 export default CartProduct;

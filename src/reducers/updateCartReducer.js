@@ -1,8 +1,12 @@
-import { UPDATE_CART } from "../actions/types";
+import { UPDATE_CART } from '../actions/types';
 
 
 const initialState = {
-  item: { productQuantity: 0, installments: 0, totalPrice: 0 }
+  item: {
+    productQuantity: 0,
+    installments: 0,
+    totalPrice: 0
+  }
 };
 
 export default function(state = initialState, action) {

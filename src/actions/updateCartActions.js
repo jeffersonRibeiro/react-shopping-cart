@@ -1,5 +1,6 @@
-import { UPDATE_CART} from "./types";
+import { UPDATE_CART} from './types';
 
+import persistentCart from '../persistentCart';
 
 
 export const updateCart = (cartProducts) => dispatch => {
@@ -25,8 +26,7 @@ export const updateCart = (cartProducts) => dispatch => {
     totalPrice
   }
 
-
-  localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  persistentCart().persist(JSON.stringify(cartProducts));
 
   dispatch({
     type: UPDATE_CART,

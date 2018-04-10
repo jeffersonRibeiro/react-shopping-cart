@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { fetchProducts } from '../actions/productActions';
-import { addProduct } from '../actions/floatCartActions';
+import { fetchProducts } from '../../actions/productActions';
+import { addProduct } from '../../actions/floatCartActions';
 
 import Product from './Product';
 
+
 class ShelfContainer extends Component {
 
-  componentWillMount(){
+  componentWillMount() {
     this.props.fetchProducts();
   }
 
@@ -29,6 +30,7 @@ class ShelfContainer extends Component {
         {products}
       </div>
     );
+
   }
 }
 

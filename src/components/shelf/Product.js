@@ -1,18 +1,23 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-import util from '../util';
+import Thumb from '../Thumb';
+
+import util from '../../util';
 
 
 const Product = (props) => {
   const product = props.product;
+
+  // Um componente de input pode alterar a quantidade no futuro
   product.quantity = 1;
-  let productInstallment;
 
   let formattedPrice = util.formatPrice(product.price);
-
-
+  
+  let productInstallment;
+  
   if(!!product.installments) {
-    const installmentPrice = product.price / product.installments;
+    const installmentPrice = (product.price / product.installments);
 
     productInstallment = (
       <div className="installment">
@@ -21,17 +26,16 @@ const Product = (props) => {
     );
   }
 
-  /* TODO: fazer a separação da casa decimal para estilização de forma mais limpa */
-
   return (
     <div className="shelf-item" data-sku={product.sku}>
-      <div className="shelf-item__thumb">
-        <img src={require(`../static/products/${product.sku}_1.jpg`)} alt={product.title} />
-      </div>
+      <Thumb
+        classes="shelf-item__thumb"
+        src={require(`../../static/products/${product.sku}_1.jpg`)}
+        alt={product.title}
+      />
       <p className="shelf-item__title">{product.title}</p>
       <div className="shelf-item__price">
         <div className="val"><small>R$</small>
-        
           <b>
             {formattedPrice.substr(0, formattedPrice.length - 3)}
           </b>
@@ -45,5 +49,11 @@ const Product = (props) => {
     </div>
   );
 }
+
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
+  addProduct: PropTypes.func.isRequired,
+};
 
 export default Product;
