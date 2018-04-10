@@ -4,10 +4,10 @@ import './App.css';
 import { Provider } from 'react-redux';
 
 
-import ShelfContainer from './components/shelf/ShelfContainer';
-import FloatCart from './components/floatCart/FloatCart';
+import ShelfContainer from './../components/shelf/ShelfContainer';
+import FloatCart from './../components/floatCart/FloatCart';
 
-import store from './store';
+import store from './../store';
 
 
 class App extends Component {

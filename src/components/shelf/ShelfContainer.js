@@ -15,6 +15,8 @@ class ShelfContainer extends Component {
   }
 
   render() {
+    console.log(this.props.products);
+
     const products = this.props.products.map(p => {
       return (
         <Product
@@ -26,9 +28,14 @@ class ShelfContainer extends Component {
     });
 
     return (
-      <div className="shelf-container">
-        {products}
-      </div>
+      <React.Fragment>
+        <h2>Camisas Timão</h2>
+        <small>Bicampeão Paulista</small>
+        <div className="shelf-container">
+          {products}
+          <div className="clearfix" />
+        </div>
+      </React.Fragment>
     );
 
   }

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+$yellow: #eabf00;
+$black-light: #1b1a20;
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -45,7 +48,7 @@ body {
             border: 1px solid #eee;
             
             .shelf-item__buy-btn {
-                background-color: #eabf00;
+                background-color: $yellow;
             }
         }
 
@@ -64,7 +67,7 @@ body {
                 content: '';
                 width: 20px;
                 height: 2px;
-                background-color: #eabf00;
+                background-color: $yellow;
                 position: absolute;
                 bottom: 0;
                 left: 50%;
@@ -88,7 +91,7 @@ body {
         }
 
         &__buy-btn {
-            background-color: #1b1a20;
+            background-color: $black-light;
             color: #fff;
             padding: 15px 0;
             margin-top: 10px;
@@ -106,7 +109,7 @@ body {
     right: -450px;
     width: 450px;
     height: 100%;
-    background-color: #1b1a20;
+    background-color: $black-light;
     box-sizing: border-box;
     
     transition: right 0.2s;
@@ -119,7 +122,7 @@ body {
         width: 50px;
         height: 50px;
         color: #ececec;
-        background-color: #1b1a20;
+        background-color: $black-light;
         text-align: center;
         line-height: 50px;
         position: absolute;
@@ -139,7 +142,7 @@ body {
         display: inline-block;
         vertical-align: middle;
         margin-right: 15px;
-        background-image: url('./static/bag-icon.png');
+        background-image: url('./../static/bag-icon.png');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -169,7 +172,7 @@ body {
             text-align: center;
             line-height: 18px;
             border-radius: 50%;
-            background-color: #eabf00;
+            background-color: $yellow;
             position: absolute;
             bottom: -5px;
             right: 0px;
@@ -241,7 +244,7 @@ body {
                 border-radius: 50%;
                 position: absolute;
                 background-size: auto 100%;
-                background-image: url('./static/sprite_delete-icon.png');
+                background-image: url('./../static/sprite_delete-icon.png');
                 background-repeat: no-repeat;
                 z-index: 2;
                 cursor: pointer;
@@ -281,7 +284,7 @@ body {
                 }
             }
             &__price {
-                color: #eabf00;
+                color: $yellow;
                 text-align: right;
                 width: 25%;
             }
@@ -312,7 +315,7 @@ body {
             }
 
             &__val {
-                color: #eabf00;
+                color: $yellow;
                 font-size: 22px;
             }
         }
@@ -370,7 +373,7 @@ body {
         &__close-btn {
             left: 0px;
             z-index: 2;
-            background-color: #1b1a20;
+            background-color: $black-light;
         }
 
         &__header {
