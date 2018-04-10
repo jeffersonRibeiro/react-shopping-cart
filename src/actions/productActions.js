@@ -1,7 +1,7 @@
 import { FETCH_PRODUCTS } from "./types";
 
 async function _fetch(callback){
-  const res = await fetch('//192.168.125.10:8001/api/products');
+  const res = await fetch('//localhost:8001/api/products');
   const json = await res.json();
 
   return json;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { loadCart, removeProduct } from '../actions/floatCartActions';
+import { updateCart } from '../actions/updateCartActions';
 
 import CartProduct from './CartProduct';
 
@@ -23,13 +24,23 @@ class FloatCart extends Component {
     this.addProduct = this.addProduct.bind(this);
     this.removeProduct = this.removeProduct.bind(this);
 
-    this.updateCart = this.updateCart.bind(this);
 
   }
 
   componentWillMount() {
-    this.props.loadCart();
-    this.updateCart();
+    this.props.loadCart(JSON.parse(localStorage.getItem("cartProducts")) || []);
+  }
+
+  componentDidMount() {
+    /*
+      Reconheço que o setTimeout 0 não é legal,
+      perdi um bom tempo tentando encontrar o momento correto
+      de acessar props.cartProducts para dar update no carrinho...
+      Aceito ajuda kkk
+    */
+    setTimeout(() => {
+      this.props.updateCart(this.props.cartProducts);
+    }, 0);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -42,54 +53,24 @@ class FloatCart extends Component {
     if(nextProps.productToRemove !== this.props.productToRemove){
       this.removeProduct(nextProps.productToRemove);
     }
-
-  }
-
-  updateCart(){
-    let productQuantity = this.props.cartProducts.reduce( (sum, p) => {
-      sum += p.quantity;
-      return sum;
-    }, 0);
-
-    let totalPrice = this.props.cartProducts.reduce((sum, p) => {
-      sum += p.price * p.quantity;
-      return sum;
-    }, 0);
-
-    let installments = this.props.cartProducts.reduce((greater, p) => {
-      greater = p.installments > greater ? p.installments : greater;
-      return greater;
-    }, 0);
-    
-    
-
-    let cartTotals = {
-      productQuantity,
-      installments,
-      totalPrice
-    }
-
-    this.setState({cartTotals});
-
-
   }
 
   addProduct(product){
     const cartProducts = this.props.cartProducts;
     let productAlreadyInCart = false;
 
-    for (var i = 0; i < cartProducts.length; i++) {
-      if (cartProducts[i].sku === product.sku) {
-        cartProducts[i].quantity += product.quantity;
+    cartProducts.forEach( (cp) => {
+      if (cp.sku === product.sku) {
+        cp.quantity += product.quantity;
         productAlreadyInCart = true;
       }
-    }
+    })
 
     if (!productAlreadyInCart) {
       this.props.cartProducts.push(product);
     }
 
-    this.updateCart();
+    this.props.updateCart(cartProducts);
     this.openFloatCart();
   }
 
@@ -99,7 +80,7 @@ class FloatCart extends Component {
     const index = cartProducts.findIndex( p => p.sku === product.sku );
     if (index >= 0) {
       cartProducts.splice(index, 1);
-      this.updateCart();
+      this.props.updateCart(cartProducts);
     }
   }
 
@@ -114,7 +95,7 @@ class FloatCart extends Component {
   }
 
   render() {
-    const cartTotals = this.state.cartTotals;
+    const cartTotals = this.props.cartTotals;
 
     const cartProducts = this.props.cartProducts.map(p => {
       return <CartProduct
@@ -182,17 +163,19 @@ class FloatCart extends Component {
 
 FloatCart.propTypes = {
   loadCart: PropTypes.func.isRequired,
+  updateCart: PropTypes.func.isRequired,
   cartProducts: PropTypes.array.isRequired,
   newProduct: PropTypes.object,
   removeProduct: PropTypes.func,
-  productToRemove: PropTypes.object
+  productToRemove: PropTypes.object,
 };
 
 const mapStateToProps = state => ({
   cartProducts: state.cartProducts.items,
   newProduct: state.cartProducts.item,
-  productToRemove: state.cartProducts.itemToRemove
+  productToRemove: state.cartProducts.itemToRemove,
+  cartTotals: state.cartTotals.item
 });
 
-export default connect(mapStateToProps, { loadCart, removeProduct })(FloatCart);
+export default connect(mapStateToProps, { loadCart, updateCart, removeProduct})(FloatCart);
 

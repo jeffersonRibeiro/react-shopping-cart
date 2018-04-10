@@ -14,14 +14,12 @@ import store from './store';
 class App extends Component {
 
   render() {
-    return (
-      <Provider store={store}>
+    return <Provider store={store}>
         <div className="App">
           <ShelfContainer />
           <FloatCart />
         </div>
-      </Provider>
-    );
+      </Provider>;
   }
 }
 

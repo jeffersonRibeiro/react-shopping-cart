@@ -28,7 +28,7 @@ class CartProduct extends Component {
       classes.push('shelf-item--mouseover');
     }
 
-    return <div className={classes.join(' ')}>
+    return <div className={classes.join(" ")}>
         <div onMouseOver={() => this.handleMouseOver()} onMouseOut={() => this.handleMouseOut()} onClick={() => this.props.removeProduct(product)} className="shelf-item__del" />
         <div className="shelf-item__thumb">
           <img src={require(`../static/products/${product.sku}_2.jpg`)} alt={product.title} />
@@ -36,7 +36,7 @@ class CartProduct extends Component {
         <div className="shelf-item__details">
           <p className="title">{product.title}</p>
           <p className="desc">
-            GGG | Preto e branco <br />
+            {product.availableSizes[0]} | {product.style}<br />
             Quantidade: {product.quantity}
           </p>
         </div>

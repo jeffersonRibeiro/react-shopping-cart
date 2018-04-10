@@ -2,10 +2,10 @@ import { LOAD_CART, ADD_PRODUCT, REMOVE_PRODUCT } from "./types";
 
 
 
-export const loadCart = () => dispatch => {
+export const loadCart = (cartProducts) => dispatch => {
   dispatch({
     type: LOAD_CART,
-    payload: []
+    payload: cartProducts
   });
 }
 
