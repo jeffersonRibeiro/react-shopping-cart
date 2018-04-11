@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 
 
 import Main from './Main';
-import Header from './Header';
 import Banner from '../components/Banner';
 import Footer from './Footer';
 import FloatCart from './../components/floatCart/FloatCart';
@@ -20,7 +19,6 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <Header />
           <Banner src={bannerImage} alt='Promoção Camisas do Timão' />
           <Main />
           <Footer />

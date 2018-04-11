@@ -23,15 +23,8 @@ class FloatCart extends Component {
   }
 
   componentDidMount() {
-    /*
-      Reconheço que o setTimeout 0 não é legal,
-      perdi um bom tempo tentando encontrar o momento correto
-      de acessar props.cartProducts para dar update no carrinho...
-      Aceito ajuda kkk
-    */
-    setTimeout(() => {
-      this.props.updateCart(this.props.cartProducts);
-    }, 0);
+    const { updateCart, cartProducts } = this.props;
+    setTimeout(() => updateCart(cartProducts), 0);
   }
 
   componentWillReceiveProps(nextProps) {
