@@ -1,11 +1,11 @@
 import React from 'react';
 
-import ShelfContainer from '../components/shelf/ShelfContainer';
+import Shelf from '../components/shelf/Shelf';
 
 
 const Main = () => (
   <main>
-    <ShelfContainer />
+    <Shelf />
   </main>
 );
 

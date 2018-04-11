@@ -7,11 +7,11 @@ import { addProduct } from '../../actions/floatCartActions';
 
 import Product from './Product';
 import Filter from './Filter';
-import ShelfContainerHeader from './ShelfContainerHeader';
+import ShelfHeader from './ShelfHeader';
 import Clearfix from '../Clearfix';
 
 
-class ShelfContainer extends Component {
+class Shelf extends Component {
 
   componentWillMount() {
     this.props.fetchProducts();
@@ -53,7 +53,7 @@ class ShelfContainer extends Component {
       <React.Fragment>
         <Filter />  
         <div className="shelf-container">
-          <ShelfContainerHeader productsLength={products.length}/>
+          <ShelfHeader productsLength={products.length}/>
           {p}
           <Clearfix />
         </div>
@@ -64,7 +64,7 @@ class ShelfContainer extends Component {
   }
 }
 
-ShelfContainer.propTypes = {
+Shelf.propTypes = {
   fetchProducts: PropTypes.func.isRequired,
   products: PropTypes.array.isRequired,
   addProduct: PropTypes.func.isRequired,
@@ -78,4 +78,4 @@ const mapStateToProps = state => ({
   sort: state.sort.item,
 })
 
-export default connect(mapStateToProps, { fetchProducts, addProduct })(ShelfContainer);
+export default connect(mapStateToProps, { fetchProducts, addProduct })(Shelf);

@@ -19,12 +19,13 @@ class FloatCart extends Component {
   };
 
   componentWillMount() {
-    this.props.loadCart(JSON.parse(persistentCart().get()) || []);
+    this.props.loadCart( JSON.parse(persistentCart().get()) || [] );
   }
 
   componentDidMount() {
-    const { updateCart, cartProducts } = this.props;
-    setTimeout(() => updateCart(cartProducts), 0);
+    setTimeout(() => {
+      this.props.updateCart(this.props.cartProducts);
+    }, 0);
   }
 
   componentWillReceiveProps(nextProps) {

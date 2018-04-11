@@ -5,7 +5,7 @@ import Sort from './Sort';
 import Clearfix from '../Clearfix';
 
 
-const ShelfContainerHeader = (props) => {
+const ShelHeader = (props) => {
 
   return (
     <div className="shelf-container-header">
@@ -18,8 +18,8 @@ const ShelfContainerHeader = (props) => {
   );
 }
 
-ShelfContainerHeader.propTypes = {
+ShelHeader.propTypes = {
   productsLength: PropTypes.number.isRequired,
 }
 
-export default ShelfContainerHeader;
+export default ShelHeader;
