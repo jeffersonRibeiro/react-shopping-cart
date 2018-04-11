@@ -4,9 +4,10 @@ import './App.css';
 import { Provider } from 'react-redux';
 
 
-import Main from '../components/main/Main';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
+import Main from './Main';
+import Header from './Header';
+import Banner from '../components/Banner';
+import Footer from './Footer';
 import FloatCart from './../components/floatCart/FloatCart';
 
 import store from './../store';
@@ -18,6 +19,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Header />
+          <Banner />
           <Main />
           <Footer />
           <FloatCart />

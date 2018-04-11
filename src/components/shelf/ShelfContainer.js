@@ -52,7 +52,7 @@ class ShelfContainer extends Component {
         <div className="shelf-container">
           <small className="applied-filters">
             {this.props.filters && this.props.filters.length > 0 &&
-              <span>Filtrado por: {this.props.filters.join(', ')}</span>
+              <span><b>Filtrado por:</b> {this.props.filters.join(', ')}</span>
             }
           </small>
           {p}

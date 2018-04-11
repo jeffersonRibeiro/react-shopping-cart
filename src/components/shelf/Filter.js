@@ -35,10 +35,11 @@ class Filter extends Component {
 
   createCheckbox = label => (
     <Checkbox
-            label={label}
-            handleCheckboxChange={this.toggleCheckbox}
-            key={label}
-        />
+        classes="filters-available-size"
+        label={label}
+        handleCheckboxChange={this.toggleCheckbox}
+        key={label}
+    />
   )
 
   createCheckboxes = () => (

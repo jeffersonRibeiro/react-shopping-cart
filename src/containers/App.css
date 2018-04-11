@@ -36,6 +36,15 @@ header {
   header .title {
     margin: 0px; }
 
+.main-banner {
+  height: 180px;
+  overflow: hidden; }
+  .main-banner img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; }
+
 footer {
   color: #ececec;
   padding: 20px 0;
@@ -48,14 +57,62 @@ footer {
       text-decoration: underline; }
 
 .filters {
-  width: 10%;
+  width: 15%;
   float: left; }
   .filters .title {
     margin-top: 0;
-    margin-bottom: 10px; }
+    margin-bottom: 30px; }
+  .filters-available-size {
+    display: inline-block;
+    /* Customize the label (the container) */ }
+    .filters-available-size label {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 35px;
+      height: 35px;
+      font-size: 0.8em;
+      margin-bottom: 8px;
+      margin-right: 8px;
+      border-radius: 50%;
+      line-height: 35px;
+      text-align: center;
+      /* On mouse-over, add a grey background color */
+      /* When the checkbox is checked, add a blue background */
+      /* Show the checkmark when checked */
+      /* Create a custom checkbox */ }
+      .filters-available-size label:hover input ~ .checkmark {
+        border: 1px solid #1b1a20; }
+      .filters-available-size label input:checked ~ .checkmark {
+        background-color: #1b1a20;
+        color: #ececec; }
+      .filters-available-size label input:checked ~ .checkmark:after {
+        display: block; }
+      .filters-available-size label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer; }
+      .filters-available-size label .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        font-size: 0.8em;
+        border-radius: 50%;
+        line-height: 35px;
+        text-align: center;
+        color: #1b1a20;
+        background-color: #ececec;
+        border: 1px solid transparent; }
 
 .shelf-container {
-  width: 90%;
+  width: 85%;
   float: left; }
   .shelf-container .applied-filters {
     height: 20px;
@@ -68,7 +125,7 @@ footer {
     position: relative;
     text-align: center;
     box-sizing: border-box;
-    padding: 25px;
+    padding: 10px;
     margin-bottom: 30px;
     border: 1px solid transparent; }
     .shelf-container .shelf-item:hover {
@@ -78,8 +135,8 @@ footer {
     .shelf-container .shelf-item .shelf-stopper {
       position: absolute;
       color: #ececec;
-      top: 25px;
-      right: 25px;
+      top: 10px;
+      right: 10px;
       padding: 5px;
       font-size: 0.6em;
       background-color: #1b1a20;

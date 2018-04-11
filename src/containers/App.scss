@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
 main {
     padding: 20px 2%;
     max-width: 1200px;
@@ -44,9 +45,21 @@ header {
     padding: 20px 0;
     background-color: #000;
     color: #ececec;
-
+    
     .title {
         margin: 0px;
+    }
+}
+
+.main-banner {
+    height: 180px;
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
 }
 
@@ -55,7 +68,7 @@ footer {
     padding: 20px 0;
     text-align: center;
     background-color: #000;
-
+    
     a {
         color: #ececec;
         text-decoration: none;
@@ -67,17 +80,80 @@ footer {
 }
 
 .filters {
-    width: 10%;
+    width: 15%;
     float: left;
 
     .title {
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    &-available-size {
+        display: inline-block;
+        /* Customize the label (the container) */
+        label {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 35px;
+            height: 35px;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+            margin-right: 8px;
+            border-radius: 50%;
+            line-height: 35px;
+            text-align: center;
+
+            /* On mouse-over, add a grey background color */
+            &:hover input ~ .checkmark {
+                border: 1px solid $black-light;
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            & input:checked ~ .checkmark {
+                background-color: $black-light;
+                color: #ececec;
+            }
+
+            /* Show the checkmark when checked */
+            & input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 35px;
+                height: 35px;
+                font-size: 0.8em;
+                border-radius: 50%;
+                line-height: 35px;
+                text-align: center;
+                color: $black-light;
+                background-color: #ececec;
+                
+                border: 1px solid transparent;
+
+            }
+        }
     }
 }
 
 .shelf-container {
-    width: 90%;
+    width: 85%;
     float: left;
 
     .applied-filters {
@@ -94,7 +170,7 @@ footer {
         position: relative;
         text-align: center;
         box-sizing: border-box;
-        padding: 25px;
+        padding: 10px;
         margin-bottom: 30px;
         border: 1px solid transparent;
 
@@ -109,8 +185,8 @@ footer {
         .shelf-stopper {
             position: absolute;
             color: #ececec;
-            top: 25px;
-            right: 25px;
+            top: 10px;
+            right: 10px;
             padding: 5px;
             font-size: 0.6em;
             background-color: $black-light;
