@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
+  margin: 0;
+  color: #1b1a20;
   font-family: 'Roboto', sans-serif; }
+
+main {
+  padding: 20px 2%;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 .clearfix {
   clear: both; }
@@ -20,22 +27,41 @@ body {
   height: 100%;
   overflow-y: scroll; }
 
-main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
+header {
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #000;
+  color: #ececec; }
+  header .title {
+    margin: 0px; }
 
-.app {
-  padding: 0 2%;
-  max-width: 1200px;
-  margin: 0 auto; }
+footer {
+  color: #ececec;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #000; }
+  footer a {
+    color: #ececec;
+    text-decoration: none; }
+    footer a:hover {
+      text-decoration: underline; }
 
 .filters {
-  flex-grow: 1; }
+  width: 10%;
+  float: left; }
+  .filters .title {
+    margin-top: 0;
+    margin-bottom: 10px; }
 
 .shelf-container {
-  flex-grow: 1; }
+  width: 90%;
+  float: left; }
+  .shelf-container .applied-filters {
+    height: 20px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0; }
   .shelf-container .shelf-item {
     float: left;
     width: 25%;

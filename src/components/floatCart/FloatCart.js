@@ -68,7 +68,7 @@ class FloatCart extends Component {
     let productAlreadyInCart = false;
 
     cartProducts.forEach(cp => {
-      if (cp.sku === product.sku) {
+      if (cp.id === product.id) {
         cp.quantity += product.quantity;
         productAlreadyInCart = true;
       }
@@ -85,7 +85,7 @@ class FloatCart extends Component {
   removeProduct(product) {
     const { cartProducts, updateCart } = this.props;
 
-    const index = cartProducts.findIndex(p => p.sku === product.sku);
+    const index = cartProducts.findIndex(p => p.id === product.id);
     if (index >= 0) {
       cartProducts.splice(index, 1);
       updateCart(cartProducts);
@@ -93,12 +93,12 @@ class FloatCart extends Component {
   }
 
   proceedToCheckout() {
-    const { totalPrice, productQuantity } = this.props.cartTotals;
+    const { totalPrice, productQuantity, currencyFormat, currencyId } = this.props.cartTotals;
 
     if (!productQuantity) {
       alert("Adicione algum produto na sacola!");
     }else {
-      alert(`Checkout - Subtotal: R$ ${util.formatPrice(totalPrice)}`);
+      alert(`Checkout - Subtotal: ${currencyFormat} ${util.formatPrice(totalPrice, currencyId)}`);
     }
   }
 
@@ -110,26 +110,26 @@ class FloatCart extends Component {
         <CartProduct
           product={p}
           removeProduct={removeProduct}
-          key={p.sku}
+          key={p.id}
         />
       );
     });
 
-    let classes = ["float-cart"];
+    let classes = ['float-cart'];
 
     if (!!this.state.isOpen) {
-      classes.push("float-cart--open");
+      classes.push('float-cart--open');
     }
 
     return (
-      <div className={classes.join(" ")}>
+      <div className={classes.join(' ')}>
         {/* Se carrinho aberto, mostrar botão (x) de fechar */}
         {this.state.isOpen && (
           <div
             onClick={() => this.closeFloatCart()}
             className="float-cart__close-btn"
           >
-            X
+          X
           </div>
         )}
 
@@ -166,15 +166,12 @@ class FloatCart extends Component {
             <div className="sub">SUBTOTAL</div>
             <div className="sub-price">
               <p className="sub-price__val">
-                R$ {util.formatPrice(cartTotals.totalPrice)}
+                {`${cartTotals.currencyFormat} ${util.formatPrice(cartTotals.totalPrice, cartTotals.currencyId)}`}
               </p>
               <small className="sub-price__installment">
                 {!!cartTotals.installments && (
                   <span>
-                    OU EM ATÉ {cartTotals.installments} x R${" "}
-                    {util.formatPrice(
-                      cartTotals.totalPrice / cartTotals.installments
-                    )}
+                    {`OU EM ATÉ ${cartTotals.installments} x ${cartTotals.currencyFormat} ${util.formatPrice(cartTotals.totalPrice / cartTotals.installments, cartTotals.currencyId)}`}
                   </span>
                 )}
               </small>

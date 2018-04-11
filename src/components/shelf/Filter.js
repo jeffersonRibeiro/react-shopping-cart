@@ -48,7 +48,7 @@ class Filter extends Component {
   render() {
     return (
       <div className="filters">
-        <h4>Tamanhos:</h4>
+        <h4 className="title">Tamanhos:</h4>
         {this.createCheckboxes()}
       </div>
     );

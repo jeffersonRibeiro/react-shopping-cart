@@ -12,7 +12,7 @@ const Product = (props) => {
   // Um componente de input pode alterar a quantidade no futuro
   product.quantity = 1;
 
-  let formattedPrice = util.formatPrice(product.price);
+  let formattedPrice = util.formatPrice(product.price, product.currencyId);
   
   let productInstallment;
   
@@ -21,7 +21,7 @@ const Product = (props) => {
 
     productInstallment = (
       <div className="installment">
-        <span>ou {product.installments} x</span><b> R$ {util.formatPrice(installmentPrice)}</b>
+        <span>ou {product.installments} x</span><b> {product.currencyFormat} {util.formatPrice(installmentPrice, product.currencyId)}</b>
       </div>
     );
   }
@@ -38,7 +38,7 @@ const Product = (props) => {
       />
       <p className="shelf-item__title">{product.title}</p>
       <div className="shelf-item__price">
-        <div className="val"><small>R$</small>
+        <div className="val"><small>{product.currencyFormat}</small>
           <b>
             {formattedPrice.substr(0, formattedPrice.length - 3)}
           </b>

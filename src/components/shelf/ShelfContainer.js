@@ -7,6 +7,7 @@ import { addProduct } from '../../actions/floatCartActions';
 
 import Product from './Product';
 import Filter from './Filter';
+import Clearfix from '../Clearfix';
 
 
 class ShelfContainer extends Component {
@@ -40,28 +41,26 @@ class ShelfContainer extends Component {
         <Product
           product={p}
           addProduct={this.props.addProduct}
-          key={p.sku}
+          key={p.id}
         />
       );
     });
 
-    return <React.Fragment>
-        <header>
-          <h2>Camisas Timão</h2>
-          <small>Bicampeão Paulista</small>
-        </header>
-
-        <main>
-          <Filter />
-          <div className="shelf-container">
-            {p}
-          </div>
-        </main>
-        
-        <footer>
-        </footer>
-      
-      </React.Fragment>;
+    return (
+      <React.Fragment>
+        <Filter />  
+        <div className="shelf-container">
+          <small className="applied-filters">
+            {this.props.filters && this.props.filters.length > 0 &&
+              <span>Filtrado por: {this.props.filters.join(', ')}</span>
+            }
+          </small>
+          {p}
+          <Clearfix />
+        </div>
+        <Clearfix />
+      </React.Fragment>
+    )
 
   }
 }

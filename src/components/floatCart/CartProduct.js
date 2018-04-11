@@ -49,12 +49,12 @@ class CartProduct extends Component {
         <div className="shelf-item__details">
           <p className="title">{product.title}</p>
           <p className="desc">
-            {product.availableSizes[0]} | {product.style} <br />
+            {`${product.availableSizes[0]} | ${product.style}`} <br />
             Quantidade: {product.quantity}
           </p>
         </div>
         <div className="shelf-item__price">
-          <p>R$ {util.formatPrice(product.price)}</p>
+          <p>{`${product.currencyFormat}  ${util.formatPrice(product.price)}`}</p>
         </div>
 
         <div className="clearfix" />
