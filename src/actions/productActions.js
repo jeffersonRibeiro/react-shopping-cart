@@ -10,12 +10,22 @@ async function _fetch(callback){
   return json;
 }
 
-export const fetchProducts = () => dispatch => {
+export const fetchProducts = (filters) => dispatch => {
+
   _fetch()
-    .then(json => dispatch({
-      type: FETCH_PRODUCTS,
-      payload: json.products
-    }))
+    .then(json => {
+      let { products } = json;
+
+      if(filters && filters.length > 0){
+        products = products.filter( p => filters.find( f => p.availableSizes.find( size => size === f ) ) )
+      }
+
+      return dispatch({
+        type: FETCH_PRODUCTS,
+        payload: products
+      });
+
+    })
     .catch(err => {
       console.log(err);
       throw new Error('Não foi possível obter os prodtos. Tente novamente mais tarde.');

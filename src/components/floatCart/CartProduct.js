@@ -25,7 +25,7 @@ class CartProduct extends Component {
 
 
   render(){
-    const product = this.props.product;
+    const { product, removeProduct } = this.props;
 
     const classes = ['shelf-item'];
 
@@ -39,7 +39,7 @@ class CartProduct extends Component {
           className="shelf-item__del"
           onMouseOver={() => this.handleMouseOver()}
           onMouseOut={() => this.handleMouseOut()}
-          onClick={() => this.props.removeProduct(product)}
+          onClick={() => removeProduct(product)}
         />
         <Thumb
           classes="shelf-item__thumb"

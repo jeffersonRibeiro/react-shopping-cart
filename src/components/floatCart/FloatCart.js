@@ -64,7 +64,7 @@ class FloatCart extends Component {
   }
 
   addProduct(product) {
-    const cartProducts = this.props.cartProducts;
+    const { cartProducts, updateCart } = this.props;
     let productAlreadyInCart = false;
 
     cartProducts.forEach(cp => {
@@ -75,41 +75,41 @@ class FloatCart extends Component {
     });
 
     if (!productAlreadyInCart) {
-      this.props.cartProducts.push(product);
+      cartProducts.push(product);
     }
 
-    this.props.updateCart(cartProducts);
+    updateCart(cartProducts);
     this.openFloatCart();
   }
 
   removeProduct(product) {
-    const cartProducts = this.props.cartProducts;
+    const { cartProducts, updateCart } = this.props;
 
     const index = cartProducts.findIndex(p => p.sku === product.sku);
     if (index >= 0) {
       cartProducts.splice(index, 1);
-      this.props.updateCart(cartProducts);
+      updateCart(cartProducts);
     }
   }
 
   proceedToCheckout() {
-    const subtotal = this.props.cartTotals.totalPrice;
+    const { totalPrice, productQuantity } = this.props.cartTotals;
 
-    if (!this.props.cartTotals.productQuantity) {
+    if (!productQuantity) {
       alert("Adicione algum produto na sacola!");
     }else {
-      alert(`Checkout - Subtotal: R$ ${util.formatPrice(subtotal)}`);
+      alert(`Checkout - Subtotal: R$ ${util.formatPrice(totalPrice)}`);
     }
   }
 
   render() {
-    const cartTotals = this.props.cartTotals;
+    const { cartTotals, cartProducts, removeProduct } = this.props;
 
-    const cartProducts = this.props.cartProducts.map(p => {
+    const products = cartProducts.map(p => {
       return (
         <CartProduct
           product={p}
-          removeProduct={this.props.removeProduct}
+          removeProduct={removeProduct}
           key={p.sku}
         />
       );
@@ -154,8 +154,8 @@ class FloatCart extends Component {
           </div>
 
           <div className="float-cart__shelf-container">
-            {cartProducts}
-            {!cartProducts.length && (
+            {products}
+            {!products.length && (
               <p className="shelf-empty">
                 Adicione algum produto na sacola <br />:)
               </p>

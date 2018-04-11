@@ -6,18 +6,37 @@ import { fetchProducts } from '../../actions/productActions';
 import { addProduct } from '../../actions/floatCartActions';
 
 import Product from './Product';
+import Filter from './Filter';
 
 
 class ShelfContainer extends Component {
+  constructor(){
+    super();
+
+    this.handleFilter = this.handleFilter.bind(this);
+  }
+
 
   componentWillMount() {
     this.props.fetchProducts();
   }
 
-  render() {
-    console.log(this.props.products);
+  componentWillReceiveProps(nextProps) {
+    const { filters } = nextProps;
+    
+    if(filters !== this.props.filters){
+      this.handleFilter(filters);
+    }
+  }
 
-    const products = this.props.products.map(p => {
+  handleFilter(filters) {
+    this.props.fetchProducts(filters);
+  }
+
+  render() {
+    const { products } = this.props;
+
+    const p = products.map(p => {
       return (
         <Product
           product={p}
@@ -31,8 +50,11 @@ class ShelfContainer extends Component {
       <React.Fragment>
         <h2>Camisas Timão</h2>
         <small>Bicampeão Paulista</small>
+        
+        <Filter />
+        
         <div className="shelf-container">
-          {products}
+          {p}
           <div className="clearfix" />
         </div>
       </React.Fragment>
@@ -44,11 +66,13 @@ class ShelfContainer extends Component {
 ShelfContainer.propTypes = {
   fetchProducts: PropTypes.func.isRequired,
   products: PropTypes.array.isRequired,
-  addProduct: PropTypes.func.isRequired
+  addProduct: PropTypes.func.isRequired,
+  filters: PropTypes.array
 }
 
 const mapStateToProps = state => ({
-  products: state.products.items
+  products: state.products.items,
+  filters: state.filters.items
 })
 
 export default connect(mapStateToProps, { fetchProducts, addProduct })(ShelfContainer);
