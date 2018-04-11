@@ -20,13 +20,26 @@ body {
   height: 100%;
   overflow-y: scroll; }
 
-.shelf-container {
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.app {
   padding: 0 2%;
   max-width: 1200px;
   margin: 0 auto; }
+
+.filters {
+  flex-grow: 1; }
+
+.shelf-container {
+  flex-grow: 1; }
   .shelf-container .shelf-item {
     float: left;
     width: 25%;
+    position: relative;
     text-align: center;
     box-sizing: border-box;
     padding: 25px;
@@ -36,8 +49,17 @@ body {
       border: 1px solid #eee; }
       .shelf-container .shelf-item:hover .shelf-item__buy-btn {
         background-color: #eabf00; }
+    .shelf-container .shelf-item .shelf-stopper {
+      position: absolute;
+      color: #ececec;
+      top: 25px;
+      right: 25px;
+      padding: 5px;
+      font-size: 0.6em;
+      background-color: #1b1a20;
+      cursor: default; }
     .shelf-container .shelf-item__thumb img {
-      width: 90%; }
+      width: 100%; }
     .shelf-container .shelf-item__title {
       position: relative;
       padding: 0 20px;

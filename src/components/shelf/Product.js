@@ -28,6 +28,9 @@ const Product = (props) => {
 
   return (
     <div className="shelf-item" data-sku={product.sku}>
+      {product.isFreeShipping && 
+        <div className="shelf-stopper">Frete Grátis</div>
+      }
       <Thumb
         classes="shelf-item__thumb"
         src={require(`../../static/products/${product.sku}_1.jpg`)}

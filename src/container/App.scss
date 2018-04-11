@@ -30,14 +30,30 @@ body {
     overflow-y: scroll;
 }
 
-.shelf-container {
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.app {
     padding: 0 2%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.filters {
+    flex-grow: 1
+}
+
+.shelf-container {
+    flex-grow: 1;
 
     .shelf-item {
         float: left;
         width: 25%;
+        position: relative;
         text-align: center;
         box-sizing: border-box;
         padding: 25px;
@@ -52,9 +68,20 @@ body {
             }
         }
 
+        .shelf-stopper {
+            position: absolute;
+            color: #ececec;
+            top: 25px;
+            right: 25px;
+            padding: 5px;
+            font-size: 0.6em;
+            background-color: $black-light;
+            cursor: default;
+        }
+
         &__thumb {
             img {
-                width: 90%; 
+                width: 100%; 
             }
         }
 

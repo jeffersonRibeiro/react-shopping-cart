@@ -16,14 +16,13 @@ class ShelfContainer extends Component {
     this.handleFilter = this.handleFilter.bind(this);
   }
 
-
   componentWillMount() {
     this.props.fetchProducts();
   }
 
   componentWillReceiveProps(nextProps) {
     const { filters } = nextProps;
-    
+
     if(filters !== this.props.filters){
       this.handleFilter(filters);
     }
@@ -46,19 +45,23 @@ class ShelfContainer extends Component {
       );
     });
 
-    return (
-      <React.Fragment>
-        <h2>Camisas Timão</h2>
-        <small>Bicampeão Paulista</small>
+    return <React.Fragment>
+        <header>
+          <h2>Camisas Timão</h2>
+          <small>Bicampeão Paulista</small>
+        </header>
+
+        <main>
+          <Filter />
+          <div className="shelf-container">
+            {p}
+          </div>
+        </main>
         
-        <Filter />
-        
-        <div className="shelf-container">
-          {p}
-          <div className="clearfix" />
-        </div>
-      </React.Fragment>
-    );
+        <footer>
+        </footer>
+      
+      </React.Fragment>;
 
   }
 }
