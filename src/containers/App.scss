@@ -52,15 +52,7 @@ header {
 }
 
 .main-banner {
-    height: 180px;
-    overflow: hidden;
-
-    img {
-        display: block;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
+    width: 100%;
 }
 
 footer {
@@ -84,8 +76,8 @@ footer {
     float: left;
 
     .title {
-        margin-top: 0;
-        margin-bottom: 30px;
+        margin-top: 2px;
+        margin-bottom: 20px;
     }
 
     &-available-size {
@@ -156,12 +148,31 @@ footer {
     width: 85%;
     float: left;
 
-    .applied-filters {
-        height: 20px;
-        display: block;
-        margin-top: 0;
-        margin-bottom: 0;
+    &-header {
+        margin-bottom: 10px;
 
+        .products-found {
+            float: left;
+            margin: 0;
+            margin-top: 8px;
+        }
+
+        .sort {
+            float: right;
+
+            select {
+                outline: none;
+                border: 1px solid #ececec;
+                border-radius: 4px;
+                padding: 5px 10px;
+                margin-left: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    border: 1px solid #5b5a5e;
+                }
+            }
+        }
     }
 
     .shelf-item {

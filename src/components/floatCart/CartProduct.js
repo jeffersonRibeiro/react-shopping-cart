@@ -7,19 +7,16 @@ import util from '../../util';
 
 
 class CartProduct extends Component {
-  constructor(){
-    super();
 
-    this.state = {
-      isMouseOver: false
-    }
+  state = {
+    isMouseOver: false,
   }
 
-  handleMouseOver() {
+  handleMouseOver = () => {
     this.setState({isMouseOver: true});
   }
 
-  handleMouseOut() {
+  handleMouseOut = () => {
     this.setState({isMouseOver: false});
   }
 

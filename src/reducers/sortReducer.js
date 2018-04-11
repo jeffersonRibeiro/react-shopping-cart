@@ -1,17 +1,13 @@
-import { UPDATE_CART } from '../actions/types';
+import { UPDATE_SORT } from '../actions/types';
 
 
 const initialState = {
-  item: {
-    productQuantity: 0,
-    installments: 0,
-    totalPrice: 0,
-  }
+  item: '',
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_CART:
+    case UPDATE_SORT:
       return {
         ...state,
         item: action.payload

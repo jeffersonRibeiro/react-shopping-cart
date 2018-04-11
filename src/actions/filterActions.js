@@ -5,7 +5,7 @@ export const updateFilters = (filters) => dispatch => {
 
   dispatch({
     type: UPDATE_FILTER,
-    payload: filters
+    payload: filters,
   });
 
 }

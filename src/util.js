@@ -8,5 +8,5 @@ const formatPrice = (x, currency) => {
 };
 
 export default {
-    formatPrice
+    formatPrice,
 }

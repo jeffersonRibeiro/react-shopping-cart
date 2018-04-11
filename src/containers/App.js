@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import bannerImage from '../static/banner.jpg';
+
 import { Provider } from 'react-redux';
 
 
@@ -19,7 +21,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Header />
-          <Banner />
+          <Banner src={bannerImage} alt='Promoção Camisas do Timão' />
           <Main />
           <Footer />
           <FloatCart />

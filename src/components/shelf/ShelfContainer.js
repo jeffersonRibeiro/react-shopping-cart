@@ -7,30 +7,33 @@ import { addProduct } from '../../actions/floatCartActions';
 
 import Product from './Product';
 import Filter from './Filter';
+import ShelfContainerHeader from './ShelfContainerHeader';
 import Clearfix from '../Clearfix';
 
 
 class ShelfContainer extends Component {
-  constructor(){
-    super();
-
-    this.handleFilter = this.handleFilter.bind(this);
-  }
 
   componentWillMount() {
     this.props.fetchProducts();
   }
 
   componentWillReceiveProps(nextProps) {
-    const { filters } = nextProps;
+    const { filters, sort } = nextProps;
 
-    if(filters !== this.props.filters){
+    if (filters !== this.props.filters){
       this.handleFilter(filters);
+    }
+    if (sort !== this.props.sort) {
+      this.handleSort(sort);
     }
   }
 
-  handleFilter(filters) {
+  handleFilter = (filters) => {
     this.props.fetchProducts(filters);
+  }
+
+  handleSort = (sort) => {
+    this.props.fetchProducts(this.props.filters, sort);
   }
 
   render() {
@@ -50,11 +53,7 @@ class ShelfContainer extends Component {
       <React.Fragment>
         <Filter />  
         <div className="shelf-container">
-          <small className="applied-filters">
-            {this.props.filters && this.props.filters.length > 0 &&
-              <span><b>Filtrado por:</b> {this.props.filters.join(', ')}</span>
-            }
-          </small>
+          <ShelfContainerHeader productsLength={products.length}/>
           {p}
           <Clearfix />
         </div>
@@ -69,12 +68,14 @@ ShelfContainer.propTypes = {
   fetchProducts: PropTypes.func.isRequired,
   products: PropTypes.array.isRequired,
   addProduct: PropTypes.func.isRequired,
-  filters: PropTypes.array
+  filters: PropTypes.array,
+  sort: PropTypes.string,
 }
 
 const mapStateToProps = state => ({
   products: state.products.items,
-  filters: state.filters.items
+  filters: state.filters.items,
+  sort: state.sort.item,
 })
 
 export default connect(mapStateToProps, { fetchProducts, addProduct })(ShelfContainer);

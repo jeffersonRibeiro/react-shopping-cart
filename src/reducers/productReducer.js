@@ -2,7 +2,7 @@ import { FETCH_PRODUCTS } from '../actions/types';
 
 
 const initialState = {
-  items: []
+  items: [],
 }
 
 export default function(state = initialState, action){

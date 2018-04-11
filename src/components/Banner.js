@@ -1,10 +1,7 @@
 import React from 'react';
-import bannerImage from '../static/banner.jpg';
 
-const Banner = () => (
-  <div className="main-banner">
-    <img src={bannerImage} />
-  </div>
+const Banner = (props) => (
+  <img className="main-banner" src={props.src} alt={props.alt} />
 );
 
 export default Banner;

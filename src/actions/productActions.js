@@ -10,7 +10,24 @@ async function _fetch(callback){
   return json;
 }
 
-export const fetchProducts = (filters) => dispatch => {
+const compare = {
+  'menorpreco': (a, b) => {
+    if (a.price < b.price)
+      return -1;
+    if (a.price > b.price)
+      return 1;
+    return 0;
+  },
+  'maiorpreco': (a, b) => {
+    if (a.price > b.price)
+      return -1;
+    if (a.price < b.price)
+      return 1;
+    return 0;
+  }
+}
+
+export const fetchProducts = (filters, sortBy) => dispatch => {
 
   _fetch()
     .then(json => {
@@ -19,6 +36,12 @@ export const fetchProducts = (filters) => dispatch => {
       if(filters && filters.length > 0){
         products = products.filter( p => filters.find( f => p.availableSizes.find( size => size === f ) ) )
       }
+
+      if(!!sortBy){
+        products = products.sort(compare[sortBy]);
+      }
+
+      console.log(products);
 
       return dispatch({
         type: FETCH_PRODUCTS,

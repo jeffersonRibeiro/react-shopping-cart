@@ -13,21 +13,10 @@ import util from '../../util';
 
 
 class FloatCart extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isOpen: false
-    };
-
-    this.openFloatCart = this.openFloatCart.bind(this);
-    this.closeFloatCart = this.closeFloatCart.bind(this);
-
-    this.addProduct = this.addProduct.bind(this);
-    this.removeProduct = this.removeProduct.bind(this);
-
-    this.proceedToCheckout = this.proceedToCheckout.bind(this);
-  }
+  
+  state = {
+    isOpen: false,
+  };
 
   componentWillMount() {
     this.props.loadCart(JSON.parse(persistentCart().get()) || []);
@@ -55,15 +44,15 @@ class FloatCart extends Component {
     }
   }
 
-  openFloatCart() {
+  openFloatCart = () => {
     this.setState({ isOpen: true });
   }
 
-  closeFloatCart() {
+  closeFloatCart = () => {
     this.setState({ isOpen: false });
   }
 
-  addProduct(product) {
+  addProduct = (product) => {
     const { cartProducts, updateCart } = this.props;
     let productAlreadyInCart = false;
 
@@ -82,7 +71,7 @@ class FloatCart extends Component {
     this.openFloatCart();
   }
 
-  removeProduct(product) {
+  removeProduct = (product) => {
     const { cartProducts, updateCart } = this.props;
 
     const index = cartProducts.findIndex(p => p.id === product.id);
@@ -92,7 +81,7 @@ class FloatCart extends Component {
     }
   }
 
-  proceedToCheckout() {
+  proceedToCheckout = () => {
     const { totalPrice, productQuantity, currencyFormat, currencyId } = this.props.cartTotals;
 
     if (!productQuantity) {
@@ -199,7 +188,7 @@ const mapStateToProps = state => ({
   cartProducts: state.cartProducts.items,
   newProduct: state.cartProducts.item,
   productToRemove: state.cartProducts.itemToRemove,
-  cartTotals: state.cartTotals.item
+  cartTotals: state.cartTotals.item,
 });
 
 export default connect(mapStateToProps, { loadCart, updateCart, removeProduct})(FloatCart);

@@ -25,14 +25,14 @@ export const updateCart = (cartProducts) => dispatch => {
     installments,
     totalPrice,
     currencyId: 'BRL',
-    currencyFormat: 'R$'
+    currencyFormat: 'R$',
   }
 
   persistentCart().persist(JSON.stringify(cartProducts));
 
   dispatch({
     type: UPDATE_CART,
-    payload: cartTotals
+    payload: cartTotals,
   });
 
 }

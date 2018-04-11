@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 
 class Checkbox extends Component {
+  
   state = {
     isChecked: false,
   }

@@ -2,7 +2,7 @@ import { UPDATE_FILTER } from '../actions/types';
 
 
 const initialState = {
-  item: []
+  item: [],
 };
 
 export default function(state = initialState, action) {
