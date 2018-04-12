@@ -33,7 +33,7 @@ export const fetchProducts = (filters, sortBy) => dispatch => {
     .then(json => {
       let { products } = json;
 
-      if(filters && filters.length > 0){
+      if(!!filters && filters.length > 0){
         products = products.filter( p => filters.find( f => p.availableSizes.find( size => size === f ) ) )
       }
 

@@ -15,7 +15,7 @@ class Selectbox extends Component {
   }
 
   render() {
-    const { classes, options, handleOnChange } = this.props;
+    const { classes, options } = this.props;
 
     return (
       <select onChange={ (e) => this.onChange(e) } className={classes}>
