@@ -1,2 +1,2 @@
 ## Responsive
-![alt text](./doc/img/store.png)
+!["Store features in action GIF"](./doc/img/react-store.gif)
