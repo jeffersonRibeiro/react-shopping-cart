@@ -1,7 +1,7 @@
 import { FETCH_PRODUCTS } from './types';
 
 
-const productsAPI = '//localhost:8001/api/products';
+const productsAPI = "//localhost:8001/api/products";
 
 async function _fetch(callback){
   const res = await fetch(productsAPI);
@@ -41,8 +41,6 @@ export const fetchProducts = (filters, sortBy) => dispatch => {
         products = products.sort(compare[sortBy]);
       }
 
-      console.log(products);
-
       return dispatch({
         type: FETCH_PRODUCTS,
         payload: products
@@ -51,6 +49,6 @@ export const fetchProducts = (filters, sortBy) => dispatch => {
     })
     .catch(err => {
       console.log(err);
-      throw new Error('Não foi possível obter os prodtos. Tente novamente mais tarde.');
+      throw new Error('Não foi possível obter os produtos. Tente novamente mais tarde.');
     });
 }

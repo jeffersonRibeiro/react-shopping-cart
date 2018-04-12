@@ -21,7 +21,7 @@ main {
 }
 
 /* MAC scrollbar para desktop*/
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 640px){
     .float-cart__content::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 10px;
@@ -480,7 +480,13 @@ footer {
 }
 
 @media only screen and (max-width : 1024px) {
+    .filters {
+        width: 20%;
+    }
+
     .shelf-container {
+        width: 80%;
+
         .shelf-item {
             width: 33.33%;
 
@@ -488,10 +494,17 @@ footer {
             }
         }
     }
+
 }
 
 @media only screen and (max-width : 640px) {
+    .filters {
+        width: 25%;
+    }
+
     .shelf-container {
+        width: 75%;
+
         .shelf-item {
             width: 50%;
             padding: 10px;
@@ -525,8 +538,37 @@ footer {
     }
 }
 
-@media only screen and (max-width : 360px) {
+@media only screen and (max-width : 460px) {
+    main {
+        padding: 2%;
+    }
+
+    .filters {
+        width: 100%;
+        text-align: center;
+        
+        .title {
+            margin-bottom: 15px;
+        }
+    }
+
+    .shelf-container-header {
+        .products-found {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .sort {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
     .shelf-container {
+        width: 100%;
+
         .shelf-item {
             width: 100%;
         }

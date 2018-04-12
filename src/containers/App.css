@@ -13,7 +13,7 @@ main {
   clear: both; }
 
 /* MAC scrollbar para desktop*/
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 640px) {
   .float-cart__content::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 10px;
@@ -26,15 +26,6 @@ main {
 .float-cart__content {
   height: 100%;
   overflow-y: scroll; }
-
-header {
-  margin: 0;
-  text-align: center;
-  padding: 20px 0;
-  background-color: #000;
-  color: #ececec; }
-  header .title {
-    margin: 0px; }
 
 .main-banner {
   width: 100%; }
@@ -340,16 +331,24 @@ footer {
         background-color: #000; }
 
 @media only screen and (max-width: 1024px) {
-  .shelf-container .shelf-item {
-    width: 33.33%; } }
+  .filters {
+    width: 20%; }
+  .shelf-container {
+    width: 80%; }
+    .shelf-container .shelf-item {
+      width: 33.33%; } }
 
 @media only screen and (max-width: 640px) {
-  .shelf-container .shelf-item {
-    width: 50%;
-    padding: 10px; }
-    .shelf-container .shelf-item__title {
-      margin-top: 5px;
-      padding: 0; }
+  .filters {
+    width: 25%; }
+  .shelf-container {
+    width: 75%; }
+    .shelf-container .shelf-item {
+      width: 50%;
+      padding: 10px; }
+      .shelf-container .shelf-item__title {
+        margin-top: 5px;
+        padding: 0; }
   .float-cart {
     width: 100%;
     right: -100%; }
@@ -362,6 +361,22 @@ footer {
     .float-cart__header {
       padding: 25px 0; } }
 
-@media only screen and (max-width: 360px) {
-  .shelf-container .shelf-item {
-    width: 100%; } }
+@media only screen and (max-width: 460px) {
+  main {
+    padding: 2%; }
+  .filters {
+    width: 100%;
+    text-align: center; }
+    .filters .title {
+      margin-bottom: 15px; }
+  .shelf-container-header .products-found {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0; }
+  .shelf-container-header .sort {
+    width: 100%;
+    text-align: center; }
+  .shelf-container {
+    width: 100%; }
+    .shelf-container .shelf-item {
+      width: 100%; } }
