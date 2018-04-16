@@ -70,7 +70,7 @@ The application will start automatically in your browser on `http://localhost:30
 <br/>
 <br/>
 
-Made with ❤️ by [Jefferson Ribeiro](http://www.jeffersonribeiro.com/)
+[Jefferson Ribeiro](http://www.jeffersonribeiro.com/)
 
 
 
