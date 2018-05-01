@@ -67,7 +67,6 @@ npm start
 
 The application will start automatically in your browser on `http://localhost:3000`
 
-<br/>
 
 ### Copyright and license
 The MIT License (MIT). Please see License File for more information.
@@ -76,6 +75,7 @@ The MIT License (MIT). Please see License File for more information.
 - [ ] Write tests
 - [ ] Host on Heroku
 
+<br/>
 <br/>
 
 <p align="center"><img src="https://avatars2.githubusercontent.com/u/20846473?s=70&v=4" width="35" height="35"/></p>
