@@ -67,6 +67,7 @@ npm start
 
 The application will start automatically in your browser on `http://localhost:3000`
 
+<br/>
 
 ### Copyright and license
 The MIT License (MIT). Please see License File for more information.
