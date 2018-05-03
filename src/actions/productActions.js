@@ -2,7 +2,7 @@ import { FETCH_PRODUCTS } from './types';
 import axios from 'axios';
 
 
-const productsAPI = "//localhot:8001/api/products";
+const productsAPI = "//localhost:8001/api/products";
 
 
 const compare = {
