@@ -68,10 +68,19 @@ npm start
 The application will start automatically in your browser on `http://localhost:3000`
 
 <br/>
+
+### Copyright and license
+The MIT License (MIT). Please see License File for more information.
+
+### Todo
+- [ ] Write tests
+- [ ] Host on Heroku
+
+<br/>
 <br/>
 
-Made with ❤️ by [Jefferson Ribeiro](http://www.jeffersonribeiro.com/)
-
-
-
+<p align="center"><img src="https://avatars2.githubusercontent.com/u/20846473?s=70&v=4" width="35" height="35"/></p>
+<p align="center">
+<sub>A little project by <a href="http://www.jeffersonribeiro.com/">Jefferson Ribeiro</a></sub>
+</p>
 
