@@ -1,14 +1,9 @@
 import { FETCH_PRODUCTS } from './types';
+import axios from 'axios';
 
 
-const productsAPI = "//localhost:8001/api/products";
+const productsAPI = "//localhot:8001/api/products";
 
-async function _fetch(callback){
-  const res = await fetch(productsAPI);
-  const json = await res.json();
-
-  return json;
-}
 
 const compare = {
   'menorpreco': (a, b) => {
@@ -29,9 +24,9 @@ const compare = {
 
 export const fetchProducts = (filters, sortBy) => dispatch => {
 
-  _fetch()
-    .then(json => {
-      let { products } = json;
+  axios.get(productsAPI)
+    .then(res => {
+      let { products } = res.data;
 
       if(!!filters && filters.length > 0){
         products = products.filter( p => filters.find( f => p.availableSizes.find( size => size === f ) ) )

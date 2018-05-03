@@ -4,6 +4,7 @@
   "description": "Teste de recrutamento Netshoes",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "node-sass-chokidar": "^1.2.2",
