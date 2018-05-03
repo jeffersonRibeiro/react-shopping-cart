@@ -28,6 +28,7 @@ friendly user experience with instant visual updates and scaleable code in ecomm
 - Nodejs
   * Express CORS Middleware
   * Nodemon - for watching for server changes
+- Axios - for promise HTTP requests
 - Native local storage API - for product persistence in floating cart
 - CSS
   * BEM methodology
