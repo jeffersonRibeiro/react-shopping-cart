@@ -1,5 +1,5 @@
 {
-  "name": "react-store",
+  "name": "react-shopping-cart",
   "version": "0.1.0",
   "description": "Teste de recrutamento Netshoes",
   "private": true,
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeffersonRibeiro/react-store.git"
+    "url": "git+https://github.com/jeffersonRibeiro/react-shopping-cart.git"
   },
   "keywords": [
     "Netshoes",
@@ -40,7 +40,7 @@
     "nodemon": "^1.17.3"
   },
   "bugs": {
-    "url": "https://github.com/jeffersonRibeiro/react-store/issues"
+    "url": "https://github.com/jeffersonRibeiro/react-shopping-cart/issues"
   },
-  "homepage": "https://github.com/jeffersonRibeiro/react-store#readme"
+  "homepage": "https://react-shopping-cart-67954.firebaseapp.com/"
 }
