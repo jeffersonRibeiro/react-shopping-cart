@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from "react-redux";
 
-import { updateFilters } from '../../actions/filterActions';
+import { updateFilters } from '../../store/actions/filterActions';
 
 import Checkbox from '../Checkbox';
 

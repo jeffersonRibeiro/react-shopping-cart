@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { fetchProducts } from '../../actions/productActions';
-import { addProduct } from '../../actions/floatCartActions';
+import { fetchProducts } from '../../store/actions/productActions';
+import { addProduct } from '../../store/actions/floatCartActions';
 
 import Product from './Product';
 import Filter from './Filter';

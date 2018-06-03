@@ -6,12 +6,12 @@ import bannerImage from '../static/banner.jpg';
 import { Provider } from 'react-redux';
 
 
-import Main from './Main';
+import Shelf from '../components/shelf/Shelf';
 import Banner from '../components/Banner';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 import FloatCart from './../components/floatCart/FloatCart';
 
-import store from './../store';
+import store from '../store';
 import Corner from '../components/github/Corner';
 
 
@@ -22,7 +22,9 @@ class App extends Component {
         <div className="App">
           <Corner />
           <Banner src={bannerImage} alt='Promoção Camisas do Timão' />
-          <Main />
+          <main>
+            <Shelf />
+          </main>
           <Footer />
           <FloatCart />
         </div>

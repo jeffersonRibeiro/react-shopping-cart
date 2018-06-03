@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { loadCart, removeProduct } from '../../actions/floatCartActions';
-import { updateCart } from '../../actions/updateCartActions';
+import { loadCart, removeProduct } from '../../store/actions/floatCartActions';
+import { updateCart } from '../../store/actions/updateCartActions';
 
 import CartProduct from './CartProduct';
 
