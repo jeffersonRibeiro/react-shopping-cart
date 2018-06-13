@@ -1,4 +1,4 @@
-## Simple product page with shopping cart built in React Redux
+## Simple ecommerce cart application built using React Redux
 <p align="center">
   <img src="https://img.shields.io/badge/React-16.3.1-blue.svg">
   <img src="https://img.shields.io/badge/Redux-3.7.2-blue.svg?colorB=764abc">
