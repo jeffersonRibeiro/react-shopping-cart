@@ -74,8 +74,8 @@ The application will start automatically in your browser on `http://localhost:30
 The MIT License (MIT). Please see License File for more information.
 
 ### Todo
+- [ ] Implement filters by URL params using react-router
 - [ ] Write tests
-- [ ] Host on Heroku
 
 <br/>
 <br/>
