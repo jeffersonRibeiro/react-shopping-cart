@@ -49,6 +49,7 @@ footer {
     margin-bottom: 20px; }
   .filters-available-size {
     display: inline-block;
+    margin-bottom: 10px;
     /* Customize the label (the container) */ }
     .filters-available-size label {
       display: inline-block;

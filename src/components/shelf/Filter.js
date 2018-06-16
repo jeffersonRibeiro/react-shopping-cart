@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { updateFilters } from '../../store/actions/filterActions';
 
 import Checkbox from '../Checkbox';
+import StarButton from '../github/StarButton';
 
 const availableSizes = [
   '40',
@@ -26,7 +27,7 @@ class Filter extends Component {
   toggleCheckbox = (label) => {
     if (this.selectedCheckboxes.has(label)) {
       this.selectedCheckboxes.delete(label);
-    } else {
+  } else {
       this.selectedCheckboxes.add(label);
     }
 
@@ -51,6 +52,7 @@ class Filter extends Component {
       <div className="filters">
         <h4 className="title">Tamanhos:</h4>
         {this.createCheckboxes()}
+        <StarButton />
       </div>
     );
   }
