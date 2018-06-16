@@ -44,6 +44,12 @@ footer {
 .filters {
   width: 15%;
   float: left; }
+  .filters .star-button-container {
+    text-align: center; }
+    .filters .star-button-container small {
+      color: #aaa;
+      margin-bottom: 8px;
+      display: inline-block; }
   .filters .title {
     margin-top: 2px;
     margin-bottom: 20px; }

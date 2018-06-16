@@ -1,7 +1,11 @@
 import React from 'react';
 
 const StarButton = () => (
-  <a className="github-button" href="https://github.com/jeffersonRibeiro/react-shopping-cart" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star jeffersonRibeiro/react-shopping-cart on GitHub">Star</a>  
+  <div className="star-button-container">
+    <small>Leave a star on Github if this example was helpful</small>
+    <a className="github-button" href="https://github.com/jeffersonRibeiro/react-shopping-cart" data-size="large" aria-label="Star jeffersonRibeiro/react-shopping-cart on GitHub">Star</a>
+  </div>
 );
 
 export default StarButton;
+

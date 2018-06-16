@@ -64,6 +64,16 @@ footer {
     width: 15%;
     float: left;
 
+    .star-button-container {
+      text-align: center;
+      small {
+        color: #aaa;
+        margin-bottom: 8px;
+        display: inline-block;
+      }
+
+    }
+
     .title {
         margin-top: 2px;
         margin-bottom: 20px;
