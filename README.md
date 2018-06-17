@@ -75,7 +75,6 @@ The MIT License (MIT). Please see License File for more information.
 
 ### Todo
 - [ ] Implement filters by URL params using react-router
-- [ ] Write tests
 
 <br/>
 <br/>
