@@ -1,7 +1,7 @@
 {
   "name": "react-shopping-cart",
   "version": "0.1.0",
-  "description": "Teste de recrutamento Netshoes",
+  "description": "Shopping cart",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
