@@ -38,7 +38,7 @@ class Shelf extends Component {
 
   render() {
     const { products } = this.props;
-
+    
     const p = products.map(p => {
       return (
         <Product

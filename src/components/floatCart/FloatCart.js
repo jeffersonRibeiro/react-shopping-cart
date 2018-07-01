@@ -79,7 +79,7 @@ class FloatCart extends Component {
     const { totalPrice, productQuantity, currencyFormat, currencyId } = this.props.cartTotals;
 
     if (!productQuantity) {
-      alert("Adicione algum produto na sacola!");
+      alert("Add some product in the bag!");
     }else {
       alert(`Checkout - Subtotal: ${currencyFormat} ${util.formatPrice(totalPrice, currencyId)}`);
     }
@@ -106,7 +106,7 @@ class FloatCart extends Component {
 
     return (
       <div className={classes.join(' ')}>
-        {/* Se carrinho aberto, mostrar botão (x) de fechar */}
+        {/* If cart open, show close (x) button */}
         {this.state.isOpen && (
           <div
             onClick={() => this.closeFloatCart()}
@@ -116,7 +116,7 @@ class FloatCart extends Component {
           </div>
         )}
 
-        {/* Se carrinho fechado, mostrar sacola com quantidade de produto e ação de abrir carrinho */}
+        {/* If cart is closed, show bag with quantity of product and open cart action */}
         {!this.state.isOpen && (
           <span
             onClick={() => this.openFloatCart()}
@@ -133,14 +133,14 @@ class FloatCart extends Component {
                 {cartTotals.productQuantity}
               </span>
             </span>
-            <span className="header-title">SACOLA</span>
+            <span className="header-title">Bag</span>
           </div>
 
           <div className="float-cart__shelf-container">
             {products}
             {!products.length && (
               <p className="shelf-empty">
-                Adicione algum produto na sacola <br />:)
+                Add some product in the bag <br />:)
               </p>
             )}
           </div>
@@ -154,13 +154,13 @@ class FloatCart extends Component {
               <small className="sub-price__installment">
                 {!!cartTotals.installments && (
                   <span>
-                    {`OU EM ATÉ ${cartTotals.installments} x ${cartTotals.currencyFormat} ${util.formatPrice(cartTotals.totalPrice / cartTotals.installments, cartTotals.currencyId)}`}
+                    {`OR UP TO ${cartTotals.installments} x ${cartTotals.currencyFormat} ${util.formatPrice(cartTotals.totalPrice / cartTotals.installments, cartTotals.currencyId)}`}
                   </span>
                 )}
               </small>
             </div>
             <div onClick={() => this.proceedToCheckout()} className="buy-btn">
-              Finalizar Pedido
+              Checkout
             </div>
           </div>
         </div>

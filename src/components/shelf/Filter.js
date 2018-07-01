@@ -9,13 +9,13 @@ import Checkbox from '../Checkbox';
 import StarButton from '../github/StarButton';
 
 const availableSizes = [
-  '40',
-  '41',
-  '43',
+  'XS',
   'S',
-  'G',
-  'GG',
-  'GGG',
+  'M',
+  'ML',
+  'L',
+  'XL',
+  'XXL',
 ];
 
 class Filter extends Component {
@@ -50,9 +50,9 @@ class Filter extends Component {
   render() {
     return (
       <div className="filters">
-        <h4 className="title">Tamanhos:</h4>
+        <h4 className="title">Sizes:</h4>
         {this.createCheckboxes()}
-        {/* <StarButton /> */}
+        <StarButton />
       </div>
     );
   }

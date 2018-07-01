@@ -6,14 +6,14 @@ const productsAPI = "https://react-shopping-cart-67954.firebaseio.com/products.j
 
 
 const compare = {
-  'menorpreco': (a, b) => {
+  'lowestprice': (a, b) => {
     if (a.price < b.price)
       return -1;
     if (a.price > b.price)
       return 1;
     return 0;
   },
-  'maiorpreco': (a, b) => {
+  'highestprice': (a, b) => {
     if (a.price > b.price)
       return -1;
     if (a.price < b.price)
@@ -44,6 +44,6 @@ export const fetchProducts = (filters, sortBy) => dispatch => {
     })
     .catch(err => {
       console.log(err);
-      throw new Error('Não foi possível obter os produtos. Tente novamente mais tarde.');
+      throw new Error('Could not fetch products. Try again later.');
     });
 }
