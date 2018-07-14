@@ -7,7 +7,7 @@ body {
 main {
   padding: 20px 2%;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 20px auto 0 auto; }
 
 .clearfix {
   clear: both; }
@@ -31,12 +31,11 @@ main {
   width: 100%; }
 
 footer {
-  color: #ececec;
+  color: #aaa;
   padding: 20px 0;
-  text-align: center;
-  background-color: #000; }
+  text-align: center; }
   footer a {
-    color: #ececec;
+    color: #aaa;
     text-decoration: none; }
     footer a:hover {
       text-decoration: underline; }
@@ -115,11 +114,13 @@ footer {
     .shelf-container-header .sort {
       float: right; }
       .shelf-container-header .sort select {
+        background-color: #fff;
         outline: none;
         border: 1px solid #ececec;
-        border-radius: 4px;
-        padding: 5px 10px;
+        border-radius: 2px;
         margin-left: 10px;
+        width: auto;
+        height: 35px;
         cursor: pointer; }
         .shelf-container-header .sort select:hover {
           border: 1px solid #5b5a5e; }
@@ -370,7 +371,8 @@ footer {
 
 @media only screen and (max-width: 460px) {
   main {
-    padding: 2%; }
+    padding: 2%;
+    margin-top: 75px; }
   .filters {
     width: 100%;
     text-align: center; }
