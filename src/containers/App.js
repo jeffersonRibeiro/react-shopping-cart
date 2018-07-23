@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 
 
 import Shelf from '../components/shelf/Shelf';
-// import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import FloatCart from './../components/floatCart/FloatCart';
 
@@ -21,7 +20,6 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Corner />
-          {/* <Banner src={bannerImage} alt='Promoção Camisas do Timão' /> */}
           <main>
             <Shelf />
           </main>
