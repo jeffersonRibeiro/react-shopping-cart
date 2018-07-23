@@ -9,12 +9,19 @@ import Product from './Product';
 import Filter from './Filter';
 import ShelfHeader from './ShelfHeader';
 import Clearfix from '../Clearfix';
+import Spinner from '../Spinner';
 
 
 class Shelf extends Component {
+  state  = {
+    loading: false,
+  }
 
   componentWillMount() {
-    this.props.fetchProducts();
+    this.setState({ loading: true });
+    this.props.fetchProducts(this.props.filters, this.props.sort, () => {
+      this.setState({ loading: false });
+    });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,11 +36,18 @@ class Shelf extends Component {
   }
 
   handleFilter = (filters) => {
-    this.props.fetchProducts(filters);
+    this.setState({ loading: true});
+    this.props.fetchProducts(filters, this.props.sort, () => {
+      this.setState({ loading: false })
+    });
   }
 
   handleSort = (sort) => {
-    this.props.fetchProducts(this.props.filters, sort);
+    this.setState({ loading: true });
+
+    this.props.fetchProducts(this.props.filters, sort, () => {
+      this.setState({ loading: false });
+    });
   }
 
   render() {
@@ -51,6 +65,9 @@ class Shelf extends Component {
 
     return (
       <React.Fragment>
+        {this.state.loading &&
+          <Spinner />
+        }
         <Filter />  
         <div className="shelf-container">
           <ShelfHeader productsLength={products.length}/>
