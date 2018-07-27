@@ -18,34 +18,39 @@ class Shelf extends Component {
   }
 
   componentWillMount() {
+    const { filters, sort, fetchProducts } = this.props;
+    
     this.setState({ loading: true });
-    this.props.fetchProducts(this.props.filters, this.props.sort, () => {
+    fetchProducts(filters, sort, () => {
       this.setState({ loading: false });
     });
   }
 
   componentWillReceiveProps(nextProps) {
-    const { filters, sort } = nextProps;
+    const { nextFilters, nextSort } = nextProps;
 
-    if (filters !== this.props.filters){
-      this.handleFilter(filters);
+    if (nextFilters !== this.props.filters){
+      this.handleFilter(nextFilters);
     }
-    if (sort !== this.props.sort) {
-      this.handleSort(sort);
+    if (nextSort !== this.props.sort) {
+      this.handleSort(nextSort);
     }
   }
 
   handleFilter = (filters) => {
+    const { sort, fetchProducts } = this.props;
+    
     this.setState({ loading: true});
-    this.props.fetchProducts(filters, this.props.sort, () => {
+    fetchProducts(filters, sort, () => {
       this.setState({ loading: false })
     });
   }
 
   handleSort = (sort) => {
+    const { filters, fetchProducts } = this.props;
     this.setState({ loading: true });
 
-    this.props.fetchProducts(this.props.filters, sort, () => {
+    fetchProducts(filters, sort, () => {
       this.setState({ loading: false });
     });
   }
