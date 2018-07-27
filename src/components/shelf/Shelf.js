@@ -36,10 +36,8 @@ class Shelf extends Component {
   }
 
   handleFetchProducts = (filters = this.props.filters, sort = this.props.sort) => {
-    const { fetchProducts } = this.props;
-
     this.setState({ loading: true });
-    fetchProducts(filters, sort, () => {
+    this.props.fetchProducts(filters, sort, () => {
       this.setState({ loading: false });
     });
   }
