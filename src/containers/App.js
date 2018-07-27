@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import bannerImage from '../static/banner.jpg';
-
 import { Provider } from 'react-redux';
 
 

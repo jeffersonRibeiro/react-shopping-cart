@@ -27,11 +27,12 @@ class Shelf extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { nextFilters, nextSort } = nextProps;
+    const { filters: nextFilters, sort: nextSort } = nextProps;
 
     if (nextFilters !== this.props.filters){
       this.handleFilter(nextFilters);
     }
+
     if (nextSort !== this.props.sort) {
       this.handleSort(nextSort);
     }
@@ -48,8 +49,8 @@ class Shelf extends Component {
 
   handleSort = (sort) => {
     const { filters, fetchProducts } = this.props;
-    this.setState({ loading: true });
 
+    this.setState({ loading: true });
     fetchProducts(filters, sort, () => {
       this.setState({ loading: false });
     });
