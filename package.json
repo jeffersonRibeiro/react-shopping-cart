@@ -7,13 +7,13 @@
     "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "node-sass-chokidar": "^1.2.2",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "node-sass-chokidar": "^1.3.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^1.1.5",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -35,7 +35,7 @@
   "author": "Jefferson Ribeiro",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.18.4"
   },
   "bugs": {
     "url": "https://github.com/jeffersonRibeiro/react-shopping-cart/issues"
