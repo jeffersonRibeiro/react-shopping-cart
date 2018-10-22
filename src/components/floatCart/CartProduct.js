@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 
-import Thumb from "./../Thumb";
+import Thumb from './../Thumb';
 
 import util from '../../util';
 
@@ -31,7 +31,7 @@ class CartProduct extends Component {
     }
 
     return (
-      <div className={classes.join(" ")}>
+      <div className={classes.join(' ')}>
         <div
           className="shelf-item__del"
           onMouseOver={() => this.handleMouseOver()}
