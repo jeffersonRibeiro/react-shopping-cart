@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 
 import Thumb from './../Thumb';
-
 import util from '../../util';
 
 

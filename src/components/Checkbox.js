@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 
-
 class Checkbox extends Component {
   
   state = {

@@ -1,29 +1,17 @@
+const path = require('path');
+
 const express = require('express');
 const cors = require('cors');
+
 const app = express();
-
-// Porta para subir o servidor
-const serverPort = 8001;
-
-// Seta as rotas default da API
-const routes = {
-	products: {
-		get: '/api/products'
-	}
-};
-
-// Aplica o CORS para aceitar requisições de outros domínios
 app.use(cors());
 
-// Registra a rota GET default, enviando o JSON como retorno
-app.get(routes.products.get, function (req, res) {
-    res.sendFile(__dirname + '/data/products.json');
+const port = 8001;
+
+app.get('/api/products', (req, res) => {
+    res.sendFile(path.join(__dirname, 'data', 'products.json'));
 });
 
-app.use('*', function (req, res) {
-    res.redirect(routes.products.get);
+app.listen(port, () => {
+  console.log(`[products] API listening on port ${port}.`);
 });
-
-// Inicia o servidor e avisa o usuário
-app.listen(serverPort);
-console.log(`[products] API escutando na porta ${serverPort}.`);
