@@ -1,9 +1,9 @@
 ## 🛍️ Simple ecommerce cart application built with React & Redux
 <p align="center">
-  <img src="https://img.shields.io/badge/React-16.5.2-blue.svg">
+  <img src="https://img.shields.io/badge/React-16.6.1-blue.svg">
   <img src="https://img.shields.io/badge/Redux-3.7.2-blue.svg?colorB=764abc">
   <img src="https://img.shields.io/badge/Nodejs-6.10.2-blue.svg?colorB=90c53f">
-  <img src="https://img.shields.io/badge/Express-4.16.3-blue.svg?colorB=47535e">
+  <img src="https://img.shields.io/badge/Express-4.16.4-blue.svg?colorB=47535e">
   <br/>
 </p>
 
