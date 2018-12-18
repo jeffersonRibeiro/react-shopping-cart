@@ -36,9 +36,7 @@ friendly user experience with instant visual updates and scaleable code in ecomm
 ## Getting started
 Don't have time? Try on CodeSandbox :)
 
-<a href="https://codesandbox.io/s/github/jeffersonRibeiro/react-shopping-cart/tree/master/" target="_blank" title="Edit react-shopping-cart">
-<img src="https://codesandbox.io/static/img/play-codesandbox.svg">
-</a>
+[![Edit react-shopping-cart](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/jeffersonRibeiro/react-shopping-cart/tree/master/)
 
 #### Requirements
 
