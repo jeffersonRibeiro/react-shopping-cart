@@ -262,7 +262,7 @@ footer {
       margin-left: -100px; }
       .float-cart__shelf-container .shelf-empty.entered {
         opacity: 1; }
-      .float-cart__shelf-container .shelf-empty.exiting {
+      .float-cart__shelf-container .shelf-empty.exited, .float-cart__shelf-container .shelf-empty.exiting {
         opacity: 0; }
     .float-cart__shelf-container .shelf-item {
       position: relative;

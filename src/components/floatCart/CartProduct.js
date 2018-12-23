@@ -10,12 +10,10 @@ class CartProduct extends Component {
   };
 
   handleMouseOver = () => {
-    return;
     this.setState({ isMouseOver: true });
   };
 
   handleMouseOut = () => {
-    return;
     this.setState({ isMouseOver: false });
   };
 

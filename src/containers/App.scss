@@ -363,6 +363,7 @@ footer {
       &.entered {
         opacity: 1;
       }
+      &.exited,
       &.exiting {
         opacity: 0;
       }

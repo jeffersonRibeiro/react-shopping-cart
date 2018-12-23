@@ -18,25 +18,7 @@ class FloatCart extends Component {
     isOpen: false
   };
 
-  componentWillMount() {
-    this.props.loadCart(JSON.parse(persistentCart().get()) || []);
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.props.updateCart(this.props.cartProducts);
-    }, 0);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.newProduct !== this.props.newProduct) {
-      this.addProduct(nextProps.newProduct);
-    }
-
-    if (nextProps.productToRemove !== this.props.productToRemove) {
-      this.removeProduct(nextProps.productToRemove);
-    }
-  }
+  floatCartContent = React.createRef();
 
   openFloatCart = () => {
     this.setState({ isOpen: true });
@@ -95,12 +77,33 @@ class FloatCart extends Component {
     }
   };
 
+  componentWillMount() {
+    this.props.loadCart(JSON.parse(persistentCart().get()) || []);
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.updateCart(this.props.cartProducts);
+    }, 0);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.newProduct !== this.props.newProduct) {
+      this.addProduct(nextProps.newProduct);
+    }
+
+    if (nextProps.productToRemove !== this.props.productToRemove) {
+      this.removeProduct(nextProps.productToRemove);
+    }
+  }
+
   render() {
     const { cartTotals, cartProducts, removeProduct } = this.props;
+    const transitionTimeout = 200;
 
     let products = cartProducts.map(p => {
       return (
-        <CSSTransition key={p.id} timeout={200} classNames="fade">
+        <CSSTransition key={p.id} timeout={transitionTimeout} classNames="fade">
           <CartProduct product={p} removeProduct={removeProduct} />
         </CSSTransition>
       );
@@ -126,15 +129,19 @@ class FloatCart extends Component {
 
         {/* If cart is closed, show bag with quantity of product and open cart action */}
         {!this.state.isOpen && (
-          <span
-            onClick={() => this.openFloatCart()}
-            className="bag bag--float-cart-closed"
-          >
-            <span className="bag__quantity">{cartTotals.productQuantity}</span>
-          </span>
+          <Transition timeout={transitionTimeout}>
+            <span
+              onClick={() => this.openFloatCart()}
+              className="bag bag--float-cart-closed"
+            >
+              <span className="bag__quantity">
+                {cartTotals.productQuantity}
+              </span>
+            </span>
+          </Transition>
         )}
 
-        <div className="float-cart__content">
+        <div ref={this.floatCartContent} className="float-cart__content">
           <div className="float-cart__header">
             <span className="bag">
               <span className="bag__quantity">
@@ -146,7 +153,7 @@ class FloatCart extends Component {
 
           <div className="float-cart__shelf-container">
             <TransitionGroup component={null}>{products}</TransitionGroup>
-            <Transition in={products.length === 0}>
+            <Transition in={products.length === 0} timeout={transitionTimeout}>
               {state => {
                 return (
                   <p className={`shelf-empty ${state}`}>
