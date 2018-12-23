@@ -155,7 +155,7 @@ class FloatCart extends Component {
               {state => {
                 return (
                   <p className={`shelf-empty ${state}`}>
-                    Add some product in the bag <br />
+                    Add some products in the bag <br />
                     :)
                   </p>
                 );
