@@ -13,6 +13,7 @@
     "react-dom": "^16.6.1",
     "react-redux": "^5.1.1",
     "react-scripts": "^2.1.1",
+    "react-transition-group": "^2.5.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.3.0"
   },
@@ -41,5 +42,11 @@
   "bugs": {
     "url": "https://github.com/jeffersonRibeiro/react-shopping-cart/issues"
   },
-  "homepage": "https://react-shopping-cart-67954.firebaseapp.com/"
+  "homepage": "https://react-shopping-cart-67954.firebaseapp.com/",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

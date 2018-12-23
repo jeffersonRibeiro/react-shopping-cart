@@ -2,7 +2,7 @@
 body {
   margin: 0;
   color: #1b1a20;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 main {
   padding: 20px 2%;
@@ -25,7 +25,8 @@ main {
 
 .float-cart__content {
   height: 100%;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .main-banner {
   width: 100%; }
@@ -154,7 +155,7 @@ footer {
       padding: 0 20px;
       height: 45px; }
       .shelf-container .shelf-item__title::before {
-        content: '';
+        content: "";
         width: 20px;
         height: 2px;
         background-color: #eabf00;
@@ -247,18 +248,43 @@ footer {
       font-size: 1.2em;
       vertical-align: middle; }
   .float-cart__shelf-container {
+    position: relative;
     min-height: 280px; }
     .float-cart__shelf-container .shelf-empty {
       color: #ececec;
       text-align: center;
-      line-height: 40px; }
+      line-height: 40px;
+      transition: all 200ms;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -100px;
+      margin-top: -60px; }
+      .float-cart__shelf-container .shelf-empty.entered {
+        opacity: 1; }
+      .float-cart__shelf-container .shelf-empty.exiting {
+        opacity: 0; }
     .float-cart__shelf-container .shelf-item {
       position: relative;
       box-sizing: border-box;
       padding: 5%;
       transition: background-color 0.2s, opacity 0.2s; }
+      .float-cart__shelf-container .shelf-item.fade-enter {
+        opacity: 0.01;
+        left: 50%; }
+        .float-cart__shelf-container .shelf-item.fade-enter-active {
+          opacity: 1;
+          left: 0%;
+          transition: all 200ms; }
+      .float-cart__shelf-container .shelf-item.fade-exit {
+        opacity: 1;
+        left: 0%; }
+        .float-cart__shelf-container .shelf-item.fade-exit-active {
+          opacity: 0;
+          left: -50%;
+          transition: all 200ms; }
       .float-cart__shelf-container .shelf-item::before {
-        content: '';
+        content: "";
         width: 90%;
         height: 2px;
         background-color: rgba(0, 0, 0, 0.2);
@@ -267,7 +293,8 @@ footer {
         left: 5%; }
       .float-cart__shelf-container .shelf-item--mouseover {
         background: #0c0b10; }
-        .float-cart__shelf-container .shelf-item--mouseover .shelf-item__details .title, .float-cart__shelf-container .shelf-item--mouseover .shelf-item__details .desc {
+        .float-cart__shelf-container .shelf-item--mouseover .shelf-item__details .title,
+        .float-cart__shelf-container .shelf-item--mouseover .shelf-item__details .desc {
           text-decoration: line-through;
           opacity: 0.6; }
         .float-cart__shelf-container .shelf-item--mouseover .shelf-item__price {
@@ -313,7 +340,8 @@ footer {
     box-sizing: border-box;
     padding: 5%;
     box-shadow: 0px -0.5em 1em rgba(0, 0, 0, 0.3); }
-    .float-cart__footer .sub, .float-cart__footer .sub-price {
+    .float-cart__footer .sub,
+    .float-cart__footer .sub-price {
       color: #5b5a5e;
       vertical-align: middle;
       display: inline-block; }

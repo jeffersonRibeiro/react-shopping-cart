@@ -1,36 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import Thumb from './../Thumb';
-import util from '../../util';
-
+import Thumb from "./../Thumb";
+import util from "../../util";
 
 class CartProduct extends Component {
-
   state = {
-    isMouseOver: false,
-  }
+    isMouseOver: false
+  };
 
   handleMouseOver = () => {
-    this.setState({isMouseOver: true});
-  }
+    return;
+    this.setState({ isMouseOver: true });
+  };
 
   handleMouseOut = () => {
-    this.setState({isMouseOver: false});
-  }
+    return;
+    this.setState({ isMouseOver: false });
+  };
 
-
-  render(){
+  render() {
     const { product, removeProduct } = this.props;
 
-    const classes = ['shelf-item'];
+    const classes = ["shelf-item"];
 
-    if(!!this.state.isMouseOver){
-      classes.push('shelf-item--mouseover');
+    if (!!this.state.isMouseOver) {
+      classes.push("shelf-item--mouseover");
     }
 
     return (
-      <div className={classes.join(' ')}>
+      <div className={classes.join(" ")}>
         <div
           className="shelf-item__del"
           onMouseOver={() => this.handleMouseOver()}
@@ -50,7 +49,9 @@ class CartProduct extends Component {
           </p>
         </div>
         <div className="shelf-item__price">
-          <p>{`${product.currencyFormat}  ${util.formatPrice(product.price)}`}</p>
+          <p>{`${product.currencyFormat}  ${util.formatPrice(
+            product.price
+          )}`}</p>
         </div>
 
         <div className="clearfix" />
@@ -59,10 +60,9 @@ class CartProduct extends Component {
   }
 }
 
-
 CartProduct.propTypes = {
   product: PropTypes.object.isRequired,
-  removeProduct: PropTypes.func.isRequired,
+  removeProduct: PropTypes.func.isRequired
 };
 
 export default CartProduct;

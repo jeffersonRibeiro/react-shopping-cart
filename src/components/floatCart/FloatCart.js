@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import {
+  TransitionGroup,
+  CSSTransition,
+  Transition
+} from "react-transition-group";
 
-import { connect } from 'react-redux';
-import { loadCart, removeProduct } from '../../store/actions/floatCartActions';
-import { updateCart } from '../../store/actions/updateCartActions';
-import CartProduct from './CartProduct';
+import { connect } from "react-redux";
+import { loadCart, removeProduct } from "../../store/actions/floatCartActions";
+import { updateCart } from "../../store/actions/updateCartActions";
+import CartProduct from "./CartProduct";
 import persistentCart from "../../persistentCart";
-import util from '../../util';
+import util from "../../util";
 
 class FloatCart extends Component {
-  
   state = {
-    isOpen: false,
+    isOpen: false
   };
 
   componentWillMount() {
-    this.props.loadCart( JSON.parse(persistentCart().get()) || [] );
+    this.props.loadCart(JSON.parse(persistentCart().get()) || []);
   }
 
   componentDidMount() {
@@ -36,13 +40,13 @@ class FloatCart extends Component {
 
   openFloatCart = () => {
     this.setState({ isOpen: true });
-  }
+  };
 
   closeFloatCart = () => {
     this.setState({ isOpen: false });
-  }
+  };
 
-  addProduct = (product) => {
+  addProduct = product => {
     const { cartProducts, updateCart } = this.props;
     let productAlreadyInCart = false;
 
@@ -59,9 +63,9 @@ class FloatCart extends Component {
 
     updateCart(cartProducts);
     this.openFloatCart();
-  }
+  };
 
-  removeProduct = (product) => {
+  removeProduct = product => {
     const { cartProducts, updateCart } = this.props;
 
     const index = cartProducts.findIndex(p => p.id === product.id);
@@ -69,46 +73,54 @@ class FloatCart extends Component {
       cartProducts.splice(index, 1);
       updateCart(cartProducts);
     }
-  }
+  };
 
   proceedToCheckout = () => {
-    const { totalPrice, productQuantity, currencyFormat, currencyId } = this.props.cartTotals;
+    const {
+      totalPrice,
+      productQuantity,
+      currencyFormat,
+      currencyId
+    } = this.props.cartTotals;
 
     if (!productQuantity) {
       alert("Add some product in the bag!");
-    }else {
-      alert(`Checkout - Subtotal: ${currencyFormat} ${util.formatPrice(totalPrice, currencyId)}`);
+    } else {
+      alert(
+        `Checkout - Subtotal: ${currencyFormat} ${util.formatPrice(
+          totalPrice,
+          currencyId
+        )}`
+      );
     }
-  }
+  };
 
   render() {
     const { cartTotals, cartProducts, removeProduct } = this.props;
 
-    const products = cartProducts.map(p => {
+    let products = cartProducts.map(p => {
       return (
-        <CartProduct
-          product={p}
-          removeProduct={removeProduct}
-          key={p.id}
-        />
+        <CSSTransition key={p.id} timeout={200} classNames="fade">
+          <CartProduct product={p} removeProduct={removeProduct} />
+        </CSSTransition>
       );
     });
 
-    let classes = ['float-cart'];
+    let classes = ["float-cart"];
 
     if (!!this.state.isOpen) {
-      classes.push('float-cart--open');
+      classes.push("float-cart--open");
     }
 
     return (
-      <div className={classes.join(' ')}>
+      <div className={classes.join(" ")}>
         {/* If cart open, show close (x) button */}
         {this.state.isOpen && (
           <div
             onClick={() => this.closeFloatCart()}
             className="float-cart__close-btn"
           >
-          X
+            X
           </div>
         )}
 
@@ -133,24 +145,37 @@ class FloatCart extends Component {
           </div>
 
           <div className="float-cart__shelf-container">
-            {products}
-            {!products.length && (
-              <p className="shelf-empty">
-                Add some product in the bag <br />:)
-              </p>
-            )}
+            <TransitionGroup>{products}</TransitionGroup>
+            <Transition in={products.length === 0}>
+              {state => {
+                return (
+                  <p className={`shelf-empty ${state}`}>
+                    Add some product in the bag <br />
+                    :)
+                  </p>
+                );
+              }}
+            </Transition>
           </div>
 
           <div className="float-cart__footer">
             <div className="sub">SUBTOTAL</div>
             <div className="sub-price">
               <p className="sub-price__val">
-                {`${cartTotals.currencyFormat} ${util.formatPrice(cartTotals.totalPrice, cartTotals.currencyId)}`}
+                {`${cartTotals.currencyFormat} ${util.formatPrice(
+                  cartTotals.totalPrice,
+                  cartTotals.currencyId
+                )}`}
               </p>
               <small className="sub-price__installment">
                 {!!cartTotals.installments && (
                   <span>
-                    {`OR UP TO ${cartTotals.installments} x ${cartTotals.currencyFormat} ${util.formatPrice(cartTotals.totalPrice / cartTotals.installments, cartTotals.currencyId)}`}
+                    {`OR UP TO ${cartTotals.installments} x ${
+                      cartTotals.currencyFormat
+                    } ${util.formatPrice(
+                      cartTotals.totalPrice / cartTotals.installments,
+                      cartTotals.currencyId
+                    )}`}
                   </span>
                 )}
               </small>
@@ -171,15 +196,17 @@ FloatCart.propTypes = {
   cartProducts: PropTypes.array.isRequired,
   newProduct: PropTypes.object,
   removeProduct: PropTypes.func,
-  productToRemove: PropTypes.object,
+  productToRemove: PropTypes.object
 };
 
 const mapStateToProps = state => ({
   cartProducts: state.cartProducts.items,
   newProduct: state.cartProducts.item,
   productToRemove: state.cartProducts.itemToRemove,
-  cartTotals: state.cartTotals.item,
+  cartTotals: state.cartTotals.item
 });
 
-export default connect(mapStateToProps, { loadCart, updateCart, removeProduct})(FloatCart);
-
+export default connect(
+  mapStateToProps,
+  { loadCart, updateCart, removeProduct }
+)(FloatCart);
