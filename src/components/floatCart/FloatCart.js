@@ -145,7 +145,7 @@ class FloatCart extends Component {
           </div>
 
           <div className="float-cart__shelf-container">
-            <TransitionGroup>{products}</TransitionGroup>
+            <TransitionGroup component={null}>{products}</TransitionGroup>
             <Transition in={products.length === 0}>
               {state => {
                 return (
