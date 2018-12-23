@@ -18,8 +18,6 @@ class FloatCart extends Component {
     isOpen: false
   };
 
-  floatCartContent = React.createRef();
-
   openFloatCart = () => {
     this.setState({ isOpen: true });
   };
@@ -141,7 +139,7 @@ class FloatCart extends Component {
           </Transition>
         )}
 
-        <div ref={this.floatCartContent} className="float-cart__content">
+        <div className="float-cart__content">
           <div className="float-cart__header">
             <span className="bag">
               <span className="bag__quantity">
