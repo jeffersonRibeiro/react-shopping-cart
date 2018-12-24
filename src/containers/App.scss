@@ -183,6 +183,7 @@ footer {
     padding: 10px;
     margin-bottom: 30px;
     border: 1px solid transparent;
+    cursor: pointer;
 
     &:hover {
       border: 1px solid #eee;
@@ -482,7 +483,7 @@ footer {
   &__footer {
     box-sizing: border-box;
     padding: 5%;
-    box-shadow: -3px -3px 2em rgba(0, 0, 0, 0.6);
+    box-shadow: 20px -3px 2em rgba(0, 0, 0, 0.6);
 
     background-color: $black-light;
     position: absolute;
@@ -623,7 +624,11 @@ footer {
     width: 100%;
 
     .shelf-item {
-      width: 100%;
+      width: 50%;
+
+      &__buy-btn {
+        display: none;
+      }
     }
   }
 }

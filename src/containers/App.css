@@ -134,7 +134,8 @@ footer {
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 30px;
-    border: 1px solid transparent; }
+    border: 1px solid transparent;
+    cursor: pointer; }
     .shelf-container .shelf-item:hover {
       border: 1px solid #eee; }
       .shelf-container .shelf-item:hover .shelf-item__buy-btn {
@@ -339,7 +340,7 @@ footer {
   .float-cart__footer {
     box-sizing: border-box;
     padding: 5%;
-    box-shadow: -3px -3px 2em rgba(0, 0, 0, 0.6);
+    box-shadow: 20px -3px 2em rgba(0, 0, 0, 0.6);
     background-color: #1b1a20;
     position: absolute;
     bottom: 0;
@@ -423,7 +424,9 @@ footer {
   .shelf-container {
     width: 100%; }
     .shelf-container .shelf-item {
-      width: 100%; } }
+      width: 50%; }
+      .shelf-container .shelf-item__buy-btn {
+        display: none; } }
 
 .lds-ring {
   position: fixed;
