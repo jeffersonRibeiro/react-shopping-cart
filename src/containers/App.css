@@ -340,13 +340,21 @@ footer {
   .float-cart__footer {
     box-sizing: border-box;
     padding: 5%;
-    box-shadow: 20px -3px 2em rgba(0, 0, 0, 0.6);
     background-color: #1b1a20;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 200px;
     z-index: 2; }
+    .float-cart__footer::before {
+      content: "";
+      width: 100%;
+      height: 20px;
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent); }
     .float-cart__footer .sub,
     .float-cart__footer .sub-price {
       color: #5b5a5e;
