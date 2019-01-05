@@ -12,9 +12,10 @@ jobs:
           paths:
             - .
   deploy:
-    - attach_workspace:
-        at: .
     steps:
+      - attach_workspace:
+        at: .
+
       - run:
           name: Deploy Master to Firebase
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
