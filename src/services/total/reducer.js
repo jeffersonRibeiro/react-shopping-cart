@@ -1,11 +1,10 @@
 import { UPDATE_CART } from './actionTypes';
 
-
 const initialState = {
   data: {
     productQuantity: 0,
     installments: 0,
-    totalPrice: 0,
+    totalPrice: 0
   }
 };
 

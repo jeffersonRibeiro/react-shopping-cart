@@ -1,8 +1,7 @@
 import { LOAD_CART, ADD_PRODUCT, REMOVE_PRODUCT } from './actionTypes';
 
-
 const initialState = {
-  products: [],
+  products: []
 };
 
 export default function(state = initialState, action) {

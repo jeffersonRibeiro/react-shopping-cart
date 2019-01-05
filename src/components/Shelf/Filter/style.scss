@@ -1,7 +1,7 @@
 .filters {
   width: 15%;
   float: left;
-  
+
   .star-button-container {
     text-align: center;
     small {
@@ -9,14 +9,13 @@
       margin-bottom: 8px;
       display: inline-block;
     }
-    
   }
-  
+
   .title {
     margin-top: 2px;
     margin-bottom: 20px;
   }
-  
+
   &-available-size {
     display: inline-block;
     margin-bottom: 10px;
@@ -38,29 +37,29 @@
       border-radius: 50%;
       line-height: 35px;
       text-align: center;
-      
+
       /* On mouse-over, add a grey background color */
       &:hover input ~ .checkmark {
         border: 1px solid #1b1a20;
       }
-      
+
       /* When the checkbox is checked, add a blue background */
       & input:checked ~ .checkmark {
         background-color: #1b1a20;
         color: #ececec;
       }
-      
+
       /* Show the checkmark when checked */
       & input:checked ~ .checkmark:after {
         display: block;
       }
-      
+
       input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
       }
-      
+
       /* Create a custom checkbox */
       .checkmark {
         position: absolute;
@@ -74,9 +73,8 @@
         text-align: center;
         color: #1b1a20;
         background-color: #ececec;
-        
+
         border: 1px solid transparent;
-        
       }
     }
   }

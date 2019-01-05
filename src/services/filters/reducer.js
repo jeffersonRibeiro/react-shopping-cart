@@ -1,8 +1,7 @@
 import { UPDATE_FILTER } from './actionTypes';
 
-
 const initialState = {
-  item: [],
+  item: []
 };
 
 export default function(state = initialState, action) {

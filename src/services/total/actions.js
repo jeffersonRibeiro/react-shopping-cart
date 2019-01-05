@@ -1,7 +1,7 @@
-import { UPDATE_CART} from './actionTypes';
+import { UPDATE_CART } from './actionTypes';
 
 export const updateCart = cartProducts => dispatch => {
-  let productQuantity = cartProducts.reduce( (sum, p) => {
+  let productQuantity = cartProducts.reduce((sum, p) => {
     sum += p.quantity;
     return sum;
   }, 0);
@@ -15,19 +15,17 @@ export const updateCart = cartProducts => dispatch => {
     greater = p.installments > greater ? p.installments : greater;
     return greater;
   }, 0);
-  
 
   let cartTotal = {
     productQuantity,
     installments,
     totalPrice,
     currencyId: 'BRL',
-    currencyFormat: 'R$',
-  }
+    currencyFormat: 'R$'
+  };
 
   dispatch({
     type: UPDATE_CART,
-    payload: cartTotal,
+    payload: cartTotal
   });
-
-}
+};

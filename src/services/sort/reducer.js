@@ -1,8 +1,7 @@
 import { UPDATE_SORT } from './actionTypes';
 
-
 const initialState = {
-  type: '',
+  type: ''
 };
 
 export default function(state = initialState, action) {
