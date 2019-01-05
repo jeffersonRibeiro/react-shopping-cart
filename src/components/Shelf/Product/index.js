@@ -18,7 +18,7 @@ const Product = props => {
 
     productInstallment = (
       <div className="installment">
-        <span>ou {product.installments} x</span>
+        <span>or {product.installments} x</span>
         <b>
           {' '}
           {product.currencyFormat}{' '}
@@ -31,7 +31,7 @@ const Product = props => {
   return (
     <div className="shelf-item" data-sku={product.sku}>
       {product.isFreeShipping && (
-        <div className="shelf-stopper">Frete grátis</div>
+        <div className="shelf-stopper">Free shipping</div>
       )}
       <Thumb
         classes="shelf-item__thumb"
@@ -51,7 +51,7 @@ const Product = props => {
         onClick={() => props.addProduct(product)}
         className="shelf-item__buy-btn"
       >
-        Adicionar Produto
+        Add to cart
       </div>
     </div>
   );

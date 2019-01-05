@@ -20,8 +20,8 @@ export const updateCart = cartProducts => dispatch => {
     productQuantity,
     installments,
     totalPrice,
-    currencyId: 'BRL',
-    currencyFormat: 'R$'
+    currencyId: 'USD',
+    currencyFormat: '$'
   };
 
   dispatch({

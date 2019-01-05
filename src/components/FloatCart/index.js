@@ -79,7 +79,7 @@ class FloatCart extends Component {
     } = this.props.cartTotal;
 
     if (!productQuantity) {
-      alert('Adicione algum produto na sacola!');
+      alert('Add some product in the bag!');
     } else {
       alert(
         `Checkout - Subtotal: ${currencyFormat} ${util.formatPrice(
@@ -139,7 +139,7 @@ class FloatCart extends Component {
             {products}
             {!products.length && (
               <p className="shelf-empty">
-                Adicione algum produto na sacola! <br />
+                Add some products in the bag <br />
                 :)
               </p>
             )}
@@ -157,7 +157,7 @@ class FloatCart extends Component {
               <small className="sub-price__installment">
                 {!!cartTotal.installments && (
                   <span>
-                    {`ou até ${cartTotal.installments} x ${
+                    {`OR UP TO ${cartTotal.installments} x ${
                       cartTotal.currencyFormat
                     } ${util.formatPrice(
                       cartTotal.totalPrice / cartTotal.installments,
@@ -168,7 +168,7 @@ class FloatCart extends Component {
               </small>
             </div>
             <div onClick={() => this.proceedToCheckout()} className="buy-btn">
-              Finalizar
+              Checkout
             </div>
           </div>
         </div>
