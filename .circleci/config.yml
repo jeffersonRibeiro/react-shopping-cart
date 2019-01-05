@@ -1,19 +1,22 @@
+witmy: &witmy
+  docker:
+    - image: circleci/node:8.11.3
+
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/node:8.11.3
+    <<: *witmy
     steps:
       - checkout
       - run: npm install
       - run: npm run test
+      - run: npm run build
       - persist_to_workspace:
           root: .
           paths:
             - .
   deploy:
-    docker:
-      - image: circleci/node:8.11.3
+    <<: *witmy
     steps:
       - attach_workspace:
           at: .
