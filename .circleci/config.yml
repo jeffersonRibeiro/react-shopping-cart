@@ -12,9 +12,8 @@ jobs:
           paths:
             - .
   deploy:
-    docker:
-      - image: buildpack-deps:trusty
-    working_directory: /tmp/my-project
+    - attach_workspace:
+        at: .
     steps:
       - run:
           name: Deploy Master to Firebase
