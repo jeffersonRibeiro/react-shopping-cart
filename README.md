@@ -1,9 +1,10 @@
-## 🛍️ Simple ecommerce cart application built with React & Redux
+## 🛍️ Simple ecommerce cart application built with React & Redux [![CircleCI](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart.svg?style=svg)](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart)
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-16.6.1-blue.svg">
   <img src="https://img.shields.io/badge/Redux-4.0.1-blue.svg?colorB=764abc">
-  <img src="https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart.svg?style=shield">
+  <img src="https://img.shields.io/badge/Nodejs-8.11.3-blue.svg?colorB=90c53f">
+  <img src="https://img.shields.io/badge/Express-4.16.4-blue.svg?colorB=47535e">
   <br/>
   <img src="./doc/react-shopping-cart.gif">
 </p>
