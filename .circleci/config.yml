@@ -16,7 +16,7 @@ jobs:
       - image: circleci/node:8.11.3
     steps:
       - attach_workspace:
-        at: .
+          at: .
       - run:
           name: Deploy Master to Firebase
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
