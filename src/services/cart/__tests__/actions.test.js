@@ -2,16 +2,16 @@ import * as actions from '../actions';
 import * as types from '../actionTypes';
 
 const mockProduct = {
-  id: 2,
-  sku: 11854078013954528,
-  title: 'Camisa Feminina Nike Corinthians I',
-  description: '14/15 s/nº',
-  availableSizes: ['S', 'G'],
-  style: 'Branco com listras pretas',
-  price: 199.9,
-  installments: 7,
-  currencyId: 'BRL',
-  currencyFormat: 'R$',
+  id: 12,
+  sku: 12064273040195392,
+  title: 'Cat Tee Black T-Shirt',
+  description: '4 MSL',
+  availableSizes: ['S', 'XS'],
+  style: 'Black with custom print',
+  price: 10.9,
+  installments: 9,
+  currencyId: 'USD',
+  currencyFormat: '$',
   isFreeShipping: true
 };
 

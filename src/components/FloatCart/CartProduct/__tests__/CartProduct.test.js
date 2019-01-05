@@ -1,16 +1,16 @@
 import CartProduct from '../';
 
 const productMock = {
-  id: 0,
-  sku: 8552515751438644,
-  title: 'Camisa Nike Corinthians I',
-  description: '14/15 s/nº',
-  availableSizes: ['S', 'G', 'GG', 'GGG'],
-  style: 'Branco com listras pretas',
-  price: 229.9,
-  installments: 9,
-  currencyId: 'BRL',
-  currencyFormat: 'R$',
+  id: 13,
+  sku: 51498472915966366,
+  title: 'Dark Thug Blue-Navy T-Shirt',
+  description: '',
+  availableSizes: ['M'],
+  style: 'Front print and paisley print',
+  price: 29.45,
+  installments: 5,
+  currencyId: 'USD',
+  currencyFormat: '$',
   isFreeShipping: true
 };
 

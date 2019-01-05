@@ -3,7 +3,7 @@ import * as types from '../actionTypes';
 
 describe('filter actions', () => {
   it('should return expected payload', () => {
-    const text = '42';
+    const text = 'L';
 
     const expectedAction = {
       type: types.UPDATE_FILTER,

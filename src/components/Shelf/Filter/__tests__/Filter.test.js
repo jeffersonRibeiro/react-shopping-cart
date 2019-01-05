@@ -3,7 +3,7 @@ import Root from '../../../../Root';
 
 const initialState = {
   filters: {
-    items: ['40', '41']
+    items: ['XS', 'S']
   }
 };
 
