@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/Nodejs-8.11.3-blue.svg?colorB=90c53f">
   <img src="https://img.shields.io/badge/Express-4.16.4-blue.svg?colorB=47535e">
   <br/>
+  <img src="./doc/react-shopping-cart.gif">
 </p>
 
 ## Basic Overview [Live Demo](https://react-shopping-cart-67954.firebaseapp.com/)
@@ -42,16 +43,16 @@ friendly user experience with instant visual updates and scaleable code in ecomm
 
 ## Getting started
 
-Try to play with the code on CodeSandbox :)
+You play with the code on CodeSandbox :)
 
 [![Edit react-shopping-cart](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/r01pkz065o)
+
+## Build/Run
 
 #### Requirements
 
 - Node.js
 - NPM
-
-## Build/Run
 
 ```javascript
 
