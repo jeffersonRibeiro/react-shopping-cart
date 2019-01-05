@@ -7,13 +7,18 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
   deploy:
     docker:
       - image: buildpack-deps:trusty
+    working_directory: /tmp/my-project
     steps:
       - run:
           name: Deploy Master to Firebase
-          command: ./firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
   version: 2
   build-deploy:
