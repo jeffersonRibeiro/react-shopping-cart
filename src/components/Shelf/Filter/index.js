@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateFilters } from '../../../services/filters/actions';
 import Checkbox from '../../Checkbox';
+import GithubStarButton from '../../github/StarButton';
 
 import './style.scss';
 
-const availableSizes = ['40', '41', '43', 'S', 'G', 'GG', 'GGG'];
+const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 
 class Filter extends Component {
   static propTypes = {
@@ -45,6 +46,7 @@ class Filter extends Component {
       <div className="filters">
         <h4 className="title">Tamanhos:</h4>
         {this.createCheckboxes()}
+        <GithubStarButton />
       </div>
     );
   }

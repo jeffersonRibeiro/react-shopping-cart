@@ -6,9 +6,9 @@ import { updateSort } from '../../../services/sort/actions';
 import Selectbox from '../../Selectbox';
 
 const sortBy = [
-  { value: '', label: 'Selecionar' },
-  { value: 'lowestprice', label: 'Menor Preço' },
-  { value: 'highestprice', label: 'Maior Preço' }
+  { value: '', label: 'Select' },
+  { value: 'lowestprice', label: 'Lowest to highest' },
+  { value: 'highestprice', label: 'Highest to lowest' }
 ];
 
 class Sort extends Component {
