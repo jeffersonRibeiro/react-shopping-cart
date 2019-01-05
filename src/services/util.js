@@ -1,4 +1,4 @@
-const formatPrice = (x, currency) => {
+export const formatPrice = (x, currency) => {
   switch (currency) {
     case 'BRL':
       return x.toFixed(2).replace('.', ',');
@@ -7,6 +7,6 @@ const formatPrice = (x, currency) => {
   }
 };
 
-export default {
-  formatPrice
-};
+export const productsAPI =
+  'https://react-shopping-cart-67954.firebaseio.com/products.json';
+// export const productsAPI = "http://localhost:8001/api/products";

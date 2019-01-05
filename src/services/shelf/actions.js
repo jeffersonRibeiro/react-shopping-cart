@@ -1,5 +1,7 @@
 import { FETCH_PRODUCTS } from './actionTypes';
-import axios from '../axios';
+import axios from 'axios';
+
+import { productsAPI } from '../util';
 
 const compare = {
   lowestprice: (a, b) => {
@@ -16,7 +18,7 @@ const compare = {
 
 export const fetchProducts = (filters, sortBy, callback) => dispatch => {
   return axios
-    .get('/products')
+    .get(productsAPI)
     .then(res => {
       let { products } = res.data;
 

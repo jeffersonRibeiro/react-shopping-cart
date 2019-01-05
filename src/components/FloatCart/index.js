@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { loadCart, removeProduct } from '../../services/cart/actions';
 import { updateCart } from '../../services/total/actions';
 import CartProduct from './CartProduct';
-import util from '../../services/util';
+import { formatPrice } from '../../services/util';
 
 import './style.scss';
 
@@ -82,7 +82,7 @@ class FloatCart extends Component {
       alert('Add some product in the bag!');
     } else {
       alert(
-        `Checkout - Subtotal: ${currencyFormat} ${util.formatPrice(
+        `Checkout - Subtotal: ${currencyFormat} ${formatPrice(
           totalPrice,
           currencyId
         )}`
@@ -149,7 +149,7 @@ class FloatCart extends Component {
             <div className="sub">SUBTOTAL</div>
             <div className="sub-price">
               <p className="sub-price__val">
-                {`${cartTotal.currencyFormat} ${util.formatPrice(
+                {`${cartTotal.currencyFormat} ${formatPrice(
                   cartTotal.totalPrice,
                   cartTotal.currencyId
                 )}`}
@@ -159,7 +159,7 @@ class FloatCart extends Component {
                   <span>
                     {`OR UP TO ${cartTotal.installments} x ${
                       cartTotal.currencyFormat
-                    } ${util.formatPrice(
+                    } ${formatPrice(
                       cartTotal.totalPrice / cartTotal.installments,
                       cartTotal.currencyId
                     )}`}

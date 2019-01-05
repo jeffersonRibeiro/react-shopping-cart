@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Thumb from './../../Thumb';
-import util from '../../../services/util';
+import { formatPrice } from '../../../services/util';
 
 class CartProduct extends Component {
   static propTypes = {
@@ -52,9 +52,7 @@ class CartProduct extends Component {
           </p>
         </div>
         <div className="shelf-item__price">
-          <p>{`${product.currencyFormat}  ${util.formatPrice(
-            product.price
-          )}`}</p>
+          <p>{`${product.currencyFormat}  ${formatPrice(product.price)}`}</p>
         </div>
 
         <div className="clearfix" />

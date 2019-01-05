@@ -1,5 +1,4 @@
 import moxios from 'moxios';
-import axios from '../services/axios';
 
 import Root from '../Root';
 import App from '../components/App';
@@ -7,7 +6,9 @@ import ShelfHeader from '../components/Shelf/ShelfHeader';
 import Product from '../components/Shelf/Product';
 import CartProduct from '../components/FloatCart/CartProduct';
 
-/* 
+import { productsAPI } from '../services/util';
+
+/*
   - Request the products;
   - check if the quantity returned is correct;
   - add 1 product to the cart and make sure it has been added correctly.
@@ -45,8 +46,8 @@ const productsMock = {
 };
 
 beforeEach(() => {
-  moxios.install(axios);
-  moxios.stubRequest('http://localhost:8001/api/products', {
+  moxios.install();
+  moxios.stubRequest(productsAPI, {
     status: 200,
     response: productsMock
   });

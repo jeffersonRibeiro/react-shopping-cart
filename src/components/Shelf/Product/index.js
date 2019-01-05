@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Thumb from '../../Thumb';
-import util from '../../../services/util';
+import { formatPrice } from '../../../services/util';
 
 const Product = props => {
   const product = props.product;
 
   product.quantity = 1;
 
-  let formattedPrice = util.formatPrice(product.price, product.currencyId);
+  let formattedPrice = formatPrice(product.price, product.currencyId);
 
   let productInstallment;
 
@@ -22,7 +22,7 @@ const Product = props => {
         <b>
           {' '}
           {product.currencyFormat}{' '}
-          {util.formatPrice(installmentPrice, product.currencyId)}
+          {formatPrice(installmentPrice, product.currencyId)}
         </b>
       </div>
     );
