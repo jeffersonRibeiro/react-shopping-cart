@@ -1,0 +1,113 @@
+.shelf-container {
+  width: 85%;
+  float: left;
+  min-height: 600px;
+  
+  &-header {
+    margin-bottom: 10px;
+    
+    .products-found {
+      float: left;
+      margin: 0;
+      margin-top: 8px;
+    }
+    
+    .sort {
+      float: right;
+      
+      select {
+        background-color: #fff;
+        outline: none;
+        border: 1px solid #ececec;
+        border-radius: 2px;
+        margin-left: 10px;
+        width: auto;
+        height: 35px;
+        cursor: pointer;
+        
+        &:hover {
+          border: 1px solid #5b5a5e;
+        }
+      }
+    }
+  }
+  
+  .shelf-item {
+    float: left;
+    width: 25%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    
+    &:hover {
+      border: 1px solid #eee;
+      
+      .shelf-item__buy-btn {
+        background-color: #eabf00;
+      }
+    }
+    
+    .shelf-stopper {
+      position: absolute;
+      color: #ececec;
+      top: 10px;
+      right: 10px;
+      padding: 5px;
+      font-size: 0.6em;
+      background-color:#1b1a20;
+      cursor: default;
+    }
+    
+    &__thumb {
+      img {
+        width: 100%; 
+      }
+    }
+    
+    &__title {
+      position: relative;
+      padding: 0 20px;
+      height: 45px;
+      
+      &::before {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: #eabf00;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -10px;
+      }
+    }
+    
+    &__price {
+      height: 60px;
+      
+      .val {
+        b {
+          font-size: 1.5em;
+          margin-left: 5px;
+        }
+      }
+      
+      .installment {
+        color: #9c9b9b;
+      }
+    }
+    
+    &__buy-btn {
+      background-color:  #1b1a20;
+      color: #fff;
+      padding: 15px 0;
+      margin-top: 10px;
+      cursor: pointer;
+      // border-bottom: 2px solid #151419;
+      
+      transition: background-color 0.2s;
+    }
+  }
+}
