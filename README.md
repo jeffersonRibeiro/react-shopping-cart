@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Nodejs-8.11.3-blue.svg?colorB=90c53f">
   <img src="https://img.shields.io/badge/Express-4.16.4-blue.svg?colorB=47535e">
   <br/>
-  <img src="./doc/react-shopping-cart.gif">
+  <img src="./doc/react-shopping-cart-min.gif">
 </p>
 
 ## Basic Overview - [Live Demo](https://react-shopping-cart-67954.firebaseapp.com/)
