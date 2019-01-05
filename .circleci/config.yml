@@ -10,19 +10,19 @@ jobs:
   deploy:
     docker:
       - image: my-image-version-tag
-      working_directory: /tmp/my-project
-       steps:
-         - run:
-             name: Deploy Master to Firebase
-             command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+    working_directory: /tmp/my-project
+    steps:
+      - run:
+        name: Deploy Master to Firebase
+        command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
   version: 2
   build-deploy:
     jobs:
       - build
       - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+        requires:
+          - build
+        filters:
+          branches:
+            only: master
