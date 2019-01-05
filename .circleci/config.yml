@@ -9,8 +9,7 @@ jobs:
       - run: npm run test
   deploy:
     docker:
-      - image: my-image-version-tag
-    working_directory: /tmp/my-project
+      - image: buildpack-deps:trusty
     steps:
       - run:
           name: Deploy Master to Firebase
