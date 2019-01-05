@@ -12,6 +12,8 @@ jobs:
           paths:
             - .
   deploy:
+    docker:
+      - image: buildpack-deps:trusty
     steps:
       - attach_workspace:
         at: .
