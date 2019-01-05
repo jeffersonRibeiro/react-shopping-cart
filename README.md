@@ -69,7 +69,6 @@ npm run test
 npm run wdio
 
 
-
 ```
 
 ## About tests
