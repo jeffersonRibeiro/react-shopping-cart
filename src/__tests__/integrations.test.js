@@ -81,7 +81,6 @@ describe('Integrations', () => {
       wrapped
         .find(Product)
         .at(0)
-        .find('.shelf-item__buy-btn')
         .simulate('click');
 
       /* Then after one product is added to cart, it should have 1 in it */

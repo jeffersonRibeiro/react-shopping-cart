@@ -14,7 +14,7 @@ describe('Shopping cart', () => {
     expect(bagProductsQtd).to.equal('0');
 
     /* Add a product to cart */
-    browser.click('.shelf-item .shelf-item__buy-btn');
+    browser.click('.shelf-item');
     browser.pause(100);
 
     /* And it should have 1 product in it now */
