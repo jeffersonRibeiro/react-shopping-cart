@@ -1,8 +1,17 @@
-# Netshoes Front end Recruitment Test
+## 🛍️ Simple ecommerce cart application built with React & Redux
 
 <p align="center">
-  <img src="./doc/screenshot.png">
+  <img src="https://img.shields.io/badge/React-16.6.1-blue.svg">
+  <img src="https://img.shields.io/badge/Redux-4.0.1-blue.svg?colorB=764abc">
+  <img src="https://img.shields.io/badge/Nodejs-8.11.3-blue.svg?colorB=90c53f">
+  <img src="https://img.shields.io/badge/Express-4.16.4-blue.svg?colorB=47535e">
+  <br/>
 </p>
+
+## Basic Overview [Live Demo](https://react-shopping-cart-67954.firebaseapp.com/)
+
+This simple shopping cart prototype shows how React components and Redux can be used to build a
+friendly user experience with instant visual updates and scaleable code in ecommerce applications.
 
 #### Features
 
@@ -12,7 +21,7 @@
 - Products persist in floating cart even after page reloads
 - Responsive design for desktop, tablets and mobile
 - Product stoppers for free shipping
-- **Unit tests, integration tests and e2e testing.**
+- Unit tests, integration tests and e2e testing
 
 #### Using
 
@@ -31,36 +40,54 @@
 - Webdriverio - to do automated tests in a real browser environment
 - Native local storage - to persist products in cart even after page reload
 
-## About tests
+## Getting started
 
-- Unit tests
-  - All components have at least a basic smoke test
-- **Integration tests**
-  - **Fetch product and add to cart properly**
-- **e2e**
-  - **Webdriverio - Add and remove product from cart**
+Try to play with the code on CodeSandbox :)
 
-### Coverage report
+[![Edit react-shopping-cart](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/r01pkz065o)
 
-![Filters](./doc/coverage-report.png 'Filters')
+#### Requirements
+
+- Node.js
+- NPM
 
 ## Build/Run
 
 ```javascript
 
-/* Install the needed packages */
+/* First, Install the needed packages */
 npm install
 
-/* To start both Node and React */
+/* Then start both Node and React */
 npm start
 
 /* To run the tests */
 npm run test
 
-/* Running e2e tests (The app should be running first) */
+/* Running e2e tests */
 npm run wdio
 
 
 
 ```
 
+## About tests
+
+- Unit tests
+  - All components have at least a basic smoke test
+- Integration tests
+  - Fetch product and add to cart properly
+- e2e
+  - Webdriverio - Add and remove product from cart
+
+### Copyright and license
+
+The MIT License (MIT). Please see License File for more information.
+
+<br/>
+<br/>
+
+<p align="center"><img src="https://avatars2.githubusercontent.com/u/20846473?s=70&v=4" width="35" height="35"/></p>
+<p align="center">
+<sub>A little project by <a href="http://www.jeffersonribeiro.com/">Jefferson Ribeiro</a></sub>
+</p>
