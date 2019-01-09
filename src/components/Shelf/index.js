@@ -26,10 +26,8 @@ class Shelf extends Component {
     loading: false
   };
 
-  componentWillMount() {
-    const { filters, sort } = this.props;
-
-    this.handleFetchProducts(filters, sort);
+  componentDidMount() {
+    this.handleFetchProducts();
   }
 
   componentWillReceiveProps(nextProps) {

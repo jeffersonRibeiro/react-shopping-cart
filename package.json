@@ -22,6 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "npm run test -- --coverage",
+    "format": "prettier --write \"**/*.+(js|json|css)\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -93,8 +93,6 @@ class FloatCart extends Component {
   render() {
     const { cartTotal, cartProducts, removeProduct } = this.props;
 
-    console.log(cartTotal);
-
     const products = cartProducts.map(p => {
       return (
         <CartProduct product={p} removeProduct={removeProduct} key={p.id} />

@@ -16,7 +16,7 @@ class Filter extends Component {
     filters: PropTypes.array
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.selectedCheckboxes = new Set();
   }
 
