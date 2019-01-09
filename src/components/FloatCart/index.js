@@ -79,7 +79,7 @@ class FloatCart extends Component {
     } = this.props.cartTotal;
 
     if (!productQuantity) {
-      alert('Add some product in the bag!');
+      alert('Add some product in the cart!');
     } else {
       alert(
         `Checkout - Subtotal: ${currencyFormat} ${formatPrice(
@@ -132,14 +132,14 @@ class FloatCart extends Component {
             <span className="bag">
               <span className="bag__quantity">{cartTotal.productQuantity}</span>
             </span>
-            <span className="header-title">Bag</span>
+            <span className="header-title">Cart</span>
           </div>
 
           <div className="float-cart__shelf-container">
             {products}
             {!products.length && (
               <p className="shelf-empty">
-                Add some products in the bag <br />
+                Add some products in the cart <br />
                 :)
               </p>
             )}
