@@ -1,9 +1,11 @@
 .shelf-container {
+  display: flex;
+  flex-wrap: wrap;
   width: 85%;
-  float: left;
   min-height: 600px;
 
   &-header {
+    width: 100%;
     margin-bottom: 10px;
 
     .products-found {
@@ -33,7 +35,6 @@
   }
 
   .shelf-item {
-    float: left;
     width: 25%;
     position: relative;
     text-align: center;

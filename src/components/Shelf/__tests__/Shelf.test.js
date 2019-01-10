@@ -1,9 +1,8 @@
 import Shelf from '..';
 import Root from '../../../Root';
 import ShelfHeader from '../ShelfHeader';
-import Filter from '../Filter';
-import Sort from '../Sort';
-import Product from '../Product';
+import ProductList from '../ProductList';
+import Product from '../ProductList/Product';
 
 const initialState = {
   shelf: {
@@ -60,10 +59,6 @@ it('shows a shelf header with 2 products', () => {
   expect(wrapped.find(ShelfHeader).props().productsLength).toEqual(2);
 });
 
-it('shows a filter component', () => {
-  expect(wrapped.find(Filter).length).toEqual(1);
-});
-
-it('shows a sort component', () => {
-  expect(wrapped.find(Sort).length).toEqual(1);
+it('shows a product list component', () => {
+  expect(wrapped.find(ProductList).length).toEqual(1);
 });

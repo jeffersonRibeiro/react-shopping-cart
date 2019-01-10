@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import Thumb from '../../Thumb';
-import { formatPrice } from '../../../services/util';
+import Thumb from '../../../Thumb';
+import { formatPrice } from '../../../../services/util';
+import { addProduct } from '../../../../services/cart/actions';
 
-const Product = props => {
-  const product = props.product;
-
+const Product = ({ product, addProduct }) => {
   product.quantity = 1;
 
   let formattedPrice = formatPrice(product.price, product.currencyId);
@@ -31,7 +31,7 @@ const Product = props => {
   return (
     <div
       className="shelf-item"
-      onClick={() => props.addProduct(product)}
+      onClick={() => addProduct(product)}
       data-sku={product.sku}
     >
       {product.isFreeShipping && (
@@ -39,7 +39,7 @@ const Product = props => {
       )}
       <Thumb
         classes="shelf-item__thumb"
-        src={require(`../../../static/products/${product.sku}_1.jpg`)}
+        src={require(`../../../../static/products/${product.sku}_1.jpg`)}
         alt={product.title}
       />
       <p className="shelf-item__title">{product.title}</p>
@@ -61,4 +61,7 @@ Product.propTypes = {
   addProduct: PropTypes.func.isRequired
 };
 
-export default Product;
+export default connect(
+  null,
+  { addProduct }
+)(Product);

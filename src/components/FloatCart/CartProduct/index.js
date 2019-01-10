@@ -54,8 +54,6 @@ class CartProduct extends Component {
         <div className="shelf-item__price">
           <p>{`${product.currencyFormat}  ${formatPrice(product.price)}`}</p>
         </div>
-
-        <div className="clearfix" />
       </div>
     );
   }

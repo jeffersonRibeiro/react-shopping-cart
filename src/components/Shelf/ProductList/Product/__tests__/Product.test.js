@@ -1,4 +1,5 @@
 import Product from '..';
+import Root from '../../../../../Root';
 
 const productMock = {
   id: 12,
@@ -16,7 +17,9 @@ const productMock = {
 
 it('mount without crashing', () => {
   const wrapped = mount(
-    <Product product={productMock} addProduct={() => {}} />
+    <Root>
+      <Product product={productMock} addProduct={() => {}} />
+    </Root>
   );
   wrapped.unmount();
 });

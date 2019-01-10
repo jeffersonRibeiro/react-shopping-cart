@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { fetchProducts } from '../../services/shelf/actions';
-import { addProduct } from '../../services/cart/actions';
 
-import Product from './Product';
-import Filter from './Filter';
-import ShelfHeader from './ShelfHeader';
-import Clearfix from '../Clearfix';
 import Spinner from '../Spinner';
+import ShelfHeader from './ShelfHeader';
+import ProductList from './ProductList';
 
 import './style.scss';
 
@@ -17,13 +14,12 @@ class Shelf extends Component {
   static propTypes = {
     fetchProducts: PropTypes.func.isRequired,
     products: PropTypes.array.isRequired,
-    addProduct: PropTypes.func.isRequired,
     filters: PropTypes.array,
     sort: PropTypes.string
   };
 
   state = {
-    loading: false
+    isLoading: false
   };
 
   componentDidMount() {
@@ -46,31 +42,23 @@ class Shelf extends Component {
     filters = this.props.filters,
     sort = this.props.sort
   ) => {
-    this.setState({ loading: true });
+    this.setState({ isLoading: true });
     this.props.fetchProducts(filters, sort, () => {
-      this.setState({ loading: false });
+      this.setState({ isLoading: false });
     });
   };
 
   render() {
     const { products } = this.props;
-
-    const p = products.map(p => {
-      return (
-        <Product product={p} addProduct={this.props.addProduct} key={p.id} />
-      );
-    });
+    const { isLoading } = this.state;
 
     return (
       <React.Fragment>
-        {this.state.loading && <Spinner />}
-        <Filter />
+        {isLoading && <Spinner />}
         <div className="shelf-container">
           <ShelfHeader productsLength={products.length} />
-          {p}
-          <Clearfix />
+          <ProductList products={products} />
         </div>
-        <Clearfix />
       </React.Fragment>
     );
   }
@@ -84,5 +72,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { fetchProducts, addProduct }
+  { fetchProducts }
 )(Shelf);
