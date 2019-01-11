@@ -20,8 +20,7 @@ const Product = ({ product, addProduct }) => {
       <div className="installment">
         <span>or {product.installments} x</span>
         <b>
-          {' '}
-          {product.currencyFormat}{' '}
+          {product.currencyFormat}
           {formatPrice(installmentPrice, product.currencyId)}
         </b>
       </div>
