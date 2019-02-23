@@ -15,11 +15,9 @@ friendly user experience with instant visual updates and scaleable code in ecomm
 - Add and remove products from the floating cart
 - Sort products by highest to lowest and lowest to highest price
 - Filter products by available sizes
-- Products persist in floating cart even after page reloads
-- Responsive design for desktop, tablets and mobile
-- Product stoppers for free shipping
+- Products persist in floating cart after page reloads
 - Unit tests, integration tests and e2e testing
-
+- Responsive design
 
 ## Getting started
 
