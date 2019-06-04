@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "concurrently": "^4.0.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",
