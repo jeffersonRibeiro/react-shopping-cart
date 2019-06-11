@@ -1,7 +1,7 @@
 import { UPDATE_SORT } from './actionTypes';
 
 const initialState = {
-  type: 'highestprice'
+  type: ''
 };
 
 export default function(state = initialState, action) {
