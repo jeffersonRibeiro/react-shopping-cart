@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "react-shopping-cart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,12 +36,7 @@
       "!src/Root.js"
     ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
   "devDependencies": {
     "chai": "^4.2.0",
     "enzyme": "^3.7.0",
@@ -59,5 +54,7 @@
     "wdio-selenium-standalone-service": "0.0.12",
     "wdio-spec-reporter": "^0.1.5",
     "webdriverio": "^4.14.1"
-  }
+  },
+  "keywords": [],
+  "description": "Shopping cart"
 }
