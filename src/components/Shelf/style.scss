@@ -46,6 +46,7 @@
 
     &:hover {
       border: 1px solid #eee;
+      transform: scale(1.1);
 
       .shelf-item__buy-btn {
         background-color: #eabf00;
