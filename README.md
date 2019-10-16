@@ -1,5 +1,5 @@
 ## 🛍️ Simple ecommerce cart application [![CircleCI](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart.svg?style=svg)](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 <p align="center">
 
@@ -80,6 +80,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Syed-Saad-Qamar"><img src="https://avatars3.githubusercontent.com/u/38069997?v=4" width="100px;" alt="Syed Saad Qamar"/><br /><sub><b>Syed Saad Qamar</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=Syed-Saad-Qamar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ksakiyama"><img src="https://avatars0.githubusercontent.com/u/1367783?v=4" width="100px;" alt="ksakiyama"/><br /><sub><b>ksakiyama</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=ksakiyama" title="Code">💻</a></td>
   </tr>
 </table>
 
