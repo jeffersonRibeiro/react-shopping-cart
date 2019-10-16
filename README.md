@@ -1,5 +1,5 @@
 ## 🛍️ Simple ecommerce cart application [![CircleCI](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart.svg?style=svg)](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart)
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors)
 
 <p align="center">
 
@@ -86,6 +86,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://stabja.github.io"><img src="https://avatars3.githubusercontent.com/u/10581882?v=4" width="100px;" alt="Swetabja Hazra"/><br /><sub><b>Swetabja Hazra</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=Stabja" title="Code">💻</a></td>
     <td align="center"><a href="https://danh-was-here.netlify.com/"><img src="https://avatars0.githubusercontent.com/u/14105469?v=4" width="100px;" alt="Danh Nguyen"/><br /><sub><b>Danh Nguyen</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=NguyenDa18" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/nhoktenz"><img src="https://avatars3.githubusercontent.com/u/6723699?v=4" width="100px;" alt="nhoktenz"/><br /><sub><b>nhoktenz</b></sub></a><br /><a href="#ideas-nhoktenz" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/harshan89"><img src="https://avatars3.githubusercontent.com/u/9652826?v=4" width="100px;" alt="Harshan Morawaka"/><br /><sub><b>Harshan Morawaka</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/issues?q=author%3Aharshan89" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
