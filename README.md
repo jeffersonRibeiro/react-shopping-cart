@@ -1,5 +1,5 @@
 ## 🛍️ Simple ecommerce cart application [![CircleCI](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart.svg?style=svg)](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart)
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors)
 
 <p align="center">
 
@@ -90,6 +90,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/harshan89"><img src="https://avatars3.githubusercontent.com/u/9652826?v=4" width="100px;" alt="Harshan Morawaka"/><br /><sub><b>Harshan Morawaka</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/issues?q=author%3Aharshan89" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/saher-elgendy"><img src="https://avatars1.githubusercontent.com/u/37591800?v=4" width="100px;" alt="saher-elgendy"/><br /><sub><b>saher-elgendy</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/issues?q=author%3Asaher-elgendy" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/criesbeck"><img src="https://avatars3.githubusercontent.com/u/1717574?v=4" width="100px;" alt="Chris Riesbeck"/><br /><sub><b>Chris Riesbeck</b></sub></a><br /><a href="#ideas-criesbeck" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tutorial-criesbeck" title="Tutorials">✅</a> <a href="#content-criesbeck" title="Content">🖋</a> <a href="#review-criesbeck" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/jeffersonRibeiro/react-shopping-cart/issues?q=author%3Acriesbeck" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
