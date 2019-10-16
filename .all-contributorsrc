@@ -85,6 +85,19 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "criesbeck",
+      "name": "Chris Riesbeck",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1717574?v=4",
+      "profile": "https://github.com/criesbeck",
+      "contributions": [
+        "ideas",
+        "tutorial",
+        "content",
+        "review",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
