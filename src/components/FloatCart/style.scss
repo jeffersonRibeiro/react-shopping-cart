@@ -117,7 +117,6 @@
 
       &--mouseover {
         background: #0c0b10;
-
         .shelf-item__details {
           .title,
           .desc {
@@ -252,6 +251,7 @@
     }
   }
 }
+
 
 /* MAC scrollbar para desktop*/
 @media screen and (min-width: 640px) {

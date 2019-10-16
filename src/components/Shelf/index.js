@@ -28,8 +28,8 @@ class Shelf extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { filters: nextFilters, sort: nextSort } = nextProps;
-
-    if (nextFilters !== this.props.filters) {
+    const { filters } = this.props;
+    if (nextFilters.length !== filters.length) {
       this.handleFetchProducts(nextFilters, undefined);
     }
 
