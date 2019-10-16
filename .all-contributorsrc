@@ -67,6 +67,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "harshan89",
+      "name": "Harshan Morawaka",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9652826?v=4",
+      "profile": "https://github.com/harshan89",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
