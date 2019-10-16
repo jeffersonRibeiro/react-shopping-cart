@@ -6,7 +6,7 @@ import Thumb from '../../../Thumb';
 import { formatPrice } from '../../../../services/util';
 import { addProduct } from '../../../../services/cart/actions';
 
-const Product = ({ product, addProduct }) => {
+const Product = ({ product }) => {
   product.quantity = 1;
 
   let formattedPrice = formatPrice(product.price, product.currencyId);
