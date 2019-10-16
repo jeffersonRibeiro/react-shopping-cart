@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Syed-Saad-Qamar",
+      "name": "Syed Saad Qamar",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/38069997?v=4",
+      "profile": "https://github.com/Syed-Saad-Qamar",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-shopping-cart",
+  "projectOwner": "jeffersonRibeiro",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
