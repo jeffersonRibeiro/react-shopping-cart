@@ -71,7 +71,7 @@ The MIT License (MIT). Please see License File for more information.
 <sub>A little project by <a href="http://www.jeffersonribeiro.com/">Jefferson Ribeiro</a></sub>
 </p>
 
-## Contributors ✨
+## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
