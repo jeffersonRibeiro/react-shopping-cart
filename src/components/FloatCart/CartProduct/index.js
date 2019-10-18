@@ -7,12 +7,17 @@ import { formatPrice } from '../../../services/util';
 class CartProduct extends Component {
   static propTypes = {
     product: PropTypes.object.isRequired,
-    removeProduct: PropTypes.func.isRequired
+    removeProduct: PropTypes.func.isRequired,
+    changeProductQuantity: PropTypes.func.isRequired,
   };
 
-  state = {
-    isMouseOver: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: this.props.product,
+      isMouseOver: false
+    };
+  }
 
   handleMouseOver = () => {
     this.setState({ isMouseOver: true });
@@ -22,8 +27,23 @@ class CartProduct extends Component {
     this.setState({ isMouseOver: false });
   };
 
+  handleOnIncrease = () => {
+    const { changeProductQuantity } = this.props;
+    const { product } = this.state;
+    product.quantity = product.quantity + 1;
+    changeProductQuantity(product);
+  }
+
+  handleOnDecrease = () => {
+    const { changeProductQuantity } = this.props;
+    const { product } = this.state;
+    product.quantity = product.quantity - 1;
+    changeProductQuantity(product);
+  }
+
   render() {
-    const { product, removeProduct } = this.props;
+    const { removeProduct } = this.props;
+    const { product } = this.state;
 
     const classes = ['shelf-item'];
 
@@ -53,6 +73,10 @@ class CartProduct extends Component {
         </div>
         <div className="shelf-item__price">
           <p>{`${product.currencyFormat}  ${formatPrice(product.price)}`}</p>
+          <div>
+            <button onClick={this.handleOnDecrease} className="change-product-button">-</button>
+            <button onClick={this.handleOnIncrease} className="change-product-button">+</button>
+          </div>
         </div>
       </div>
     );

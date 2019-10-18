@@ -1,4 +1,4 @@
-import { LOAD_CART, ADD_PRODUCT, REMOVE_PRODUCT } from './actionTypes';
+import { LOAD_CART, ADD_PRODUCT, REMOVE_PRODUCT, CHANGE_PRODUCT_QUANTITY } from './actionTypes';
 
 const initialState = {
   products: []
@@ -20,6 +20,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         productToRemove: Object.assign({}, action.payload)
+      };
+    case CHANGE_PRODUCT_QUANTITY:
+      return {
+        ...state,
+        productToChange: Object.assign({}, action.payload)
       };
     default:
       return state;
