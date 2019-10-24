@@ -98,6 +98,16 @@
         "review",
         "bug"
       ]
+    },
+    {
+      "login": "HayTran94",
+      "name": "Hay Tran",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/39950210?v=4",
+      "profile": "https://www.linkedin.com/in/hay-tran-ab6421165/",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
