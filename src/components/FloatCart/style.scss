@@ -185,7 +185,14 @@
         width: 25%;
       }
       .change-product-button {
-        color: #000,
+        color: #b7b7b7;
+        border: 0;
+        background-color: #000;
+        width: 25px;
+        height: 25px;
+        
+        &:disabled {
+          opacity: .2
       }
     }
   }
