@@ -74,7 +74,7 @@ class CartProduct extends Component {
         <div className="shelf-item__price">
           <p>{`${product.currencyFormat}  ${formatPrice(product.price)}`}</p>
           <div>
-            <button onClick={this.handleOnDecrease} className="change-product-button">-</button>
+            <button onClick={this.handleOnDecrease} disabled={product.quantity === 1 ? true : false} className="change-product-button">-</button>
             <button onClick={this.handleOnIncrease} className="change-product-button">+</button>
           </div>
         </div>
