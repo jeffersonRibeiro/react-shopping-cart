@@ -47,6 +47,15 @@ class Filter extends Component {
         <h4 className="title">Sizes:</h4>
         {this.createCheckboxes()}
         <GithubStarButton />
+        <div className="instagram">
+          <div class="instagram-icon" />
+          <a
+            href="https://www.instagram.com/jeffiribeiro/"
+            title="jeffiribeiro instagram"
+          >
+            /jeffiribeiro
+          </a>
+        </div>
       </div>
     );
   }
