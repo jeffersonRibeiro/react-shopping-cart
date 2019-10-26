@@ -11,6 +11,33 @@
     }
   }
 
+  .instagram {
+    margin: 20px auto 0 auto;
+    text-align: center;
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+      background-image: url('../../../static/instagram-icon.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      opacity: 0.3;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    a {
+      color: #aaa;
+      text-decoration: none;
+
+      &:hover {
+        color: #eabf00;
+      }
+    }
+  }
+
   .title {
     margin-top: 2px;
     margin-bottom: 20px;
