@@ -1,35 +1,45 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const Checkbox = props => {
-  const { label, classes } = props;
-  const [isChecked, setChecked] = useState(false);
+class Checkbox extends Component {
+  static propTypes = {
+    label: PropTypes.string.isRequired,
+    handleCheckboxChange: PropTypes.func.isRequired
+  };
 
-  const toggleCheckboxChange = (props, isChecked, setChecked) => {
-    const { handleCheckboxChange, label } = props;
+  state = {
+    isChecked: false
+  };
 
-    setChecked(!isChecked);
+  toggleCheckboxChange = () => {
+    const { handleCheckboxChange, label } = this.props;
+
+    this.setState(({ isChecked }) => ({
+      isChecked: !isChecked
+    }));
+
     handleCheckboxChange(label);
   };
 
-  return (
-    <div className={classes}>
-      <label>
-        <input
-          type="checkbox"
-          value={label}
-          checked={isChecked}
-          onChange={() => toggleCheckboxChange(props, isChecked, setChecked)}
-        />
-        <span className="checkmark">{label}</span>
-      </label>
-    </div>
-  );
-};
+  render() {
+    const { label, classes } = this.props;
+    const { isChecked } = this.state;
 
-Checkbox.propTypes = {
-  label: PropTypes.string.isRequired,
-  handleCheckboxChange: PropTypes.func.isRequired
-};
+    return (
+      <div className={classes}>
+        <label>
+          <input
+            type="checkbox"
+            value={label}
+            checked={isChecked}
+            onChange={this.toggleCheckboxChange}
+          />
+
+          <span className="checkmark">{label}</span>
+        </label>
+      </div>
+    );
+  }
+}
 
 export default Checkbox;
