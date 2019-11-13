@@ -16,6 +16,17 @@
     margin-bottom: 20px;
   }
 
+  .clear-filter{
+    display: block;
+    margin:30px 0;
+    color: #1b1a20;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
   &-available-size {
     display: inline-block;
     margin-bottom: 10px;

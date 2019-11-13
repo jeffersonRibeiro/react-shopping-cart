@@ -46,10 +46,13 @@ const productsMock = {
 
 beforeEach(() => {
   moxios.install(axios);
-  moxios.stubRequest('http://localhost:8001/api/products', {
-    status: 200,
-    response: productsMock
-  });
+  moxios.stubRequest(
+    'https://react-shopping-cart-67954.firebaseio.com/products.json',
+    {
+      status: 200,
+      response: productsMock
+    }
+  );
 });
 
 afterEach(() => {
@@ -80,7 +83,6 @@ describe('Integrations', () => {
       wrapped
         .find(Product)
         .at(0)
-        .find('.shelf-item__buy-btn')
         .simulate('click');
 
       /* Then after one product is added to cart, it should have 1 in it */

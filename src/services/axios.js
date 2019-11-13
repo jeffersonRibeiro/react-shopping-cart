@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8001/api'
+  baseURL: 'https://react-shopping-cart-67954.firebaseio.com/'
 });
 
 export default instance;

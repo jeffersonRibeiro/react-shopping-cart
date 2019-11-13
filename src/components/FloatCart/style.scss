@@ -37,7 +37,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 15px;
-    background-image: url('../../static/bag-icon.png');
+    background-image: url('https://rawcdn.githack.com/jeffersonRibeiro/react-shopping-cart/ccf64841ddfdfedfce9821b2b7ff2c8075afb17c/src/static/bag-icon.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -140,7 +140,7 @@
         border-radius: 50%;
         position: absolute;
         background-size: auto 100%;
-        background-image: url('../../static/sprite_delete-icon.png');
+        background-image: url('https://rawcdn.githack.com/jeffersonRibeiro/react-shopping-cart/ccf64841ddfdfedfce9821b2b7ff2c8075afb17c/src/static/sprite_delete-icon.png');
         background-repeat: no-repeat;
         z-index: 2;
         cursor: pointer;

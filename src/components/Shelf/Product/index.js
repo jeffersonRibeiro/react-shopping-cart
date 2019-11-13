@@ -29,7 +29,11 @@ const Product = props => {
   }
 
   return (
-    <div className="shelf-item" data-sku={product.sku}>
+    <div
+      className="shelf-item"
+      onClick={() => props.addProduct(product)}
+      data-sku={product.sku}
+    >
       {product.isFreeShipping && (
         <div className="shelf-stopper">Free shipping</div>
       )}
@@ -47,12 +51,7 @@ const Product = props => {
         </div>
         {productInstallment}
       </div>
-      <div
-        onClick={() => props.addProduct(product)}
-        className="shelf-item__buy-btn"
-      >
-        Add to cart
-      </div>
+      <div className="shelf-item__buy-btn">Add to cart</div>
     </div>
   );
 };

@@ -4,19 +4,21 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateFilters } from '../../../services/filters/actions';
 import Checkbox from '../../Checkbox';
-import GithubStarButton from '../../github/StarButton';
 
 import './style.scss';
 
 const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 
 class Filter extends Component {
+  state = {
+    clearFilter: true
+  };
   static propTypes = {
     updateFilters: PropTypes.func.isRequired,
     filters: PropTypes.array
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.selectedCheckboxes = new Set();
   }
 
@@ -36,8 +38,17 @@ class Filter extends Component {
       label={label}
       handleCheckboxChange={this.toggleCheckbox}
       key={label}
+      isFilterCleared={this.selectedCheckboxes}
     />
   );
+
+  clearFilter = () => {
+    this.selectedCheckboxes.size && this.selectedCheckboxes.clear();
+    this.props.updateFilters(Array.from(this.selectedCheckboxes));
+    this.setState({ clearFilter: false }, () => {
+      this.setState({ clearFilter: true });
+    });
+  };
 
   createCheckboxes = () => availableSizes.map(this.createCheckbox);
 
@@ -45,8 +56,10 @@ class Filter extends Component {
     return (
       <div className="filters">
         <h4 className="title">Sizes:</h4>
-        {this.createCheckboxes()}
-        <GithubStarButton />
+        <span className="clear-filter" onClick={this.clearFilter}>
+          Clear Filter
+        </span>
+        {this.state.clearFilter && this.createCheckboxes()}
       </div>
     );
   }

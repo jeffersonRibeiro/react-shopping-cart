@@ -16,7 +16,7 @@ const compare = {
 
 export const fetchProducts = (filters, sortBy, callback) => dispatch => {
   return axios
-    .get('/products')
+    .get('/products.json')
     .then(res => {
       let { products } = res.data;
 
