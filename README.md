@@ -1,5 +1,5 @@
 ## 🛍️ Simple ecommerce cart application [![CircleCI](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart.svg?style=svg)](https://circleci.com/gh/jeffersonRibeiro/react-shopping-cart)
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 
 <p align="center">
 
@@ -81,15 +81,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Syed-Saad-Qamar"><img src="https://avatars3.githubusercontent.com/u/38069997?v=4" width="100px;" alt="Syed Saad Qamar"/><br /><sub><b>Syed Saad Qamar</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=Syed-Saad-Qamar" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ksakiyama"><img src="https://avatars0.githubusercontent.com/u/1367783?v=4" width="100px;" alt="ksakiyama"/><br /><sub><b>ksakiyama</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=ksakiyama" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/deskoh"><img src="https://avatars0.githubusercontent.com/u/9096984?v=4" width="100px;" alt="Desmond Koh"/><br /><sub><b>Desmond Koh</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=deskoh" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/rithikachowta08"><img src="https://avatars1.githubusercontent.com/u/26671726?v=4" width="100px;" alt="Rithika Chowta"/><br /><sub><b>Rithika Chowta</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=rithikachowta08" title="Code">💻</a></td>
     <td align="center"><a href="http://stabja.github.io"><img src="https://avatars3.githubusercontent.com/u/10581882?v=4" width="100px;" alt="Swetabja Hazra"/><br /><sub><b>Swetabja Hazra</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=Stabja" title="Code">💻</a></td>
-    <td align="center"><a href="https://danh-was-here.netlify.com/"><img src="https://avatars0.githubusercontent.com/u/14105469?v=4" width="100px;" alt="Danh Nguyen"/><br /><sub><b>Danh Nguyen</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=NguyenDa18" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/nhoktenz"><img src="https://avatars3.githubusercontent.com/u/6723699?v=4" width="100px;" alt="nhoktenz"/><br /><sub><b>nhoktenz</b></sub></a><br /><a href="#ideas-nhoktenz" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/harshan89"><img src="https://avatars3.githubusercontent.com/u/9652826?v=4" width="100px;" alt="Harshan Morawaka"/><br /><sub><b>Harshan Morawaka</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/issues?q=author%3Aharshan89" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/saher-elgendy"><img src="https://avatars1.githubusercontent.com/u/37591800?v=4" width="100px;" alt="saher-elgendy"/><br /><sub><b>saher-elgendy</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/issues?q=author%3Asaher-elgendy" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/criesbeck"><img src="https://avatars3.githubusercontent.com/u/1717574?v=4" width="100px;" alt="Chris Riesbeck"/><br /><sub><b>Chris Riesbeck</b></sub></a><br /><a href="#ideas-criesbeck" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tutorial-criesbeck" title="Tutorials">✅</a> <a href="#content-criesbeck" title="Content">🖋</a> <a href="#review-criesbeck" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/jeffersonRibeiro/react-shopping-cart/issues?q=author%3Acriesbeck" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/hay-tran-ab6421165/"><img src="https://avatars0.githubusercontent.com/u/39950210?v=4" width="100px;" alt="Hay Tran"/><br /><sub><b>Hay Tran</b></sub></a><br /><a href="https://github.com/jeffersonRibeiro/react-shopping-cart/commits?author=HayTran94" title="Code">💻</a> <a href="#design-HayTran94" title="Design">🎨</a></td>
   </tr>
