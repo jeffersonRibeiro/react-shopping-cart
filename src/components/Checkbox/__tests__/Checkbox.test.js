@@ -28,3 +28,6 @@ it('should have innerText equals label propertie', () => {
   const text = wrapped.find('span').text();
   expect(text).toEqual(label);
 });
+
+
+//doing sample commit and PR
