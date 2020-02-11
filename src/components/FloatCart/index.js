@@ -10,6 +10,7 @@ import { formatPrice } from '../../services/util';
 import './style.scss';
 
 class FloatCart extends Component {
+
   static propTypes = {
     loadCart: PropTypes.func.isRequired,
     updateCart: PropTypes.func.isRequired,
@@ -18,24 +19,43 @@ class FloatCart extends Component {
     removeProduct: PropTypes.func,
     productToRemove: PropTypes.object,
     changeProductQuantity: PropTypes.func,
-    productToChange: PropTypes.object,
+    productToChange: PropTypes.object
   };
 
   state = {
+    newProduct: this.props.newProduct,
+    productToChange: this.props.productToChange,
+    productToRemove: this.props.productToRemove,
     isOpen: false
   };
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.newProduct !== this.props.newProduct) {
-      this.addProduct(nextProps.newProduct);
+  static getDerivedStateFromProps(nextProps, prevState) {
+
+    if (nextProps.newProduct !== prevState.newProduct) {
+      return { newProduct : nextProps.newProduct }
     }
 
-    if (nextProps.productToRemove !== this.props.productToRemove) {
-      this.removeProduct(nextProps.productToRemove);
+    if(nextProps.productToRemove !== prevState.productToRemove){
+      return { productToRemove: nextProps.productToRemove };
     }
 
-    if (nextProps.productToChange !== this.props.productToChange) {
-      this.changeProductQuantity(nextProps.productToChange);
+    if (nextProps.productToChange !== prevState.productToChange) {
+      return { productToChange: nextProps.productToChange };
+    }
+    return null;
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    if(prevState.newProduct !== this.state.newProduct){
+      this.addProduct(this.state.newProduct);
+    }
+
+    if (prevState.productToRemove !== this.state.productToRemove) {
+      this.removeProduct(this.state.productToRemove);
+    }
+
+    if (prevState.productToChange !== this.state.productToChange) {
+      this.changeProductQuantity(this.state.productToChange);
     }
   }
 
