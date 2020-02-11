@@ -19,28 +19,55 @@ class Shelf extends Component {
   };
 
   state = {
-    isLoading: false
+    isLoading: false,
+    filters: this.props.filters,
+    sort: this.props.sort
   };
 
   componentDidMount() {
     this.handleFetchProducts();
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { filters: nextFilters, sort: nextSort } = nextProps;
-    const { filters } = this.props;
+  // componentWillReceiveProps(nextProps) {
+  //   const { filters: nextFilters, sort: nextSort } = nextProps;
+  //   const { filters } = this.props;
+  //   if (nextFilters.length !== filters.length) {
+  //     this.handleFetchProducts(nextFilters, undefined);
+  //   }
+
+  //   if (nextSort !== this.props.sort) {
+  //     this.handleFetchProducts(undefined, nextSort);
+  //   }
+  // }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.filters.length !== prevState.filters.length) {
+      return { filters: nextProps.filters };
+    }
+
+    if (nextProps.sort !== prevState.sort) {
+      return { sort: nextProps.sort };
+    }
+
+    return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { filters: nextFilters, sort: nextSort } = this.state;
+    const { filters, sort } = prevState;
+
     if (nextFilters.length !== filters.length) {
       this.handleFetchProducts(nextFilters, undefined);
     }
 
-    if (nextSort !== this.props.sort) {
+    if (nextSort !== sort) {
       this.handleFetchProducts(undefined, nextSort);
     }
   }
 
   handleFetchProducts = (
-    filters = this.props.filters,
-    sort = this.props.sort
+    filters = this.state.filters,
+    sort = this.state.sort
   ) => {
     this.setState({ isLoading: true });
     this.props.fetchProducts(filters, sort, () => {
