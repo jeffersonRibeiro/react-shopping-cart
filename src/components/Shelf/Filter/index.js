@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -10,8 +10,8 @@ import './style.scss';
 
 const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 
-const Filter =(props)=> {
-  const selectedCheckboxes = new Set(); 
+const Filter = props => {
+  const selectedCheckboxes = new Set();
 
   const toggleCheckbox = label => {
     if (selectedCheckboxes.has(label)) {
@@ -34,14 +34,14 @@ const Filter =(props)=> {
 
   const createCheckboxes = () => availableSizes.map(createCheckbox);
 
-    return (
-      <div className="filters">
-        <h4 className="title">Sizes:</h4>
-        {createCheckboxes()}
-        <GithubStarButton />
-      </div>
-    );
-}
+  return (
+    <div className="filters">
+      <h4 className="title">Sizes:</h4>
+      {createCheckboxes()}
+      <GithubStarButton />
+    </div>
+  );
+};
 
 Filter.propTypes = {
   updateFilters: PropTypes.func.isRequired,
