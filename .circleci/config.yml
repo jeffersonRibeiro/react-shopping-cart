@@ -36,16 +36,19 @@ workflows:
   version: 2
   test-branch:
     jobs:
-      - test:
-          filters:
-            branches:
-              ignore: master
+      - test
+    filters:
+      branches:
+        ignore: master
   build-deploy:
     jobs:
-      - build
+      - test
+      - build:
+          requires:
+            - test
       - deploy:
           requires:
             - build
-          filters:
-            branches:
-              only: master
+    filters:
+      branches:
+        only: master
