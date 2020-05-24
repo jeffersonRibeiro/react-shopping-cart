@@ -5,12 +5,13 @@ witmy: &witmy
 version: 2
 jobs:
   test:
-    - run: npm install
-    - run: npm run test
+    <<: *witmy
+    steps:
+      - run: npm install
+      - run: npm run test
   build:
     <<: *witmy
     steps:
-      - checkout
       - run: npm install
       - run: npm run test
       - run: npm run build
