@@ -42,7 +42,7 @@ workflows:
               ignore: master
   build-deploy:
     jobs:
-      - test
+      - test:
           filters:
             branches:
               only: master
