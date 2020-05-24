@@ -222,6 +222,7 @@ const mapStateToProps = state => ({
   cartTotal: state.total.data
 });
 
+
 export default connect(
   mapStateToProps,
   { loadCart, updateCart, removeProduct, changeProductQuantity }
