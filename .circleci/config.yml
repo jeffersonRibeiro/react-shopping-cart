@@ -7,6 +7,7 @@ jobs:
   test:
     <<: *witmy
     steps:
+      - checkout
       - run: npm install
       - run: npm run test
       - persist_to_workspace:
