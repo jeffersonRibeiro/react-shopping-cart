@@ -37,9 +37,9 @@ workflows:
   test-branch:
     jobs:
       - test:
-          filters:
-            branches:
-              ignore: master
+        filters:
+          branches:
+            ignore: master
   build-deploy:
     jobs:
       - test:
