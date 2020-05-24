@@ -4,12 +4,21 @@ witmy: &witmy
 
 version: 2
 jobs:
-  build:
+  test:
     <<: *witmy
     steps:
       - checkout
       - run: npm install
       - run: npm run test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+  build:
+    <<: *witmy
+    steps:
+      - attach_workspace:
+          at: .
       - run: npm run build
       - persist_to_workspace:
           root: .
@@ -25,12 +34,21 @@ jobs:
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
   version: 2
+  test-branch:
+    jobs:
+      - test:
+          filters:
+            branches:
+              ignore: master
   build-deploy:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
+      - test:
           filters:
             branches:
               only: master
+      - build:
+          requires:
+            - test
+      - deploy:
+          requires:
+            - build
