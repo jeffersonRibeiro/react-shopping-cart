@@ -9,11 +9,15 @@ jobs:
     steps:
       - run: npm install
       - run: npm run test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
   build:
     <<: *witmy
     steps:
-      - run: npm install
-      - run: npm run test
+      - attach_workspace:
+          at: .
       - run: npm run build
       - persist_to_workspace:
           root: .
