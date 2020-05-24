@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Sort from '../Sort';
+import Sort from '../ShelfSort';
 
-const ShelfHeader = props => {
+import { Container, ProductsFound } from './styles';
+
+const ShelfHeader = (props) => {
   return (
-    <div className="shelf-container-header">
-      <small className="products-found">
+    <Container>
+      <ProductsFound>
         <span>{props.productsLength} Product(s) found.</span>
-      </small>
+      </ProductsFound>
       <Sort />
-    </div>
+    </Container>
   );
 };
 
 ShelfHeader.propTypes = {
-  productsLength: PropTypes.number.isRequired
+  productsLength: PropTypes.number.isRequired,
 };
 
 export default ShelfHeader;

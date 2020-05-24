@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { loadCart, removeProduct, changeProductQuantity } from '../../services/cart/actions';
+import {
+  loadCart,
+  removeProduct,
+  changeProductQuantity
+} from '../../services/cart/actions';
 import { updateCart } from '../../services/total/actions';
 import CartProduct from './CartProduct';
 import { formatPrice } from '../../services/util';
@@ -10,16 +14,12 @@ import { formatPrice } from '../../services/util';
 import './style.scss';
 
 class FloatCart extends Component {
-  static propTypes = {
-    loadCart: PropTypes.func.isRequired,
-    updateCart: PropTypes.func.isRequired,
-    cartProducts: PropTypes.array.isRequired,
-    newProduct: PropTypes.object,
-    removeProduct: PropTypes.func,
-    productToRemove: PropTypes.object,
-    changeProductQuantity: PropTypes.func,
-    productToChange: PropTypes.object,
-  };
+  // static propTypes = {
+  //   cartProducts: PropTypes.array.isRequired,
+  //   newProduct: PropTypes.object,
+  //   productToRemove: PropTypes.object,
+  //   productToChange: PropTypes.object
+  // };
 
   state = {
     isOpen: false
@@ -105,14 +105,24 @@ class FloatCart extends Component {
       this.removeProduct(product);
     }
     updateCart(cartProducts);
-  }
+  };
 
   render() {
-    const { cartTotal, cartProducts, removeProduct, changeProductQuantity } = this.props;
+    const {
+      cartTotal,
+      cartProducts,
+      removeProduct,
+      changeProductQuantity
+    } = this.props;
 
     const products = cartProducts.map(p => {
       return (
-        <CartProduct product={p} removeProduct={removeProduct} changeProductQuantity={changeProductQuantity} key={p.id} />
+        <CartProduct
+          product={p}
+          removeProduct={removeProduct}
+          changeProductQuantity={changeProductQuantity}
+          key={p.id}
+        />
       );
     });
 
@@ -194,15 +204,4 @@ class FloatCart extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  cartProducts: state.cart.products,
-  newProduct: state.cart.productToAdd,
-  productToRemove: state.cart.productToRemove,
-  productToChange: state.cart.productToChange,
-  cartTotal: state.total.data
-});
-
-export default connect(
-  mapStateToProps,
-  { loadCart, updateCart, removeProduct, changeProductQuantity }
-)(FloatCart);
+export default FloatCart;

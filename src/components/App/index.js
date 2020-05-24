@@ -1,19 +1,17 @@
 import React from 'react';
 
+import Filter from '../Filter';
 import Shelf from '../Shelf';
-import Filter from '../Shelf/Filter';
-import GithubCorner from '../github/Corner';
-import FloatCart from '../FloatCart';
+
+import { Container } from './styles';
+
+import PRODUCTS from '../../mock/products.json';
 
 const App = () => (
-  <React.Fragment>
-    <GithubCorner />
-    <main>
-      <Filter />
-      <Shelf />
-    </main>
-    <FloatCart />
-  </React.Fragment>
+  <Container>
+    <Filter />
+    <Shelf products={PRODUCTS.products} />
+  </Container>
 );
 
 export default App;
