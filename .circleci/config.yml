@@ -4,6 +4,9 @@ witmy: &witmy
 
 version: 2
 jobs:
+  test:
+    - run: npm install
+    - run: npm run test
   build:
     <<: *witmy
     steps:
@@ -25,6 +28,13 @@ jobs:
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
   version: 2
+  test:
+    jobs:
+      - test
+        filters:
+          branches:
+            ignore:
+              - master
   build-deploy:
     jobs:
       - build
