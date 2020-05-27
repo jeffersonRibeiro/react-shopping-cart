@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Selectbox from '../../Selectbox';
 
@@ -11,15 +10,14 @@ const sortBy = [
   { value: 'highestprice', label: 'Highest to lowest' },
 ];
 
-const Sort = ({ updateSort, sort }) => (
+const Sort = () => (
   <Container>
     Order by
-    <Selectbox options={sortBy} handleOnChange={(value) => updateSort(value)} />
+    <Selectbox
+      options={sortBy}
+      handleOnChange={() => console.log('handle on change here')}
+    />
   </Container>
 );
-
-Sort.propTypes = {
-  sort: PropTypes.string.isRequired,
-};
 
 export default Sort;

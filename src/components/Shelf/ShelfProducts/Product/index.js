@@ -1,60 +1,58 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Thumb from '../../../Thumb';
 import { formatPrice } from '../../../../services/util';
 
-const Product = ({ product, addProduct }) => {
-  product.quantity = 1;
+import {
+  Container,
+  Stopper,
+  Image,
+  Title,
+  Price,
+  InstallmentStyle,
+  Bold,
+  BuyButton,
+} from './styles.js';
 
+function Product({ product, addProduct }) {
   let formattedPrice = formatPrice(product.price, product.currencyId);
 
-  let productInstallment;
-
-  if (!!product.installments) {
-    const installmentPrice = product.price / product.installments;
-
-    productInstallment = (
-      <div className="installment">
-        <span>or {product.installments} x</span>
-        <b>
-          {product.currencyFormat}
-          {formatPrice(installmentPrice, product.currencyId)}
-        </b>
-      </div>
-    );
-  }
-
   return (
-    <div
-      className="shelf-item"
-      onClick={() => addProduct(product)}
-      data-sku={product.sku}
-    >
-      {product.isFreeShipping && (
-        <div className="shelf-stopper">Free shipping</div>
-      )}
-      <Thumb
-        classes="shelf-item__thumb"
+    <Container onClick={() => addProduct(product)}>
+      {product.isFreeShipping && <Stopper>Free shipping</Stopper>}
+      <Image
         src={require(`../../../../static/products/${product.sku}_1.jpg`)}
         alt={product.title}
+        title={product.title}
       />
-      <p className="shelf-item__title">{product.title}</p>
-      <div className="shelf-item__price">
-        <div className="val">
+      <Title>{product.title}</Title>
+      <Price>
+        <div>
           <small>{product.currencyFormat}</small>
-          <b>{formattedPrice.substr(0, formattedPrice.length - 3)}</b>
-          <span>{formattedPrice.substr(formattedPrice.length - 3, 3)}</span>
+          <Bold>{formattedPrice}</Bold>
         </div>
-        {productInstallment}
-      </div>
-      <div className="shelf-item__buy-btn">Add to cart</div>
-    </div>
+        <Installment product={product} />
+      </Price>
+      <BuyButton>Add to cart</BuyButton>
+    </Container>
   );
-};
+}
 
-Product.propTypes = {
-  product: PropTypes.object.isRequired,
-};
+function Installment({ product }) {
+  if (!product.installments) {
+    return null;
+  }
+
+  const installmentPrice = product.price / product.installments;
+
+  return (
+    <InstallmentStyle>
+      <span>or {product.installments} x </span>
+      <Bold>
+        {product.currencyFormat}
+        {formatPrice(installmentPrice, product.currencyId)}
+      </Bold>
+    </InstallmentStyle>
+  );
+}
 
 export default Product;

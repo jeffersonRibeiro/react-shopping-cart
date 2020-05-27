@@ -13,8 +13,8 @@ function Shelf({ products }) {
   return (
     <Container>
       {isLoading && <Spinner />}
-      <ShelfHeader products={products} />
-      {/* <ShelfProducts products={products} /> */}
+      <ShelfHeader productsQuantity={products.length} />
+      <ShelfProducts products={products} />
     </Container>
   );
 }
