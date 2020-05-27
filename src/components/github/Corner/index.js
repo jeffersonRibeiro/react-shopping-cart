@@ -1,11 +1,10 @@
 import React from 'react';
 
-import './style.scss';
+import { Container } from './styles.js';
 
 export default () => (
-  <a
+  <Container
     href="https://github.com/jeffersonRibeiro/react-shopping-cart"
-    className="github-corner"
     aria-label="View source on Github"
   >
     <svg
@@ -19,7 +18,7 @@ export default () => (
         top: '0',
         border: '0',
         left: '0',
-        transform: 'scale(-1, 1)'
+        transform: 'scale(-1, 1)',
       }}
       aria-hidden="true"
     >
@@ -36,5 +35,5 @@ export default () => (
         className="octo-body"
       />
     </svg>
-  </a>
+  </Container>
 );
