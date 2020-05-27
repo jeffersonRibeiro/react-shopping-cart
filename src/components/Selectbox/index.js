@@ -1,25 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Selectbox = ({ options, classes, handleOnChange }) => {
-  const createOptions = options =>
-    options.map(o => (
-      <option value={o.value} key={o.value}>
-        {o.label}
-      </option>
-    ));
+import { Container } from './styles';
 
+function Selectbox({ options, classes, handleOnChange }) {
   return (
-    <select onChange={e => handleOnChange(e.target.value)} className={classes}>
-      {createOptions(options)}
-    </select>
+    <Container
+      onChange={(e) => handleOnChange(e.target.value)}
+      className={classes}
+    >
+      {options.map((o) => (
+        <option value={o.value} key={o.value}>
+          {o.label}
+        </option>
+      ))}
+    </Container>
   );
-};
+}
 
 Selectbox.propTypes = {
   options: PropTypes.array.isRequired,
   classes: PropTypes.string,
-  handleOnChange: PropTypes.func.isRequired
+  handleOnChange: PropTypes.func.isRequired,
 };
 
 export default Selectbox;

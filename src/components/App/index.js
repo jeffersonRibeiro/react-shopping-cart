@@ -9,11 +9,12 @@ import PRODUCTS from '../../mock/products.json';
 
 const App = () => (
   <Container>
-    <LayoutSide>Sidebar</LayoutSide>
+    <LayoutSide>
+      <Filter />
+    </LayoutSide>
     <LayoutMain>
       <Shelf products={PRODUCTS.products} />
     </LayoutMain>
-    {/* <Filter /> */}
   </Container>
 );
 

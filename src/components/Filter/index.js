@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Checkbox from '../Checkbox';
+import GithubStarButton from '../github/StarButton';
 
 import { Container, Title } from './styles';
 
 const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 
-const Filter = (props) => {
+function Filter(props) {
   const selectedCheckboxes = new Set();
 
   const toggleCheckbox = (label) => {
@@ -20,24 +21,23 @@ const Filter = (props) => {
     // props.updateFilters(Array.from(selectedCheckboxes));
   };
 
-  const createCheckbox = (label) => (
-    <Checkbox
-      classes="filters-available-size"
-      label={label}
-      handleCheckboxChange={toggleCheckbox}
-      key={label}
-    />
-  );
-
-  const createCheckboxes = () => availableSizes.map(createCheckbox);
-
   return (
     <Container>
       <Title>Sizes:</Title>
-      {createCheckboxes()}
+      <div>
+        {availableSizes.map((label) => (
+          <Checkbox
+            classes="filters-available-size"
+            label={label}
+            handleCheckboxChange={toggleCheckbox}
+            key={label}
+          />
+        ))}
+      </div>
+      <GithubStarButton />
     </Container>
   );
-};
+}
 
 Filter.propTypes = {
   filters: PropTypes.array,

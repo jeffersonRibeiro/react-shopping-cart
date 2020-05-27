@@ -8,9 +8,7 @@ import { Container, ProductsFound } from './styles';
 const ShelfHeader = ({ productsQuantity }) => {
   return (
     <Container>
-      <ProductsFound>
-        <span>{productsQuantity} Product(s) found.</span>
-      </ProductsFound>
+      <ProductsFound>{productsQuantity} Product(s) found.</ProductsFound>
       <ShelfSort />
     </Container>
   );

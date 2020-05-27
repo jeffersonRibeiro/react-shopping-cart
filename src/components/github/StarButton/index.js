@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './style.scss';
+import { Container } from './styles.js';
 
 const StarButton = () => (
-  <div className="star-button-container">
+  <Container>
     <small>Leave a star on Github if this repository was useful :)</small>
     <a
       className="github-button"
@@ -15,7 +15,7 @@ const StarButton = () => (
     >
       Star
     </a>
-  </div>
+  </Container>
 );
 
 export default StarButton;
