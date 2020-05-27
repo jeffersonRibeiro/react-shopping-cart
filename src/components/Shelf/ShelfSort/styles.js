@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  float: right;
-`;
+export const Container = styled.div``;
 
 // .sort {
 //

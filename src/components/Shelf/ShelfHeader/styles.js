@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
 `;
 
 export const ProductsFound = styled.small`
-  float: left;
   margin: 0;
   margin-top: 8px;
 `;
