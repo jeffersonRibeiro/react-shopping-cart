@@ -9,8 +9,7 @@
 
 📌
 
-*I'm migrating the app from SASS to Styled Components and removing Redux to make things more simpler.
-If you'd like to contribute just checkout to `update-project-cleanup-and-modernize` branch.*
+*I'm migrating the app from SASS to Styled Components and removing Redux to make things more simpler for people who are just starting to learn React and use this project to study. If you'd like to contribute just checkout to `update-project-cleanup-and-modernize` branch.*
 
 
 ## Basic Overview - [Live Demo](https://react-shopping-cart-67954.firebaseapp.com/)
