@@ -6,8 +6,10 @@
   <img src="./doc/react-shopping-cart-min.gif">
 </p>
 
-I'm migrating the app from SASS to Styled Components and removing Redux to make things more simpler.
-If you'd like to contribute just checkout to `update-project-cleanup-and-modernize` branch.
+
+📌  *I'm migrating the app from SASS to Styled Components and removing Redux to make things more simpler.
+If you'd like to contribute just checkout to `update-project-cleanup-and-modernize` branch.*
+
 
 ## Basic Overview - [Live Demo](https://react-shopping-cart-67954.firebaseapp.com/)
 
