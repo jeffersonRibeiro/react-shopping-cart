@@ -1,0 +1,1 @@
+export const UPDATE_SHIPPING = 'UPDATE_SHIPPING';
