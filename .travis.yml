@@ -7,7 +7,6 @@ before_script:
 
 script: 
   - npm run test
-  - npm run wdio
 
 deploy:
   provider: pages
