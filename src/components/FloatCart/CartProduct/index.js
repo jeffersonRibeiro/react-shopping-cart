@@ -8,7 +8,7 @@ class CartProduct extends Component {
   static propTypes = {
     product: PropTypes.object.isRequired,
     removeProduct: PropTypes.func.isRequired,
-    changeProductQuantity: PropTypes.func.isRequired,
+    changeProductQuantity: PropTypes.func
   };
 
   constructor(props) {
