@@ -3,16 +3,8 @@ node_js:
   - 11
 
 before_script:
+  - npm install -g node-gyp
   - npm install 
-
+  
 script: 
   - npm run test
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  keep_history: true
-  on: 
-    branch: master
-
