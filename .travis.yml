@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 11
+
+before_script:
+  - npm install 
+
+script: 
+  - npm run test
+  - npm run wdio
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  keep_history: true
+  on: 
+    branch: master
+
