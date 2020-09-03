@@ -17,6 +17,7 @@ install:
 
 script:
   - npm run test
+  - npm run test:coverage
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
