@@ -1,10 +1,13 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=b57944028211bb1f164b1214e1547bd4bea4ab0b3cf4963fb1eda86ff75ad5e4
 language: node_js
 node_js:
   - 11
 
 before_script:
   - npm install -g node-gyp
-  - npm install 
-  
-script: 
+  - npm install
+
+script:
   - npm run test
