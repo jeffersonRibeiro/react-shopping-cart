@@ -5,7 +5,7 @@ node_js:
 before_script:
   - npm install -g node-gyp
   - npm install
-  - npm test -- --coverage
 
 script:
   - npm run test
+  - npm test -- --coverage
