@@ -31,10 +31,10 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!/node_modules/",
-      "!src/index.js",
-      "!src/Root.js"
+      "src/*.{js,jsx,ts,tsx}"
+    ],
+    "coverageReporters": [
+      "lcov"
     ]
   },
   "browserslist": [
