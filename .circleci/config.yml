@@ -30,7 +30,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          name: Deploy Master to Firebase
+          name: Deploy Main to Firebase
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
   version: 2
@@ -39,13 +39,13 @@ workflows:
       - test:
           filters:
             branches:
-              ignore: master
+              ignore: main
   build-deploy:
     jobs:
       - test:
           filters:
             branches:
-              only: master
+              only: main
       - build:
           requires:
             - test
