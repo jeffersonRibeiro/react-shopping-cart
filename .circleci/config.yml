@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      # - run: npm run test
+      - run: npm run test
       - persist_to_workspace:
           root: .
           paths:
