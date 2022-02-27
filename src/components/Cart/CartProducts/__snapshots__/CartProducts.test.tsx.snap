@@ -1,0 +1,372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[components] - CartProducts should render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sc-furwcr cLrkbH"
+      >
+        <div
+          class="sc-bdvvtL jueDJs"
+        >
+          <div
+            class="sc-jRQBWg dyYCuI"
+          />
+          <img
+            alt="Cropped Stay Groovy off white"
+            class="sc-iCfMLu kdysBI"
+            src="8552515751438644-1-cart.webp"
+          />
+          <div
+            class="sc-gsDKAQ ixJPSE"
+          >
+            <p
+              class="sc-dkPtRN gXtprY"
+            >
+              Cropped Stay Groovy off white
+            </p>
+            <p
+              class="sc-hKwDye bPeUpS"
+            >
+              S | White T-shirt
+               
+              <br />
+              Quantity: 
+              1
+            </p>
+          </div>
+          <div
+            class="sc-eCImPb bHNFYi"
+          >
+            <p>
+              $  10.90
+            </p>
+            <div>
+              <button
+                class="sc-gKclnd hRhwqi"
+                disabled=""
+              >
+                -
+              </button>
+              <button
+                class="sc-gKclnd hRhwqi"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-bdvvtL jueDJs"
+        >
+          <div
+            class="sc-jRQBWg dyYCuI"
+          />
+          <img
+            alt="Basic Cactus White T-shirt"
+            class="sc-iCfMLu kdysBI"
+            src="39876704341265610-1-cart.webp"
+          />
+          <div
+            class="sc-gsDKAQ ixJPSE"
+          >
+            <p
+              class="sc-dkPtRN gXtprY"
+            >
+              Basic Cactus White T-shirt
+            </p>
+            <p
+              class="sc-hKwDye bPeUpS"
+            >
+              X | Wine
+               
+              <br />
+              Quantity: 
+              1
+            </p>
+          </div>
+          <div
+            class="sc-eCImPb bHNFYi"
+          >
+            <p>
+              $  13.25
+            </p>
+            <div>
+              <button
+                class="sc-gKclnd hRhwqi"
+                disabled=""
+              >
+                -
+              </button>
+              <button
+                class="sc-gKclnd hRhwqi"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-bdvvtL jueDJs"
+        >
+          <div
+            class="sc-jRQBWg dyYCuI"
+          />
+          <img
+            alt="Skater Black Sweatshirt"
+            class="sc-iCfMLu kdysBI"
+            src="9197907543445676-1-cart.webp"
+          />
+          <div
+            class="sc-gsDKAQ ixJPSE"
+          >
+            <p
+              class="sc-dkPtRN gXtprY"
+            >
+              Skater Black Sweatshirt
+            </p>
+            <p
+              class="sc-hKwDye bPeUpS"
+            >
+              XL | Tony Hawk
+               
+              <br />
+              Quantity: 
+              1
+            </p>
+          </div>
+          <div
+            class="sc-eCImPb bHNFYi"
+          >
+            <p>
+              $  25.90
+            </p>
+            <div>
+              <button
+                class="sc-gKclnd hRhwqi"
+                disabled=""
+              >
+                -
+              </button>
+              <button
+                class="sc-gKclnd hRhwqi"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-furwcr cLrkbH"
+    >
+      <div
+        class="sc-bdvvtL jueDJs"
+      >
+        <div
+          class="sc-jRQBWg dyYCuI"
+        />
+        <img
+          alt="Cropped Stay Groovy off white"
+          class="sc-iCfMLu kdysBI"
+          src="8552515751438644-1-cart.webp"
+        />
+        <div
+          class="sc-gsDKAQ ixJPSE"
+        >
+          <p
+            class="sc-dkPtRN gXtprY"
+          >
+            Cropped Stay Groovy off white
+          </p>
+          <p
+            class="sc-hKwDye bPeUpS"
+          >
+            S | White T-shirt
+             
+            <br />
+            Quantity: 
+            1
+          </p>
+        </div>
+        <div
+          class="sc-eCImPb bHNFYi"
+        >
+          <p>
+            $  10.90
+          </p>
+          <div>
+            <button
+              class="sc-gKclnd hRhwqi"
+              disabled=""
+            >
+              -
+            </button>
+            <button
+              class="sc-gKclnd hRhwqi"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bdvvtL jueDJs"
+      >
+        <div
+          class="sc-jRQBWg dyYCuI"
+        />
+        <img
+          alt="Basic Cactus White T-shirt"
+          class="sc-iCfMLu kdysBI"
+          src="39876704341265610-1-cart.webp"
+        />
+        <div
+          class="sc-gsDKAQ ixJPSE"
+        >
+          <p
+            class="sc-dkPtRN gXtprY"
+          >
+            Basic Cactus White T-shirt
+          </p>
+          <p
+            class="sc-hKwDye bPeUpS"
+          >
+            X | Wine
+             
+            <br />
+            Quantity: 
+            1
+          </p>
+        </div>
+        <div
+          class="sc-eCImPb bHNFYi"
+        >
+          <p>
+            $  13.25
+          </p>
+          <div>
+            <button
+              class="sc-gKclnd hRhwqi"
+              disabled=""
+            >
+              -
+            </button>
+            <button
+              class="sc-gKclnd hRhwqi"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bdvvtL jueDJs"
+      >
+        <div
+          class="sc-jRQBWg dyYCuI"
+        />
+        <img
+          alt="Skater Black Sweatshirt"
+          class="sc-iCfMLu kdysBI"
+          src="9197907543445676-1-cart.webp"
+        />
+        <div
+          class="sc-gsDKAQ ixJPSE"
+        >
+          <p
+            class="sc-dkPtRN gXtprY"
+          >
+            Skater Black Sweatshirt
+          </p>
+          <p
+            class="sc-hKwDye bPeUpS"
+          >
+            XL | Tony Hawk
+             
+            <br />
+            Quantity: 
+            1
+          </p>
+        </div>
+        <div
+          class="sc-eCImPb bHNFYi"
+        >
+          <p>
+            $  25.90
+          </p>
+          <div>
+            <button
+              class="sc-gKclnd hRhwqi"
+              disabled=""
+            >
+              -
+            </button>
+            <button
+              class="sc-gKclnd hRhwqi"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

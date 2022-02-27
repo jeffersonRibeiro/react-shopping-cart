@@ -1,11 +1,12 @@
-import { ICartContext, useCartContext } from 'contexts/cart-context';
-
+import { ICartProduct } from 'models';
 import CartProduct from './CartProduct';
 import * as S from './style';
 
-const CartProducts = () => {
-  const { products } = useCartContext() as ICartContext;
+interface IProps {
+  products: ICartProduct[];
+}
 
+const CartProducts = ({ products }: IProps) => {
   return (
     <S.Container>
       {products?.length ? (
