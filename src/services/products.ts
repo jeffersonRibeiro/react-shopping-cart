@@ -11,7 +11,7 @@ export const getProducts = async () => {
       'https://react-shopping-cart-67954.firebaseio.com/products.json'
     );
   } else {
-    response = await require('static/json/products.json');
+    response = require('static/json/products.json');
   }
 
   const { products } = response.data || [];
