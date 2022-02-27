@@ -35,7 +35,7 @@ Try playing with the code on CodeSandbox :)
 /* First, Install the needed packages */
 npm install
 
-/* Then start both the React app */
+/* Then start the React app */
 npm start
 
 /* To run the tests */
