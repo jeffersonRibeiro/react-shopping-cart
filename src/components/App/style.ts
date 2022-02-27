@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import S from 'components/Sort';
-
 export const Container = styled.div``;
 
 export const TwoColumnGrid = styled.main`
@@ -35,8 +33,4 @@ export const MainHeader = styled.main`
   grid-template-columns: 1fr 1fr;
   justify-content: end;
   padding: 0 15px;
-`;
-
-export const Sort = styled(S)`
-  justify-self: end;
 `;
