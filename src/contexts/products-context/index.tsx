@@ -64,4 +64,5 @@ const ProductsProvider: FC = ({ children }) => {
 };
 
 export const useProductsContext = () => useContext(ProductsContext);
+
 export default ProductsProvider;

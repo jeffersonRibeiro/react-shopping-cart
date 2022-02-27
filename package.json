@@ -31,8 +31,14 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -57,7 +63,8 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@types/styled-components": "^5.1.23",
     "firebase-tools": "^10.2.1",
-    "husky": "^7.0.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
     "prettier": "^2.5.1"
   }
 }
