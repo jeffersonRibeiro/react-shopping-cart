@@ -142,5 +142,4 @@ const CartProvider: FC = ({ children }) => {
 };
 
 export const useCartContext = () => useContext(CartContext);
-
 export default CartProvider;
