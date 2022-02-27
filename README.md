@@ -2,7 +2,7 @@
 
 <p align="center">
 
-  <img src="./doc/react-shopping-cart-min.gif">
+  <img src="./readme-banner.png">
 </p>
 
 ## Basic Overview - [Live Demo](https://react-shopping-cart-67954.firebaseapp.com/)
@@ -15,7 +15,7 @@ This simple shopping cart prototype shows how React with Typescript, React hooks
 - Filter products by available sizes using Context Api
 - Responsive design
 
-<!-- 
+<!--
 ## Getting started
 
 Try playing with the code on CodeSandbox :)
