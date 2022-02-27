@@ -1,6 +1,5 @@
-import Product from './Product';
-
 import { IProduct } from 'models';
+import Product from './Product';
 
 import * as S from './style';
 

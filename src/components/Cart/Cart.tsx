@@ -1,8 +1,7 @@
 import { ICartContext, useCartContext } from 'contexts/cart-context';
-import CartProducts from './CartProducts';
 
 import formatPrice from 'utils/formatPrice';
-
+import CartProducts from './CartProducts';
 import * as S from './style';
 
 const Cart = () => {
@@ -39,7 +38,7 @@ const Cart = () => {
           <S.CartIcon large>
             <S.CartQuantity>{total.productQuantity}</S.CartQuantity>
           </S.CartIcon>
-          <S.HeaderTitle className="header-title">Cart</S.HeaderTitle>
+          <S.HeaderTitle>Cart</S.HeaderTitle>
         </S.CartContentHeader>
 
         <CartProducts />

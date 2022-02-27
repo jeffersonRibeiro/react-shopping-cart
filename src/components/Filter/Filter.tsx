@@ -1,9 +1,9 @@
-import * as S from './style';
-
 import {
   IProductsContext,
   useProductsContext,
 } from 'contexts/products-context';
+
+import * as S from './style';
 
 const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 

@@ -4,6 +4,7 @@ import {
   IProductsContext,
   useProductsContext,
 } from 'contexts/products-context';
+
 import Loader from 'components/Loader';
 import { GithubCorner, GithubStarButton } from 'components/Github';
 import Filter from 'components/Filter';

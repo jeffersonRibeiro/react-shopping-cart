@@ -1,6 +1,7 @@
 import { createContext, FC, useContext, useState, useCallback } from 'react';
-import { getProducts } from 'services/products';
+
 import { IProduct } from 'models';
+import { getProducts } from 'services/products';
 
 export interface IProductsContext {
   isFetching: boolean;

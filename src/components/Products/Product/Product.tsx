@@ -1,7 +1,7 @@
-import formatPrice from 'utils/formatPrice';
-
 import { ICartContext, useCartContext } from 'contexts/cart-context';
+
 import { IProduct } from 'models';
+import formatPrice from 'utils/formatPrice';
 import * as S from './style';
 
 interface IProps {

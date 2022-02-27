@@ -1,7 +1,7 @@
-import * as S from './style';
-
 import { ICartContext, useCartContext } from 'contexts/cart-context';
+
 import CartProduct from './CartProduct';
+import * as S from './style';
 
 const CartProducts = () => {
   const { products } = useCartContext() as ICartContext;
