@@ -8,7 +8,7 @@ const Cart = () => {
   const { total, isOpen, openCart, closeCart } =
     useCartContext() as ICartContext;
 
-  const checkout = () => {
+  const handleCheckout = () => {
     if (total.productQuantity) {
       alert(
         `Checkout - Subtotal: ${total.currencyFormat} ${formatPrice(
@@ -21,9 +21,12 @@ const Cart = () => {
     }
   };
 
+  const handleToggleCart = (isOpen: boolean) => () =>
+    isOpen ? closeCart() : openCart();
+
   return (
     <S.Container isOpen={isOpen}>
-      <S.CartButton onClick={() => (isOpen ? closeCart() : openCart())}>
+      <S.CartButton onClick={handleToggleCart(isOpen)}>
         {isOpen ? (
           <span>X</span>
         ) : (
@@ -63,7 +66,7 @@ const Cart = () => {
               ) : null}
             </S.SubPriceInstallment>
           </S.SubPrice>
-          <S.CheckoutButton onClick={checkout}>Checkout</S.CheckoutButton>
+          <S.CheckoutButton onClick={handleCheckout}>Checkout</S.CheckoutButton>
         </S.CartFooter>
       </S.CartContent>
     </S.Container>
