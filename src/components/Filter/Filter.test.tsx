@@ -6,10 +6,10 @@ import Filter from '.';
 import { availableSizes } from './Filter';
 
 describe('[components] - Filter', () => {
-  const setup = (props = {}) => {
+  const setup = () => {
     return renderWithThemeProvider(
       <ProductsProvider>
-        <Filter {...props} />
+        <Filter />
       </ProductsProvider>
     );
   };

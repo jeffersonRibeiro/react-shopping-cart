@@ -4,7 +4,7 @@ import CartProvider from 'contexts/cart-context';
 import Cart from '.';
 
 describe('[components] - Cart', () => {
-  const setup = (props = {}) => {
+  const setup = () => {
     return renderWithThemeProvider(
       <CartProvider>
         <Cart />

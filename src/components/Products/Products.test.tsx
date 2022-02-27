@@ -4,8 +4,10 @@ import { mockProducts } from 'utils/test/mocks';
 import Products from '.';
 
 describe('[components] - Products', () => {
-  const setup = () => {
-    return renderWithThemeProvider(<Products products={mockProducts} />);
+  const setup = (props = {}) => {
+    return renderWithThemeProvider(
+      <Products products={mockProducts} {...props} />
+    );
   };
 
   test('should render correctly', () => {
