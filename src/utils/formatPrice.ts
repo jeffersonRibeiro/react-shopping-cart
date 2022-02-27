@@ -1,9 +1,9 @@
-const formatPrice = (number: number, currency: string): string => {
-  switch (currency) {
+const formatPrice = (price: number, currencyId: string): string => {
+  switch (currencyId) {
     case 'BRL':
-      return number.toFixed(2).replace('.', ',');
+      return price.toFixed(2).replace('.', ',');
     default:
-      return number.toFixed(2);
+      return price.toFixed(2);
   }
 };
 
