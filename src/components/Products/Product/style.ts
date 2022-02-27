@@ -10,17 +10,42 @@ export const BuyButton = styled.div`
   transition: background-color 0.2s;
 `;
 
-export const Container = styled.div`
+interface IImage {
+  alt: string;
+}
+export const Image = styled.div<IImage>``;
+
+interface IContainer {
+  sku: number | string;
+}
+export const Container = styled.div<IContainer>`
   position: relative;
   text-align: center;
   box-sizing: border-box;
   padding: 10px;
   margin-bottom: 30px;
-  border: 1px solid transparent;
   cursor: pointer;
 
+  ${Image} {
+    width: 100%;
+    height: 270px;
+    background-image: ${({ sku }) =>
+      `url(${require(`static/products/${sku}-1-product.webp`)})`};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media only screen and (min-width: ${({ theme: { breakpoints } }) =>
+        breakpoints.tablet}) {
+      height: 320px;
+    }
+  }
+
   &:hover {
-    border: 1px solid #eee;
+    ${Image} {
+      background-image: ${({ sku }) =>
+        `url(${require(`static/products/${sku}-2-product.webp`)})`};
+    }
 
     ${BuyButton} {
       background-color: ${({ theme }) => theme.colors.secondary};
@@ -37,10 +62,6 @@ export const Stopper = styled.div`
   font-size: 0.6em;
   background-color: ${({ theme }) => theme.colors.primary};
   cursor: default;
-`;
-
-export const Image = styled.img`
-  width: 100%;
 `;
 
 export const Title = styled.p`
