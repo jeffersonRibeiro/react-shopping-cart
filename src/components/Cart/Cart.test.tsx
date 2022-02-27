@@ -1,17 +1,14 @@
 import { renderWithThemeProvider } from 'utils/test/test-utils';
-import ProductsProvider from 'contexts/products-context';
 import CartProvider from 'contexts/cart-context';
 
-import App from '.';
+import Cart from '.';
 
-describe('[components] - App', () => {
+describe('[components] - Cart', () => {
   const setup = (props = {}) => {
     return renderWithThemeProvider(
-      <ProductsProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </ProductsProvider>
+      <CartProvider>
+        <Cart />
+      </CartProvider>
     );
   };
 
