@@ -43,9 +43,9 @@ const Product = ({ product }: IProps) => {
   };
 
   return (
-    <S.Container>
+    <S.Container sku={sku}>
       {isFreeShipping && <S.Stopper>Free shipping</S.Stopper>}
-      <S.Image src={require(`static/products/${sku}_1.jpg`)} alt={title} />
+      <S.Image alt={title} />
       <S.Title>{title}</S.Title>
       <S.Price>
         <S.Val>
