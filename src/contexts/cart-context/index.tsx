@@ -28,7 +28,6 @@ const CartProvider: FC = ({ children }) => {
   const [total, setTotal] = useState<ICartTotal>(totalInitialValues);
 
   const openCart = () => setIsOpen(true);
-
   const closeCart = () => setIsOpen(false);
 
   const updateQuantitySafely = (

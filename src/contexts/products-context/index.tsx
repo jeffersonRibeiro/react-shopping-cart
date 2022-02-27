@@ -20,18 +20,18 @@ const ProductsProvider: FC = ({ children }) => {
 
   const fetchProducts = useCallback(() => {
     setIsFetching(true);
+
     getProducts().then((products: IProduct[]) => {
       setIsFetching(false);
-
       setProducts(products);
     });
   }, []);
 
   const filterProducts = (filters: string[]) => {
     setIsFetching(true);
+
     getProducts().then((products: IProduct[]) => {
       setIsFetching(false);
-
       let filteredProducts;
 
       if (filters && filters.length > 0) {
