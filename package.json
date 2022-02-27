@@ -24,9 +24,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\""
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ]
   },
   "husky": {
     "hooks": {
