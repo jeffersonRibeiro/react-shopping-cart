@@ -1,6 +1,6 @@
 import { renderWithThemeProvider } from 'utils/test/test-utils';
 import ProductsProvider from 'contexts/products-context';
-import CartProvider from 'contexts/cart-context';
+import { CartProvider } from 'contexts/cart-context';
 
 import App from '.';
 

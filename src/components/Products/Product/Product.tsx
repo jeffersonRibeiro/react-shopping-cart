@@ -1,4 +1,4 @@
-import { ICartContext, useCartContext } from 'contexts/cart-context';
+import { useCart } from 'contexts/cart-context';
 
 import { IProduct } from 'models';
 import formatPrice from 'utils/formatPrice';
@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const Product = ({ product }: IProps) => {
-  const { addProduct, openCart } = useCartContext() as ICartContext;
+  const { openCart, addProduct } = useCart();
   const {
     sku,
     title,
