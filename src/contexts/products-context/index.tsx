@@ -11,7 +11,7 @@ export interface IProductsContext {
   filterProducts(filters: string[]): void;
 }
 
-const ProductsContext = createContext<IProductsContext | {}>({});
+export const ProductsContext = createContext<IProductsContext | {}>({});
 
 const ProductsProvider: FC = ({ children }) => {
   const [isFetching, setIsFetching] = useState(false);
@@ -65,5 +65,4 @@ const ProductsProvider: FC = ({ children }) => {
 };
 
 export const useProductsContext = () => useContext(ProductsContext);
-
 export default ProductsProvider;
