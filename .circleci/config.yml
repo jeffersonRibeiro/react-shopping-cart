@@ -37,15 +37,21 @@ workflows:
   test-branch:
     jobs:
       - test:
+          filters:
+            branches:
+              ignore: main
+      - build:
+          requires:
+            - test
   build-deploy:
     jobs:
-      - test
+      - test:
+          filters:
+            branches:
+              only: main
       - build:
           requires:
             - test
       - deploy:
-          filters:
-            branches:
-              only: main
           requires:
             - build
