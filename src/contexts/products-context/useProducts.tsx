@@ -16,7 +16,6 @@ const useProducts = () => {
 
   const fetchProducts = useCallback(() => {
     setIsFetching(true);
-
     getProducts().then((products: IProduct[]) => {
       setIsFetching(false);
       setProducts(products);

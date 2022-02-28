@@ -11,8 +11,8 @@ describe('[components] - CartProducts', () => {
   };
 
   test('should render correctly', () => {
-    const wrapper = setup();
-    expect(wrapper).toMatchSnapshot();
+    const view = setup();
+    expect(view).toMatchSnapshot();
   });
 
   test('should render call to action text when cart is empty', () => {
