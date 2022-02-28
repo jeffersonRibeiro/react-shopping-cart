@@ -21,7 +21,7 @@ const useProducts = () => {
       setIsFetching(false);
       setProducts(products);
     });
-  }, []);
+  }, [setIsFetching, setProducts]);
 
   const filterProducts = (filters: string[]) => {
     setIsFetching(true);
