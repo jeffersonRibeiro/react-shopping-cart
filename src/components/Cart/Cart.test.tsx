@@ -13,7 +13,7 @@ describe('[components] - Cart', () => {
   };
 
   test('should render correctly', () => {
-    const wrapper = setup();
-    expect(wrapper).toMatchSnapshot();
+    const view = setup();
+    expect(view).toMatchSnapshot();
   });
 });

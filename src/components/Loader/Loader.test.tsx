@@ -8,7 +8,7 @@ describe('[components] - Loader', () => {
   };
 
   test('should render correctly', () => {
-    const wrapper = setup();
-    expect(wrapper).toMatchSnapshot();
+    const view = setup();
+    expect(view).toMatchSnapshot();
   });
 });

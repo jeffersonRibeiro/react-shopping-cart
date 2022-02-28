@@ -7,7 +7,7 @@ import GlobalStyle from 'commons/style/global-style';
 
 import App from 'components/App';
 
-import ProductsProvider from 'contexts/products-context';
+import { ProductsProvider } from 'contexts/products-context';
 import { CartProvider } from 'contexts/cart-context';
 
 ReactDOM.render(

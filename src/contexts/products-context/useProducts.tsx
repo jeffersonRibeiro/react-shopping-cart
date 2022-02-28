@@ -1,31 +1,26 @@
-import { createContext, FC, useContext, useState, useCallback } from 'react';
+import { useContext, useCallback } from 'react';
 
+import { ProductsContext, IProductsContext } from './ProductsContextProvider';
 import { IProduct } from 'models';
 import { getProducts } from 'services/products';
 
-export interface IProductsContext {
-  isFetching: boolean;
-  products: IProduct[];
-  filters: string[];
-  fetchProducts(): void;
-  filterProducts(filters: string[]): void;
-}
-
-export const ProductsContext = createContext<IProductsContext | {}>({});
-
-const ProductsProvider: FC = ({ children }) => {
-  const [isFetching, setIsFetching] = useState(false);
-  const [products, setProducts] = useState<IProduct[]>([]);
-  const [filters, setFilters] = useState<string[]>([]);
+const useProducts = () => {
+  const {
+    isFetching,
+    setIsFetching,
+    products,
+    setProducts,
+    filters,
+    setFilters,
+  } = useContext(ProductsContext) as IProductsContext;
 
   const fetchProducts = useCallback(() => {
     setIsFetching(true);
-
     getProducts().then((products: IProduct[]) => {
       setIsFetching(false);
       setProducts(products);
     });
-  }, []);
+  }, [setIsFetching, setProducts]);
 
   const filterProducts = (filters: string[]) => {
     setIsFetching(true);
@@ -49,20 +44,13 @@ const ProductsProvider: FC = ({ children }) => {
     });
   };
 
-  const ProductContextValue: IProductsContext = {
+  return {
     isFetching,
-    products,
-    filters,
     fetchProducts,
+    products,
     filterProducts,
+    filters,
   };
-
-  return (
-    <ProductsContext.Provider value={ProductContextValue}>
-      {children}
-    </ProductsContext.Provider>
-  );
 };
 
-export const useProductsContext = () => useContext(ProductsContext);
-export default ProductsProvider;
+export default useProducts;

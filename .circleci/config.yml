@@ -40,6 +40,9 @@ workflows:
           filters:
             branches:
               ignore: main
+      - build:
+          requires:
+            - test
   build-deploy:
     jobs:
       - test:

@@ -1,14 +1,11 @@
-import {
-  IProductsContext,
-  useProductsContext,
-} from 'contexts/products-context';
+import { useProducts } from 'contexts/products-context';
 
 import * as S from './style';
 
 export const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 
 const Filter = () => {
-  const { filters, filterProducts } = useProductsContext() as IProductsContext;
+  const { filters, filterProducts } = useProducts();
 
   const selectedCheckboxes = new Set(filters);
 
