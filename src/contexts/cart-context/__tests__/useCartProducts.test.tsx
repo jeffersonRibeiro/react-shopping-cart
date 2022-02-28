@@ -1,9 +1,9 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { ICartProduct } from 'models';
 import React, { ReactNode } from 'react';
-import { CartProvider } from '.';
-import useCartProducts from './useCartProducts';
-import * as useCartTotalModule from './useCartTotal';
+import { CartProvider } from '..';
+import useCartProducts from '../useCartProducts';
+import * as useCartTotalModule from '../useCartTotal';
 
 import { mockCartProducts } from 'utils/test/mocks';
 

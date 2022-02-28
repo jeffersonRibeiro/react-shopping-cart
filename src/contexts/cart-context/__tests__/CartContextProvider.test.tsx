@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { CartProvider } from '.';
+import { CartProvider } from '..';
 
 describe('[contexts] - cart-context', () => {
   const setup = () => {
