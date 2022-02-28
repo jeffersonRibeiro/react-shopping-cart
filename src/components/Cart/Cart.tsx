@@ -5,7 +5,7 @@ import CartProducts from './CartProducts';
 import * as S from './style';
 
 const Cart = () => {
-  const { total, isOpen, openCart, closeCart } =
+  const { products, total, isOpen, openCart, closeCart } =
     useCartContext() as ICartContext;
 
   const handleCheckout = () => {
@@ -44,7 +44,7 @@ const Cart = () => {
           <S.HeaderTitle>Cart</S.HeaderTitle>
         </S.CartContentHeader>
 
-        <CartProducts />
+        <CartProducts products={products} />
 
         <S.CartFooter>
           <S.Sub>SUBTOTAL</S.Sub>

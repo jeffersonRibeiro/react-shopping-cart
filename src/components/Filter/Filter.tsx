@@ -5,7 +5,7 @@ import {
 
 import * as S from './style';
 
-const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
+export const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 
 const Filter = () => {
   const { filters, filterProducts } = useProductsContext() as IProductsContext;

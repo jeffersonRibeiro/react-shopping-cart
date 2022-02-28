@@ -22,6 +22,7 @@ const Checkbox = ({ className, label, handleOnChange }: IProps) => {
           value={label}
           checked={isChecked}
           onChange={toggleCheckboxChange}
+          data-testid="checkbox"
         />
 
         <span className="checkmark">{label}</span>
