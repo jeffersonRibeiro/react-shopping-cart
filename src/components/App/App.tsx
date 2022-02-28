@@ -1,9 +1,6 @@
 import { useEffect } from 'react';
 
-import {
-  IProductsContext,
-  useProductsContext,
-} from 'contexts/products-context';
+import { useProducts } from 'contexts/products-context';
 
 import Loader from 'components/Loader';
 import { GithubCorner, GithubStarButton } from 'components/Github';
@@ -14,8 +11,7 @@ import Cart from 'components/Cart';
 import * as S from './style';
 
 function App() {
-  const { isFetching, products, fetchProducts } =
-    useProductsContext() as IProductsContext;
+  const { isFetching, products, fetchProducts } = useProducts();
 
   useEffect(() => {
     fetchProducts();
