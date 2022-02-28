@@ -1,12 +1,11 @@
-import { ICartContext, useCartContext } from 'contexts/cart-context';
+import { useCart } from 'contexts/cart-context';
 
 import formatPrice from 'utils/formatPrice';
 import CartProducts from './CartProducts';
 import * as S from './style';
 
 const Cart = () => {
-  const { products, total, isOpen, openCart, closeCart } =
-    useCartContext() as ICartContext;
+  const { products, total, isOpen, openCart, closeCart } = useCart();
 
   const handleCheckout = () => {
     if (total.productQuantity) {

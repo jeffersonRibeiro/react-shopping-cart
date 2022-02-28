@@ -1,5 +1,5 @@
 import { renderWithThemeProvider } from 'utils/test/test-utils';
-import CartProvider from 'contexts/cart-context';
+import { CartProvider } from 'contexts/cart-context';
 import { mockCartProducts } from 'utils/test/mocks';
 
 import CartProduct from '.';
