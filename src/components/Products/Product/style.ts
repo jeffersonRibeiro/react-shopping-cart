@@ -93,6 +93,7 @@ export const Price = styled.div`
 `;
 
 export const Val = styled.p`
+  margin: 0;
   b {
     font-size: 1.5em;
     margin-left: 5px;
@@ -100,5 +101,6 @@ export const Val = styled.p`
 `;
 
 export const Installment = styled.p`
+  margin: 0;
   color: #9c9b9b;
 `;
