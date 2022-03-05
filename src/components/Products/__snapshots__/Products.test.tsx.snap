@@ -9,7 +9,7 @@ Object {
         class="sc-furwcr lmktzQ"
       >
         <div
-          class="sc-dkPtRN bbNUMC"
+          class="sc-dkPtRN gXqRZy"
           tabindex="1"
         >
           <div
@@ -58,13 +58,13 @@ Object {
           </div>
           <button
             class="sc-bdvvtL brAMjl"
-            tabindex="1"
+            tabindex="-1"
           >
             Add to cart
           </button>
         </div>
         <div
-          class="sc-dkPtRN dsICxi"
+          class="sc-dkPtRN glzrqu"
           tabindex="1"
         >
           <div
@@ -113,13 +113,13 @@ Object {
           </div>
           <button
             class="sc-bdvvtL brAMjl"
-            tabindex="1"
+            tabindex="-1"
           >
             Add to cart
           </button>
         </div>
         <div
-          class="sc-dkPtRN liqJQC"
+          class="sc-dkPtRN jKqKES"
           tabindex="1"
         >
           <div
@@ -163,7 +163,7 @@ Object {
           </div>
           <button
             class="sc-bdvvtL brAMjl"
-            tabindex="1"
+            tabindex="-1"
           >
             Add to cart
           </button>
@@ -176,7 +176,7 @@ Object {
       class="sc-furwcr lmktzQ"
     >
       <div
-        class="sc-dkPtRN bbNUMC"
+        class="sc-dkPtRN gXqRZy"
         tabindex="1"
       >
         <div
@@ -225,13 +225,13 @@ Object {
         </div>
         <button
           class="sc-bdvvtL brAMjl"
-          tabindex="1"
+          tabindex="-1"
         >
           Add to cart
         </button>
       </div>
       <div
-        class="sc-dkPtRN dsICxi"
+        class="sc-dkPtRN glzrqu"
         tabindex="1"
       >
         <div
@@ -280,13 +280,13 @@ Object {
         </div>
         <button
           class="sc-bdvvtL brAMjl"
-          tabindex="1"
+          tabindex="-1"
         >
           Add to cart
         </button>
       </div>
       <div
-        class="sc-dkPtRN liqJQC"
+        class="sc-dkPtRN jKqKES"
         tabindex="1"
       >
         <div
@@ -330,7 +330,7 @@ Object {
         </div>
         <button
           class="sc-bdvvtL brAMjl"
-          tabindex="1"
+          tabindex="-1"
         >
           Add to cart
         </button>

@@ -68,7 +68,7 @@ const Cart = () => {
                 ) : null}
               </S.SubPriceInstallment>
             </S.SubPrice>
-            <S.CheckoutButton onClick={handleCheckout}>
+            <S.CheckoutButton onClick={handleCheckout} autoFocus>
               Checkout
             </S.CheckoutButton>
           </S.CartFooter>

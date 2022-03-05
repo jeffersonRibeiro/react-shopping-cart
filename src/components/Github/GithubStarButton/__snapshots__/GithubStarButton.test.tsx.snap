@@ -7,7 +7,6 @@ Object {
     <div>
       <div
         class="star-button-container"
-        tabindex="-1"
       >
         <p>
           <small>
@@ -21,6 +20,7 @@ Object {
           data-show-count="true"
           data-size="large"
           href="https://github.com/jeffersonRibeiro/react-shopping-cart"
+          tabindex="-1"
         >
           Star
         </a>
@@ -30,7 +30,6 @@ Object {
   "container": <div>
     <div
       class="star-button-container"
-      tabindex="-1"
     >
       <p>
         <small>
@@ -44,6 +43,7 @@ Object {
         data-show-count="true"
         data-size="large"
         href="https://github.com/jeffersonRibeiro/react-shopping-cart"
+        tabindex="-1"
       >
         Star
       </a>

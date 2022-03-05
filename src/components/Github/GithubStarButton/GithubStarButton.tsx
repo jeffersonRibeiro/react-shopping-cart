@@ -1,5 +1,5 @@
 const StarButton = () => (
-  <div className="star-button-container" tabIndex={-1}>
+  <div className="star-button-container">
     <p>
       <small>Leave a star on Github if this repository was useful :)</small>
     </p>
@@ -10,6 +10,7 @@ const StarButton = () => (
       data-size="large"
       data-show-count="true"
       aria-label="Star jeffersonRibeiro/react-shopping-cart on GitHub"
+      tabIndex={-1}
     >
       Star
     </a>

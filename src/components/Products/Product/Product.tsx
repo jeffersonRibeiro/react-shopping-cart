@@ -1,3 +1,4 @@
+import { KeyboardEvent } from 'react';
 import { useCart } from 'contexts/cart-context';
 
 import { IProduct } from 'models';
@@ -42,8 +43,15 @@ const Product = ({ product }: IProps) => {
     openCart();
   };
 
+  const handleAddProductWhenEnter = (event: KeyboardEvent) => {
+    if (event.key === 'Enter' || event.code === 'Space') {
+      addProduct({ ...product, quantity: 1 });
+      openCart();
+    }
+  };
+
   return (
-    <S.Container sku={sku} tabIndex={1}>
+    <S.Container onKeyUp={handleAddProductWhenEnter} sku={sku} tabIndex={1}>
       {isFreeShipping && <S.Stopper>Free shipping</S.Stopper>}
       <S.Image alt={title} />
       <S.Title>{title}</S.Title>
@@ -55,7 +63,7 @@ const Product = ({ product }: IProps) => {
         </S.Val>
         {productInstallment}
       </S.Price>
-      <S.BuyButton onClick={handleAddProduct} tabIndex={1}>
+      <S.BuyButton onClick={handleAddProduct} tabIndex={-1}>
         Add to cart
       </S.BuyButton>
     </S.Container>
