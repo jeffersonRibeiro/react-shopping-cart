@@ -55,11 +55,11 @@ Object {
               </b>
             </p>
           </div>
-          <div
-            class="sc-bdvvtL bitLMF"
+          <button
+            class="sc-bdvvtL fFPDou"
           >
             Add to cart
-          </div>
+          </button>
         </div>
         <div
           class="sc-dkPtRN tJmnc"
@@ -108,11 +108,11 @@ Object {
               </b>
             </p>
           </div>
-          <div
-            class="sc-bdvvtL bitLMF"
+          <button
+            class="sc-bdvvtL fFPDou"
           >
             Add to cart
-          </div>
+          </button>
         </div>
         <div
           class="sc-dkPtRN jsNbrc"
@@ -156,11 +156,11 @@ Object {
               </b>
             </p>
           </div>
-          <div
-            class="sc-bdvvtL bitLMF"
+          <button
+            class="sc-bdvvtL fFPDou"
           >
             Add to cart
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -216,11 +216,11 @@ Object {
             </b>
           </p>
         </div>
-        <div
-          class="sc-bdvvtL bitLMF"
+        <button
+          class="sc-bdvvtL fFPDou"
         >
           Add to cart
-        </div>
+        </button>
       </div>
       <div
         class="sc-dkPtRN tJmnc"
@@ -269,11 +269,11 @@ Object {
             </b>
           </p>
         </div>
-        <div
-          class="sc-bdvvtL bitLMF"
+        <button
+          class="sc-bdvvtL fFPDou"
         >
           Add to cart
-        </div>
+        </button>
       </div>
       <div
         class="sc-dkPtRN jsNbrc"
@@ -317,11 +317,11 @@ Object {
             </b>
           </p>
         </div>
-        <div
-          class="sc-bdvvtL bitLMF"
+        <button
+          class="sc-bdvvtL fFPDou"
         >
           Add to cart
-        </div>
+        </button>
       </div>
     </div>
   </div>,

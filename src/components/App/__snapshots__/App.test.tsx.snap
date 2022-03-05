@@ -209,78 +209,20 @@ Object {
         <div
           class="sc-fKVqWL fPaiQB"
         >
-          <div
-            class="sc-kfPuZi htCyVR"
+          <button
+            class="sc-kfPuZi gQJAfr"
           >
             <div
               class="sc-bBHxTw glIljW"
             >
               <div
                 class="sc-iwjdpV btwaUJ"
+                title="Products in cart quantity"
               >
                 0
               </div>
             </div>
-          </div>
-          <div
-            class="sc-cxpSdN hMpNOY"
-          >
-            <div
-              class="sc-llYSUQ fLxDth"
-            >
-              <div
-                class="sc-bBHxTw ikqEHG"
-              >
-                <div
-                  class="sc-iwjdpV btwaUJ"
-                >
-                  0
-                </div>
-              </div>
-              <span
-                class="sc-iJKOTD MRzOH"
-              >
-                Cart
-              </span>
-            </div>
-            <div
-              class="sc-hGPBjI ihzmGm"
-            >
-              <p
-                class="sc-dlVxhl buIPVK"
-              >
-                Add some products in the cart 
-                <br />
-                :)
-              </p>
-            </div>
-            <div
-              class="sc-jJoQJp hsMZQB"
-            >
-              <p
-                class="sc-giYglK ezTcgm"
-              >
-                SUBTOTAL
-              </p>
-              <div
-                class="sc-ezbkAF eORZQM"
-              >
-                <p
-                  class="sc-bYoBSM fAweDq"
-                >
-                  $ 0.00
-                </p>
-                <p
-                  class="sc-kLwhqv hrbREL"
-                />
-              </div>
-              <button
-                class="sc-ikJyIC lskEV"
-              >
-                Checkout
-              </button>
-            </div>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -490,78 +432,20 @@ Object {
       <div
         class="sc-fKVqWL fPaiQB"
       >
-        <div
-          class="sc-kfPuZi htCyVR"
+        <button
+          class="sc-kfPuZi gQJAfr"
         >
           <div
             class="sc-bBHxTw glIljW"
           >
             <div
               class="sc-iwjdpV btwaUJ"
+              title="Products in cart quantity"
             >
               0
             </div>
           </div>
-        </div>
-        <div
-          class="sc-cxpSdN hMpNOY"
-        >
-          <div
-            class="sc-llYSUQ fLxDth"
-          >
-            <div
-              class="sc-bBHxTw ikqEHG"
-            >
-              <div
-                class="sc-iwjdpV btwaUJ"
-              >
-                0
-              </div>
-            </div>
-            <span
-              class="sc-iJKOTD MRzOH"
-            >
-              Cart
-            </span>
-          </div>
-          <div
-            class="sc-hGPBjI ihzmGm"
-          >
-            <p
-              class="sc-dlVxhl buIPVK"
-            >
-              Add some products in the cart 
-              <br />
-              :)
-            </p>
-          </div>
-          <div
-            class="sc-jJoQJp hsMZQB"
-          >
-            <p
-              class="sc-giYglK ezTcgm"
-            >
-              SUBTOTAL
-            </p>
-            <div
-              class="sc-ezbkAF eORZQM"
-            >
-              <p
-                class="sc-bYoBSM fAweDq"
-              >
-                $ 0.00
-              </p>
-              <p
-                class="sc-kLwhqv hrbREL"
-              />
-            </div>
-            <button
-              class="sc-ikJyIC lskEV"
-            >
-              Checkout
-            </button>
-          </div>
-        </div>
+        </button>
       </div>
     </div>
   </div>,

@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 
-export const BuyButton = styled.div`
+export const BuyButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
   color: #fff;
   padding: 15px 0;
   margin-top: 10px;
   cursor: pointer;
+  width: 100%;
+  border: 0;
 
   transition: background-color 0.2s;
+
+  &:focus {
+    outline: 3px solid ${({ theme }) => theme.colors.secondary};
+  }
 `;
 
 interface IImage {

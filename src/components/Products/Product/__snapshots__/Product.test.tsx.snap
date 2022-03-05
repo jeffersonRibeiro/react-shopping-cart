@@ -52,11 +52,11 @@ Object {
             </b>
           </p>
         </div>
-        <div
-          class="sc-bdvvtL bitLMF"
+        <button
+          class="sc-bdvvtL fFPDou"
         >
           Add to cart
-        </div>
+        </button>
       </div>
     </div>
   </body>,
@@ -108,11 +108,11 @@ Object {
           </b>
         </p>
       </div>
-      <div
-        class="sc-bdvvtL bitLMF"
+      <button
+        class="sc-bdvvtL fFPDou"
       >
         Add to cart
-      </div>
+      </button>
     </div>
   </div>,
   "debug": [Function],
