@@ -43,7 +43,7 @@ const Product = ({ product }: IProps) => {
   };
 
   return (
-    <S.Container sku={sku}>
+    <S.Container sku={sku} tabIndex={1}>
       {isFreeShipping && <S.Stopper>Free shipping</S.Stopper>}
       <S.Image alt={title} />
       <S.Title>{title}</S.Title>
@@ -55,7 +55,9 @@ const Product = ({ product }: IProps) => {
         </S.Val>
         {productInstallment}
       </S.Price>
-      <S.BuyButton onClick={handleAddProduct}>Add to cart</S.BuyButton>
+      <S.BuyButton onClick={handleAddProduct} tabIndex={1}>
+        Add to cart
+      </S.BuyButton>
     </S.Container>
   );
 };

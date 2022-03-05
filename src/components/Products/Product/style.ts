@@ -11,7 +11,7 @@ export const BuyButton = styled.button`
 
   transition: background-color 0.2s;
 
-  &:focus {
+  &:focus-visible {
     outline: 3px solid ${({ theme }) => theme.colors.secondary};
   }
 `;
@@ -31,6 +31,10 @@ export const Container = styled.div<IContainer>`
   padding: 10px;
   margin-bottom: 30px;
   cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid ${({ theme }) => theme.colors.secondary};
+  }
 
   ${Image} {
     width: 100%;

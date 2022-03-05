@@ -27,12 +27,18 @@ export const Checkbox = styled(CB)`
     line-height: 35px;
     text-align: center;
 
-    /* On mouse-over, add a grey background color */
+    /* On mouse-over, add a border with the primary color */
     &:hover input ~ .checkmark {
       border: 1px solid ${({ theme }) => theme.colors.primary};
     }
 
-    /* When the checkbox is checked, add a blue background */
+    input:focus-visible ~ .checkmark {
+      box-sizing: border-box;
+      line-height: 30px;
+      border: 3px solid ${({ theme }) => theme.colors.secondary};
+    }
+
+    /* When the checkbox is checked, add the primary color to background */
     & input:checked ~ .checkmark {
       background-color: ${({ theme }) => theme.colors.primary};
       color: #ececec;
@@ -58,6 +64,7 @@ export const Checkbox = styled(CB)`
       height: 35px;
       font-size: 0.8em;
       border-radius: 50%;
+      box-sizing: border-box;
       line-height: 35px;
       text-align: center;
       color: ${({ theme }) => theme.colors.primary};

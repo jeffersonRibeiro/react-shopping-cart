@@ -9,7 +9,8 @@ Object {
         class="sc-furwcr lmktzQ"
       >
         <div
-          class="sc-dkPtRN glmPeg"
+          class="sc-dkPtRN bbNUMC"
+          tabindex="1"
         >
           <div
             class="sc-hKwDye KttlJ"
@@ -56,13 +57,15 @@ Object {
             </p>
           </div>
           <button
-            class="sc-bdvvtL fFPDou"
+            class="sc-bdvvtL brAMjl"
+            tabindex="1"
           >
             Add to cart
           </button>
         </div>
         <div
-          class="sc-dkPtRN tJmnc"
+          class="sc-dkPtRN dsICxi"
+          tabindex="1"
         >
           <div
             class="sc-hKwDye KttlJ"
@@ -109,13 +112,15 @@ Object {
             </p>
           </div>
           <button
-            class="sc-bdvvtL fFPDou"
+            class="sc-bdvvtL brAMjl"
+            tabindex="1"
           >
             Add to cart
           </button>
         </div>
         <div
-          class="sc-dkPtRN jsNbrc"
+          class="sc-dkPtRN liqJQC"
+          tabindex="1"
         >
           <div
             alt="Skater Black Sweatshirt"
@@ -157,7 +162,8 @@ Object {
             </p>
           </div>
           <button
-            class="sc-bdvvtL fFPDou"
+            class="sc-bdvvtL brAMjl"
+            tabindex="1"
           >
             Add to cart
           </button>
@@ -170,7 +176,8 @@ Object {
       class="sc-furwcr lmktzQ"
     >
       <div
-        class="sc-dkPtRN glmPeg"
+        class="sc-dkPtRN bbNUMC"
+        tabindex="1"
       >
         <div
           class="sc-hKwDye KttlJ"
@@ -217,13 +224,15 @@ Object {
           </p>
         </div>
         <button
-          class="sc-bdvvtL fFPDou"
+          class="sc-bdvvtL brAMjl"
+          tabindex="1"
         >
           Add to cart
         </button>
       </div>
       <div
-        class="sc-dkPtRN tJmnc"
+        class="sc-dkPtRN dsICxi"
+        tabindex="1"
       >
         <div
           class="sc-hKwDye KttlJ"
@@ -270,13 +279,15 @@ Object {
           </p>
         </div>
         <button
-          class="sc-bdvvtL fFPDou"
+          class="sc-bdvvtL brAMjl"
+          tabindex="1"
         >
           Add to cart
         </button>
       </div>
       <div
-        class="sc-dkPtRN jsNbrc"
+        class="sc-dkPtRN liqJQC"
+        tabindex="1"
       >
         <div
           alt="Skater Black Sweatshirt"
@@ -318,7 +329,8 @@ Object {
           </p>
         </div>
         <button
-          class="sc-bdvvtL fFPDou"
+          class="sc-bdvvtL brAMjl"
+          tabindex="1"
         >
           Add to cart
         </button>

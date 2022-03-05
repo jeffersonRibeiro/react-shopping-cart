@@ -14,7 +14,7 @@ export const CartButton = styled.button`
   cursor: pointer;
   z-index: 2;
 
-  &:focus {
+  &:focus-visible {
     outline: 3px solid ${({ theme }) => theme.colors.secondary};
   }
 
@@ -158,7 +158,7 @@ export const CheckoutButton = styled.button`
 
   transition: background-color 0.2s;
 
-  &:focus {
+  &:focus-visible {
     outline: 3px solid ${({ theme }) => theme.colors.secondary};
   }
 

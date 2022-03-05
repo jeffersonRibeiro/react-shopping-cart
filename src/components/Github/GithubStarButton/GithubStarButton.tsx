@@ -1,5 +1,5 @@
 const StarButton = () => (
-  <div className="star-button-container">
+  <div className="star-button-container" tabIndex={-1}>
     <p>
       <small>Leave a star on Github if this repository was useful :)</small>
     </p>

@@ -57,7 +57,7 @@ export const DeleteButton = styled.button`
   border: 0;
   background-color: transparent;
 
-  &:focus {
+  &:focus-visible {
     outline: 3px solid ${({ theme }) => theme.colors.secondary};
   }
 
@@ -73,7 +73,7 @@ export const ChangeQuantity = styled.button`
   width: 25px;
   height: 25px;
 
-  &:focus {
+  &:focus-visible {
     outline: 3px solid ${({ theme }) => theme.colors.secondary};
   }
 
