@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const CartButton = styled.div`
+export const CartButton = styled.button`
+  border: 0;
+  padding: 0;
   width: 50px;
   height: 50px;
   color: #ececec;
@@ -12,6 +14,10 @@ export const CartButton = styled.div`
   left: 0;
   cursor: pointer;
   z-index: 2;
+
+  &:focus-visible {
+    outline: 3px solid ${({ theme }) => theme.colors.secondary};
+  }
 
   &:hover {
     filter: brightness(85%);
@@ -150,8 +156,13 @@ export const CheckoutButton = styled.button`
   padding: 15px 0;
   margin-top: 40px;
   cursor: pointer;
+  outline: none;
 
   transition: background-color 0.2s;
+
+  &:focus-visible {
+    outline: 3px solid ${({ theme }) => theme.colors.secondary};
+  }
 
   &:hover {
     background-color: #000;

@@ -8,8 +8,9 @@ Object {
       <div
         class="sc-bdvvtL jueDJs"
       >
-        <div
-          class="sc-jRQBWg dyYCuI"
+        <button
+          class="sc-jRQBWg hOcWzm"
+          title="remove product from cart"
         />
         <img
           alt="Cropped Stay Groovy off white"
@@ -42,13 +43,13 @@ Object {
           </p>
           <div>
             <button
-              class="sc-gKclnd hRhwqi"
+              class="sc-gKclnd fUHPHw"
               disabled=""
             >
               -
             </button>
             <button
-              class="sc-gKclnd hRhwqi"
+              class="sc-gKclnd fUHPHw"
             >
               +
             </button>
@@ -61,8 +62,9 @@ Object {
     <div
       class="sc-bdvvtL jueDJs"
     >
-      <div
-        class="sc-jRQBWg dyYCuI"
+      <button
+        class="sc-jRQBWg hOcWzm"
+        title="remove product from cart"
       />
       <img
         alt="Cropped Stay Groovy off white"
@@ -95,13 +97,13 @@ Object {
         </p>
         <div>
           <button
-            class="sc-gKclnd hRhwqi"
+            class="sc-gKclnd fUHPHw"
             disabled=""
           >
             -
           </button>
           <button
-            class="sc-gKclnd hRhwqi"
+            class="sc-gKclnd fUHPHw"
           >
             +
           </button>

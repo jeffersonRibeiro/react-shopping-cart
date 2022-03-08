@@ -20,6 +20,7 @@ Object {
           data-show-count="true"
           data-size="large"
           href="https://github.com/jeffersonRibeiro/react-shopping-cart"
+          tabindex="-1"
         >
           Star
         </a>
@@ -42,6 +43,7 @@ Object {
         data-show-count="true"
         data-size="large"
         href="https://github.com/jeffersonRibeiro/react-shopping-cart"
+        tabindex="-1"
       >
         Star
       </a>

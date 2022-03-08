@@ -8,78 +8,20 @@ Object {
       <div
         class="sc-kDTinF bcnLhm"
       >
-        <div
-          class="sc-jrQzAO elgsqr"
+        <button
+          class="sc-jrQzAO jrGhlo"
         >
           <div
             class="sc-iqseJM foSbxs"
           >
             <div
               class="sc-crHmcD kClYHQ"
+              title="Products in cart quantity"
             >
               0
             </div>
           </div>
-        </div>
-        <div
-          class="sc-egiyK ldQrvv"
-        >
-          <div
-            class="sc-bqiRlB kFhrUZ"
-          >
-            <div
-              class="sc-iqseJM jmQRSU"
-            >
-              <div
-                class="sc-crHmcD kClYHQ"
-              >
-                0
-              </div>
-            </div>
-            <span
-              class="sc-ksdxgE bHSSQy"
-            >
-              Cart
-            </span>
-          </div>
-          <div
-            class="sc-furwcr cLrkbH"
-          >
-            <p
-              class="sc-pVTFL hfIegI"
-            >
-              Add some products in the cart 
-              <br />
-              :)
-            </p>
-          </div>
-          <div
-            class="sc-dJjYzT cLcfdy"
-          >
-            <p
-              class="sc-hBUSln bdaBov"
-            >
-              SUBTOTAL
-            </p>
-            <div
-              class="sc-fotOHu kTiyoO"
-            >
-              <p
-                class="sc-fFeiMQ dyNUha"
-              >
-                $ 0.00
-              </p>
-              <p
-                class="sc-bkkeKt kySsZU"
-              />
-            </div>
-            <button
-              class="sc-ieecCq crBrQm"
-            >
-              Checkout
-            </button>
-          </div>
-        </div>
+        </button>
       </div>
     </div>
   </body>,
@@ -87,78 +29,20 @@ Object {
     <div
       class="sc-kDTinF bcnLhm"
     >
-      <div
-        class="sc-jrQzAO elgsqr"
+      <button
+        class="sc-jrQzAO jrGhlo"
       >
         <div
           class="sc-iqseJM foSbxs"
         >
           <div
             class="sc-crHmcD kClYHQ"
+            title="Products in cart quantity"
           >
             0
           </div>
         </div>
-      </div>
-      <div
-        class="sc-egiyK ldQrvv"
-      >
-        <div
-          class="sc-bqiRlB kFhrUZ"
-        >
-          <div
-            class="sc-iqseJM jmQRSU"
-          >
-            <div
-              class="sc-crHmcD kClYHQ"
-            >
-              0
-            </div>
-          </div>
-          <span
-            class="sc-ksdxgE bHSSQy"
-          >
-            Cart
-          </span>
-        </div>
-        <div
-          class="sc-furwcr cLrkbH"
-        >
-          <p
-            class="sc-pVTFL hfIegI"
-          >
-            Add some products in the cart 
-            <br />
-            :)
-          </p>
-        </div>
-        <div
-          class="sc-dJjYzT cLcfdy"
-        >
-          <p
-            class="sc-hBUSln bdaBov"
-          >
-            SUBTOTAL
-          </p>
-          <div
-            class="sc-fotOHu kTiyoO"
-          >
-            <p
-              class="sc-fFeiMQ dyNUha"
-            >
-              $ 0.00
-            </p>
-            <p
-              class="sc-bkkeKt kySsZU"
-            />
-          </div>
-          <button
-            class="sc-ieecCq crBrQm"
-          >
-            Checkout
-          </button>
-        </div>
-      </div>
+      </button>
     </div>
   </div>,
   "debug": [Function],

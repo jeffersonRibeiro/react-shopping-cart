@@ -6,7 +6,8 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-dkPtRN glmPeg"
+        class="sc-dkPtRN HHfHH"
+        tabindex="1"
       >
         <div
           class="sc-hKwDye KttlJ"
@@ -52,17 +53,19 @@ Object {
             </b>
           </p>
         </div>
-        <div
-          class="sc-bdvvtL bitLMF"
+        <button
+          class="sc-bdvvtL brAMjl"
+          tabindex="-1"
         >
           Add to cart
-        </div>
+        </button>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-dkPtRN glmPeg"
+      class="sc-dkPtRN HHfHH"
+      tabindex="1"
     >
       <div
         class="sc-hKwDye KttlJ"
@@ -108,11 +111,12 @@ Object {
           </b>
         </p>
       </div>
-      <div
-        class="sc-bdvvtL bitLMF"
+      <button
+        class="sc-bdvvtL brAMjl"
+        tabindex="-1"
       >
         Add to cart
-      </div>
+      </button>
     </div>
   </div>,
   "debug": [Function],

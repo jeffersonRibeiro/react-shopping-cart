@@ -10,6 +10,7 @@ const StarButton = () => (
       data-size="large"
       data-show-count="true"
       aria-label="Star jeffersonRibeiro/react-shopping-cart on GitHub"
+      tabIndex={-1}
     >
       Star
     </a>
