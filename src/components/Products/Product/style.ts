@@ -31,6 +31,7 @@ export const Container = styled.div<IContainer>`
   padding: 10px;
   margin-bottom: 30px;
   cursor: default;
+  outline: none;
 
   &:focus-visible {
     outline: 3px solid ${({ theme }) => theme.colors.secondary};
