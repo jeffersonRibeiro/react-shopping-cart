@@ -58,8 +58,8 @@ const Product = ({ product }: IProps) => {
       <S.Price>
         <S.Val>
           <small>{currencyFormat}</small>
-          <b>{formattedPrice.substr(0, formattedPrice.length - 3)}</b>
-          <span>{formattedPrice.substr(formattedPrice.length - 3, 3)}</span>
+          <b>{formattedPrice.substring(0, formattedPrice.length - 3)}</b>
+          <span>{formattedPrice.substring(formattedPrice.length - 3)}</span>
         </S.Val>
         {productInstallment}
       </S.Price>
