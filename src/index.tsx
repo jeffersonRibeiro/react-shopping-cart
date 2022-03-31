@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 
 import { ThemeProvider } from 'commons/style/styled-components';
 import { theme } from 'commons/style/theme';
@@ -10,7 +10,10 @@ import App from 'components/App';
 import { ProductsProvider } from 'contexts/products-context';
 import { CartProvider } from 'contexts/cart-context';
 
-ReactDOM.render(
+const root = document.getElementById('root')!;
+const container = ReactDOMClient.createRoot(root);
+
+container.render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -20,6 +23,5 @@ ReactDOM.render(
         </CartProvider>
       </ProductsProvider>
     </ThemeProvider>
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
