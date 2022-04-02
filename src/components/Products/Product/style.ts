@@ -84,6 +84,7 @@ export const Stopper = styled.div`
   font-size: 0.6em;
   background-color: ${({ theme }) => theme.colors.primary};
   cursor: default;
+  z-index: 1;
 `;
 
 export const Title = styled.p`
