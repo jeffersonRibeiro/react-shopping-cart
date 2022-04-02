@@ -1,4 +1,7 @@
-import { ProductsContext, ProductsProvider } from './ProductsContextProvider';
+import {
+  useProductsContext,
+  ProductsProvider,
+} from './ProductsContextProvider';
 import useProducts from './useProducts';
 
-export { ProductsContext, ProductsProvider, useProducts };
+export { ProductsProvider, useProductsContext, useProducts };

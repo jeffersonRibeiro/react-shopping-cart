@@ -1,11 +1,9 @@
-import { useContext } from 'react';
-
-import { CartContext, ICartContext } from './CartContextProvider';
+import { useCartContext } from './CartContextProvider';
 import useCartProducts from './useCartProducts';
 import useCartTotal from './useCartTotal';
 
 const useCart = () => {
-  const { isOpen, setIsOpen } = useContext(CartContext) as ICartContext;
+  const { isOpen, setIsOpen } = useCartContext();
   const {
     products,
     addProduct,

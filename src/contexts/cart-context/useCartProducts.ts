@@ -1,11 +1,9 @@
-import { useContext } from 'react';
-
-import { CartContext, ICartContext } from './CartContextProvider';
+import { useCartContext } from './CartContextProvider';
 import useCartTotal from './useCartTotal';
 import { ICartProduct } from 'models';
 
 const useCartProducts = () => {
-  const { products, setProducts } = useContext(CartContext) as ICartContext;
+  const { products, setProducts } = useCartContext();
   const { updateCartTotal } = useCartTotal();
 
   const updateQuantitySafely = (

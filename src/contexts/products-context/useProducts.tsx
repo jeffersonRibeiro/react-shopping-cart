@@ -1,6 +1,6 @@
-import { useContext, useCallback } from 'react';
+import { useCallback } from 'react';
 
-import { ProductsContext, IProductsContext } from './ProductsContextProvider';
+import { useProductsContext } from './ProductsContextProvider';
 import { IProduct } from 'models';
 import { getProducts } from 'services/products';
 
@@ -12,7 +12,7 @@ const useProducts = () => {
     setProducts,
     filters,
     setFilters,
-  } = useContext(ProductsContext) as IProductsContext;
+  } = useProductsContext();
 
   const fetchProducts = useCallback(() => {
     setIsFetching(true);

@@ -1,4 +1,4 @@
-import { createContext, FC, useState } from 'react';
+import { createContext, useContext, FC, useState } from 'react';
 import { ICartProduct, ICartTotal } from 'models';
 
 export interface ICartContext {
@@ -10,7 +10,19 @@ export interface ICartContext {
   setTotal(products: any): void;
 }
 
-const CartContext = createContext<ICartContext | {}>({});
+const CartContext = createContext<ICartContext | undefined>(undefined);
+const useCartContext = (): ICartContext => {
+  const value = useContext(CartContext);
+
+  if (!value) {
+    throw new Error(
+      "useCartContext shouldn't be called outside of a <CartProvider />"
+    );
+  }
+
+  return value;
+};
+
 const totalInitialValues = {
   productQuantity: 0,
   installments: 0,
@@ -40,4 +52,4 @@ const CartProvider: FC = ({ children }) => {
   );
 };
 
-export { CartContext, CartProvider };
+export { CartProvider, useCartContext };
