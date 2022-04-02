@@ -1,5 +1,2 @@
-export {
-  ProductsProvider,
-  useProductsContext,
-} from './ProductsContextProvider';
+export { ProductsProvider } from './ProductsContextProvider';
 export { default as useProducts } from './useProducts';
