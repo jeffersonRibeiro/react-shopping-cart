@@ -24,7 +24,7 @@ const useProductsContext = (): IProductsContext => {
   return context;
 };
 
-const ProductsProvider: FC = ({ children }) => {
+const ProductsProvider: FC = (props) => {
   const [isFetching, setIsFetching] = useState(false);
   const [products, setProducts] = useState<IProduct[]>([]);
   const [filters, setFilters] = useState<string[]>([]);
@@ -38,11 +38,7 @@ const ProductsProvider: FC = ({ children }) => {
     setFilters,
   };
 
-  return (
-    <ProductsContext.Provider value={ProductContextValue}>
-      {children}
-    </ProductsContext.Provider>
-  );
+  return <ProductsContext.Provider value={ProductContextValue} {...props} />;
 };
 
 export { ProductsProvider, useProductsContext };

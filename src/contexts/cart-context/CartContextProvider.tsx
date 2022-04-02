@@ -29,7 +29,7 @@ const totalInitialValues = {
   currencyFormat: '$',
 };
 
-const CartProvider: FC = ({ children }) => {
+const CartProvider: FC = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [products, setProducts] = useState<ICartProduct[]>([]);
   const [total, setTotal] = useState<ICartTotal>(totalInitialValues);
@@ -43,11 +43,7 @@ const CartProvider: FC = ({ children }) => {
     setTotal,
   };
 
-  return (
-    <CartContext.Provider value={CartContextValue}>
-      {children}
-    </CartContext.Provider>
-  );
+  return <CartContext.Provider value={CartContextValue} {...props} />;
 };
 
 export { CartProvider, useCartContext };
