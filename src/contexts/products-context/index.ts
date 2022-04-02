@@ -1,7 +1,3 @@
-import {
-  useProductsContext,
-  ProductsProvider,
-} from './ProductsContextProvider';
-import useProducts from './useProducts';
-
-export { ProductsProvider, useProductsContext, useProducts };
+export { ProductsProvider } from './ProductsContextProvider';
+export { useProductsContext } from './ProductsContextProvider';
+export { default as useProducts } from './useProducts';

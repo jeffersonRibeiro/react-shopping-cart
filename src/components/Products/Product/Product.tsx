@@ -1,8 +1,10 @@
 import { KeyboardEvent } from 'react';
+
+import formatPrice from 'utils/formatPrice';
+import { IProduct } from 'models';
+
 import { useCart } from 'contexts/cart-context';
 
-import { IProduct } from 'models';
-import formatPrice from 'utils/formatPrice';
 import * as S from './style';
 
 interface IProps {

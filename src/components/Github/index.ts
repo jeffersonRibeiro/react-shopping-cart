@@ -1,4 +1,2 @@
-import GithubCorner from './GithubCorner';
-import GithubStarButton from './GithubStarButton';
-
-export { GithubCorner, GithubStarButton };
+export { default as GithubCorner } from './GithubCorner';
+export { default as GithubStarButton } from './GithubStarButton';

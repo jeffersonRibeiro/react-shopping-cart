@@ -1,3 +1,1 @@
-import GithubCorner from './GithubCorner';
-
-export default GithubCorner;
+export { default } from './GithubCorner';

@@ -1,5 +1,6 @@
 import { ICartProduct } from 'models';
 import CartProduct from './CartProduct';
+
 import * as S from './style';
 
 interface IProps {

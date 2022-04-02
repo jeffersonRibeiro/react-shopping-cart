@@ -1,7 +1,8 @@
-import { useCart } from 'contexts/cart-context';
-
 import formatPrice from 'utils/formatPrice';
 import CartProducts from './CartProducts';
+
+import { useCart } from 'contexts/cart-context';
+
 import * as S from './style';
 
 const Cart = () => {

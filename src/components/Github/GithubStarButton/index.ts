@@ -1,3 +1,1 @@
-import GithubStarButton from './GithubStarButton';
-
-export default GithubStarButton;
+export { default } from './GithubStarButton';
