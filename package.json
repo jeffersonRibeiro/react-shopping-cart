@@ -26,6 +26,7 @@
     "test": "react-scripts test --silent",
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage --watchAll",
+    "deploy": "firebase deploy",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\""

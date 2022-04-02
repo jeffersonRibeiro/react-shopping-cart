@@ -40,11 +40,22 @@ export const Container = styled.div<IContainer>`
   ${Image} {
     width: 100%;
     height: 270px;
+    position: relative;
     background-image: ${({ sku }) =>
       `url(${require(`static/products/${sku}-1-product.webp`)})`};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    ::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: #eee;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
     @media only screen and (min-width: ${({ theme: { breakpoints } }) =>
         breakpoints.tablet}) {

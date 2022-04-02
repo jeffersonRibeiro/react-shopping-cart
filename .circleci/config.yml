@@ -31,7 +31,7 @@ jobs:
           at: .
       - run:
           name: Deploy Main to Firebase
-          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+          command: npm run deploy -- --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
   version: 2
   test-branch:
