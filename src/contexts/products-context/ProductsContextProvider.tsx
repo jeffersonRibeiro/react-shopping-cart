@@ -13,15 +13,15 @@ export interface IProductsContext {
 
 const ProductsContext = createContext<IProductsContext | undefined>(undefined);
 const useProductsContext = (): IProductsContext => {
-  const value = useContext(ProductsContext);
+  const context = useContext(ProductsContext);
 
-  if (!value) {
+  if (!context) {
     throw new Error(
-      "useProductsContext shouldn't be called outside of a <ProductsProvider />"
+      'useProductsContext must be used within a ProductsProvider'
     );
   }
 
-  return value;
+  return context;
 };
 
 const ProductsProvider: FC = ({ children }) => {

@@ -12,15 +12,13 @@ export interface ICartContext {
 
 const CartContext = createContext<ICartContext | undefined>(undefined);
 const useCartContext = (): ICartContext => {
-  const value = useContext(CartContext);
+  const context = useContext(CartContext);
 
-  if (!value) {
-    throw new Error(
-      "useCartContext shouldn't be called outside of a <CartProvider />"
-    );
+  if (!context) {
+    throw new Error('useCartContext must be used within a CartProvider');
   }
 
-  return value;
+  return context;
 };
 
 const totalInitialValues = {
