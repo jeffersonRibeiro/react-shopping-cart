@@ -35,6 +35,7 @@ export const Container = styled.div<IContainer>`
   height: 100%;
   background-color: ${({ theme }) => theme.colors.primary};
   box-sizing: border-box;
+  z-index: 99;
 
   transition: right 0.2s;
 
