@@ -6,15 +6,15 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL"
+        class="style__Container-sc-bj2vay-0"
       >
         <h4
-          class="sc-dkPtRN uWdPq"
+          class="style__Title-sc-bj2vay-2 lkqPMW"
         >
           Sizes:
         </h4>
         <div
-          class="sc-gsDKAQ hPjhBp"
+          class="style__Checkbox-sc-bj2vay-1 iItNhF"
         >
           <label>
             <input
@@ -30,7 +30,7 @@ Object {
           </label>
         </div>
         <div
-          class="sc-gsDKAQ hPjhBp"
+          class="style__Checkbox-sc-bj2vay-1 iItNhF"
         >
           <label>
             <input
@@ -46,7 +46,7 @@ Object {
           </label>
         </div>
         <div
-          class="sc-gsDKAQ hPjhBp"
+          class="style__Checkbox-sc-bj2vay-1 iItNhF"
         >
           <label>
             <input
@@ -62,7 +62,7 @@ Object {
           </label>
         </div>
         <div
-          class="sc-gsDKAQ hPjhBp"
+          class="style__Checkbox-sc-bj2vay-1 iItNhF"
         >
           <label>
             <input
@@ -78,7 +78,7 @@ Object {
           </label>
         </div>
         <div
-          class="sc-gsDKAQ hPjhBp"
+          class="style__Checkbox-sc-bj2vay-1 iItNhF"
         >
           <label>
             <input
@@ -94,7 +94,7 @@ Object {
           </label>
         </div>
         <div
-          class="sc-gsDKAQ hPjhBp"
+          class="style__Checkbox-sc-bj2vay-1 iItNhF"
         >
           <label>
             <input
@@ -110,7 +110,7 @@ Object {
           </label>
         </div>
         <div
-          class="sc-gsDKAQ hPjhBp"
+          class="style__Checkbox-sc-bj2vay-1 iItNhF"
         >
           <label>
             <input
@@ -130,15 +130,15 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL"
+      class="style__Container-sc-bj2vay-0"
     >
       <h4
-        class="sc-dkPtRN uWdPq"
+        class="style__Title-sc-bj2vay-2 lkqPMW"
       >
         Sizes:
       </h4>
       <div
-        class="sc-gsDKAQ hPjhBp"
+        class="style__Checkbox-sc-bj2vay-1 iItNhF"
       >
         <label>
           <input
@@ -154,7 +154,7 @@ Object {
         </label>
       </div>
       <div
-        class="sc-gsDKAQ hPjhBp"
+        class="style__Checkbox-sc-bj2vay-1 iItNhF"
       >
         <label>
           <input
@@ -170,7 +170,7 @@ Object {
         </label>
       </div>
       <div
-        class="sc-gsDKAQ hPjhBp"
+        class="style__Checkbox-sc-bj2vay-1 iItNhF"
       >
         <label>
           <input
@@ -186,7 +186,7 @@ Object {
         </label>
       </div>
       <div
-        class="sc-gsDKAQ hPjhBp"
+        class="style__Checkbox-sc-bj2vay-1 iItNhF"
       >
         <label>
           <input
@@ -202,7 +202,7 @@ Object {
         </label>
       </div>
       <div
-        class="sc-gsDKAQ hPjhBp"
+        class="style__Checkbox-sc-bj2vay-1 iItNhF"
       >
         <label>
           <input
@@ -218,7 +218,7 @@ Object {
         </label>
       </div>
       <div
-        class="sc-gsDKAQ hPjhBp"
+        class="style__Checkbox-sc-bj2vay-1 iItNhF"
       >
         <label>
           <input
@@ -234,7 +234,7 @@ Object {
         </label>
       </div>
       <div
-        class="sc-gsDKAQ hPjhBp"
+        class="style__Checkbox-sc-bj2vay-1 iItNhF"
       >
         <label>
           <input

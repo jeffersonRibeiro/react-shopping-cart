@@ -6,27 +6,27 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL jueDJs"
+        class="style__Container-sc-11uohgb-0 hKxpJl"
       >
         <button
-          class="sc-jRQBWg hOcWzm"
+          class="style__DeleteButton-sc-11uohgb-5 fBWlDT"
           title="remove product from cart"
         />
         <img
           alt="Cropped Stay Groovy off white"
-          class="sc-iCfMLu kdysBI"
+          class="style__Image-sc-11uohgb-7 bDQgko"
           src="8552515751438644-1-cart.webp"
         />
         <div
-          class="sc-gsDKAQ ixJPSE"
+          class="style__Details-sc-11uohgb-1 gKxOqg"
         >
           <p
-            class="sc-dkPtRN gXtprY"
+            class="style__Title-sc-11uohgb-2 gCGmlD"
           >
             Cropped Stay Groovy off white
           </p>
           <p
-            class="sc-hKwDye bPeUpS"
+            class="style__Desc-sc-11uohgb-3 kWdLHy"
           >
             S | White T-shirt
              
@@ -36,20 +36,20 @@ Object {
           </p>
         </div>
         <div
-          class="sc-eCImPb bHNFYi"
+          class="style__Price-sc-11uohgb-4 Sbvvv"
         >
           <p>
             $  10.90
           </p>
           <div>
             <button
-              class="sc-gKclnd fUHPHw"
+              class="style__ChangeQuantity-sc-11uohgb-6 gkvbAa"
               disabled=""
             >
               -
             </button>
             <button
-              class="sc-gKclnd fUHPHw"
+              class="style__ChangeQuantity-sc-11uohgb-6 gkvbAa"
             >
               +
             </button>
@@ -60,27 +60,27 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL jueDJs"
+      class="style__Container-sc-11uohgb-0 hKxpJl"
     >
       <button
-        class="sc-jRQBWg hOcWzm"
+        class="style__DeleteButton-sc-11uohgb-5 fBWlDT"
         title="remove product from cart"
       />
       <img
         alt="Cropped Stay Groovy off white"
-        class="sc-iCfMLu kdysBI"
+        class="style__Image-sc-11uohgb-7 bDQgko"
         src="8552515751438644-1-cart.webp"
       />
       <div
-        class="sc-gsDKAQ ixJPSE"
+        class="style__Details-sc-11uohgb-1 gKxOqg"
       >
         <p
-          class="sc-dkPtRN gXtprY"
+          class="style__Title-sc-11uohgb-2 gCGmlD"
         >
           Cropped Stay Groovy off white
         </p>
         <p
-          class="sc-hKwDye bPeUpS"
+          class="style__Desc-sc-11uohgb-3 kWdLHy"
         >
           S | White T-shirt
            
@@ -90,20 +90,20 @@ Object {
         </p>
       </div>
       <div
-        class="sc-eCImPb bHNFYi"
+        class="style__Price-sc-11uohgb-4 Sbvvv"
       >
         <p>
           $  10.90
         </p>
         <div>
           <button
-            class="sc-gKclnd fUHPHw"
+            class="style__ChangeQuantity-sc-11uohgb-6 gkvbAa"
             disabled=""
           >
             -
           </button>
           <button
-            class="sc-gKclnd fUHPHw"
+            class="style__ChangeQuantity-sc-11uohgb-6 gkvbAa"
           >
             +
           </button>
