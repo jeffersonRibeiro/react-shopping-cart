@@ -6,16 +6,16 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="style__Container-sc-1h98xa9-1 jTIjPF"
+        class="Cart__Container-sc-1h98xa9-1 OVjcy"
       >
         <button
-          class="style__CartButton-sc-1h98xa9-0 hglEaQ"
+          class="Cart__CartButton-sc-1h98xa9-0 Xqoyz"
         >
           <div
-            class="style__CartIcon-sc-1h98xa9-2 gVQxxd"
+            class="Cart__CartIcon-sc-1h98xa9-2 dFOmZq"
           >
             <div
-              class="style__CartQuantity-sc-1h98xa9-3 libMxI"
+              class="Cart__CartQuantity-sc-1h98xa9-3 gkShyn"
               title="Products in cart quantity"
             >
               0
@@ -27,16 +27,16 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="style__Container-sc-1h98xa9-1 jTIjPF"
+      class="Cart__Container-sc-1h98xa9-1 OVjcy"
     >
       <button
-        class="style__CartButton-sc-1h98xa9-0 hglEaQ"
+        class="Cart__CartButton-sc-1h98xa9-0 Xqoyz"
       >
         <div
-          class="style__CartIcon-sc-1h98xa9-2 gVQxxd"
+          class="Cart__CartIcon-sc-1h98xa9-2 dFOmZq"
         >
           <div
-            class="style__CartQuantity-sc-1h98xa9-3 libMxI"
+            class="Cart__CartQuantity-sc-1h98xa9-3 gkShyn"
             title="Products in cart quantity"
           >
             0
