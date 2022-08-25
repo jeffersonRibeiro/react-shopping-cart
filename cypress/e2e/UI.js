@@ -4,6 +4,6 @@ import utils from '../src/utils';
 
 describe('ZenHR', () => {
   it('Checking the availability of the links, @ID: 01', () => {
-    cy.visit('/');
+    cy.visit('/'); 
   });
 });
