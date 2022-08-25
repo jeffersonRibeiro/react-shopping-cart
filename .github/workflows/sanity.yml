@@ -18,7 +18,7 @@ jobs:
         timeout-minutes: 10
       - name: Running npm start
         run: npm start
-        timeout-minutes: 15
+        timeout-minutes: 1
       - name: Running Cypress tests
         run: npm run cypress:test-headless
         timeout-minutes: 30
