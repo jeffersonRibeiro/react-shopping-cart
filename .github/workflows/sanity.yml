@@ -2,26 +2,25 @@ name: "Sanity"
 on:
   pull_request
 jobs:
-  # cypress:
-  #   name: "Cypress"
-  #   runs-on: "ubuntu-latest"
-  #   timeout-minutes: 30
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2.3.4
-  #     - name: Setup Node
-  #       uses: actions/setup-node@v2.1.2
-  #       with:
-  #         node-version: 14.x
-  #     - name: Install Node Packages
-  #       run: npm ci
-  #       timeout-minutes: 10
-  #     - name: Running npm start
-  #       run: npm start
-  #       timeout-minutes: 1
-  #     - name: Running Cypress tests
-  #       run: npm run cypress:test-headless
-  #       timeout-minutes: 30
+  cypress:
+    name: "Cypress"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 14.x
+      - name: npm install, build, and test
+        run: |
+          npm ci
+          npm run build --if-present
+          npm start & npx wait-on http://localhost:3000
+      - name: Running Cypress tests
+        run: npm run cypress:test-headless
+        timeout-minutes: 30
 
   API:
     name: "API-testing"
