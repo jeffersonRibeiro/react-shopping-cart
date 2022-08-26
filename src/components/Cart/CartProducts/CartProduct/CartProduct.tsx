@@ -49,10 +49,11 @@ const CartProduct = ({ product }: IProps) => {
           <S.ChangeQuantity
             onClick={handleDecreaseProductQuantity}
             disabled={quantity === 1 ? true : false}
+            data-testid="decreaseQuatity"
           >
             -
           </S.ChangeQuantity>
-          <S.ChangeQuantity onClick={handleIncreaseProductQuantity}>
+          <S.ChangeQuantity data-testid="increaseQuatity" onClick={handleIncreaseProductQuantity}>
             +
           </S.ChangeQuantity>
         </div>

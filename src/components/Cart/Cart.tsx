@@ -30,7 +30,7 @@ const Cart = () => {
         {isOpen ? (
           <span>X</span>
         ) : (
-          <S.CartIcon>
+          <S.CartIcon data-testid="cardIcon">
             <S.CartQuantity title="Products in cart quantity">
               {total.productQuantity}
             </S.CartQuantity>
@@ -52,7 +52,8 @@ const Cart = () => {
           <S.CartFooter>
             <S.Sub>SUBTOTAL</S.Sub>
             <S.SubPrice>
-              <S.SubPriceValue>{`${total.currencyFormat} ${formatPrice(
+              <S.SubPriceValue
+              data-testid= "subTotal">{`${total.currencyFormat} ${formatPrice(
                 total.totalPrice,
                 total.currencyId
               )}`}</S.SubPriceValue>
@@ -69,7 +70,7 @@ const Cart = () => {
                 ) : null}
               </S.SubPriceInstallment>
             </S.SubPrice>
-            <S.CheckoutButton onClick={handleCheckout} autoFocus>
+            <S.CheckoutButton data-testid = "checkOutButton" onClick={handleCheckout} autoFocus>
               Checkout
             </S.CheckoutButton>
           </S.CartFooter>
