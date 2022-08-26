@@ -5,22 +5,20 @@ jobs:
   cypress:
     name: "Cypress"
     runs-on: "ubuntu-latest"
-    container: cypress/browsers:node12.18.3-chrome87-ff82
     timeout-minutes: 30
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v2.3.4
-      # - name: Setup Node
-      #   uses: actions/setup-node@v2.1.2
-      #   with:
-      #     node-version: 14.x
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 14.x
       - name: npm install and run
         run: |
           npm ci
           npm start & npx wait-on http://localhost:3000
       - name: Running Cypress tests
-        uses: cypress-io/github-action@v4
-        run: npm run cypress:test-headless
+        run: docker run -it --network=host -v ${PWD}:/e2e -w /e2e cypress/included:9.2.0
         timeout-minutes: 30
 
   API:
