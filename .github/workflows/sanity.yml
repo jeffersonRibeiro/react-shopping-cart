@@ -4,6 +4,7 @@ on:
 jobs:
   cypress:
     name: "Cypress"
+    container: cypress/browsers:node14.17.0-chrome88-ff89
     runs-on: "ubuntu-latest"
     timeout-minutes: 30
     steps:
@@ -18,7 +19,7 @@ jobs:
           npm ci
           npm start & npx wait-on http://localhost:3000
       - name: Running Cypress tests
-        run: docker run --network=host -v ${PWD}:cypress/e2e -w /e2e cypress/included:9.2.0
+        run: npm run cypress:test-headless
         timeout-minutes: 30
 
   API:
