@@ -1,3 +1,5 @@
+import './GithubStarButton.css';
+
 const StarButton = () => (
   <div className="star-button-container">
     <p>
