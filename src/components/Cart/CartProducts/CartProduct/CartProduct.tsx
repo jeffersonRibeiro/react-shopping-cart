@@ -44,7 +44,7 @@ const CartProduct = ({ product }: IProps) => {
         </S.Desc>
       </S.Details>
       <S.Price>
-        <p>{`${currencyFormat}  ${formatPrice(price, currencyId)}`}</p>
+        <p data-testid="cartProducts" >{`${currencyFormat}  ${formatPrice(price, currencyId)}`}</p>
         <div>
           <S.ChangeQuantity
             onClick={handleDecreaseProductQuantity}
