@@ -13,7 +13,7 @@ export default {
     addToCart: "addToCart",
     openCartButton: "cartIcon",
     mainHeader: "mainHeader",
-    filterBySize : (size) => `[value="${size}"]`,
+    filterBySize: (size) => `[value="${size}"]`,
     allInstallments: 'installments'
   },
 };

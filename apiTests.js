@@ -518,7 +518,7 @@ it('login and logout with valid info', async () => {
             "type": "object"
         })
 
-        await spec()
+    await spec()
         .get('/user/logout')
         .expectStatus(200)
         .expectJsonSchema({

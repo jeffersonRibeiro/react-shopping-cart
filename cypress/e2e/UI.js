@@ -83,12 +83,31 @@ describe('Shopping', () => {
 		})
 	});
 
-	it('Check the number of added items, @ID: 08', () => {
+	it('Check the number of added items, @ID: 09', () => {
 		const itemsToAdd = [3, 3, 5, 6, 11, 12, 12, 15]
 		utils.addItemsToCart(itemsToAdd)
 		cy.GetByTestId(cart.cartIconButton).click()
 		cy.GetByTestId(cart.numberOfItemsInCart).invoke('text').then((numberOfItems) => {
 			expect(parseInt(numberOfItems)).to.eq(itemsToAdd.length)
+		})
+	});
+
+	it("Check the prompt after checking out without adding any item, @ID: 10", () => {
+		cy.GetByTestId(cart.cartIconButton).click()
+		cy.GetByTestId(cart.checkOutButton).should('be.visible');
+		cy.GetByTestId(cart.checkOutButton).click()
+		cy.on('window:alert', (text) => {
+			expect(text).to.eq('Add some product in the cart!');
+		});
+	});
+
+	it("Check the prompt after checking out it should show the right sub total, @ID: 11", () => {
+		const itemsToAdd = [3, 3, 5, 6, 11, 12, 12, 15]
+		utils.addItemsToCart(itemsToAdd)
+		cy.GetByTestId(cart.cartIconButton).click()
+		cy.GetByTestId(cart.checkOutButton).click()
+		cy.on('window:alert', (text) => {
+			expect(text).to.eq("Checkout - Subtotal: $ 225.80");
 		})
 	});
 });
