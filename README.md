@@ -42,6 +42,16 @@ A step by step series of examples that tell you how to run tests with a gui.
 /react-shopping-cart > npm run cypress:test-headless
 ```
 
+- To run the api tests please using the following:
+
+
+```bash
+> git clone git@github.com:FadiRazouk/react-shopping-cart.git
+> cd react-shopping-cart
+/react-shopping-cart > npm install
+/react-shopping-cart > npm run api-test
+```
+
 #####  Not good enough? having issues running the test locally? no worries:shipit: i got you covered 
 
 * use the following commands to run the test inside a docker container(must have docker installed):
