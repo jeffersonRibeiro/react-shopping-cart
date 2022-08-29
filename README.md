@@ -51,7 +51,7 @@ A step by step series of examples that tell you how to run tests with a gui.
 > cd react-shopping-cart
 /react-shopping-cart > docker run -it -v $PWD:/e2e -w /e2e  cypress/included:4.1.0
 ```
-#####  You can also find a run of the tests and an eslint check on CI/CD run on GitHub Actions in the links below: 
+#####  You can also find a run of the tests on CI/CD run on GitHub Actions in the links below: 
 
 Cypress Tests -> This job does the following : 
 
