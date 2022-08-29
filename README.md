@@ -54,14 +54,19 @@ A step by step series of examples that tell you how to run tests with a gui.
 #####  You can also find a run of the tests and an eslint check on CI/CD run on GitHub Actions in the links below: 
 
 Cypress Tests -> This job does the following : 
-1- Pull a docker image (cypress/browsers:node14.17.0-chrome88-ff89)
-2- Runs npm install then npm run to start the react app and waits for localhost:3000 to be up and running
-3- Runs the Cypress tests inside the docker container and reports the result
+
+1- Pull a docker image (cypress/browsers:node14.17.0-chrome88-ff89).
+
+2- Runs npm install then npm run to start the react app and waits for localhost:3000 to be up and running.
+
+3- Runs the Cypress tests inside the docker container and reports the result.
 
 Run-URL: https://github.com/FadiRazouk/react-shopping-cart/runs/8072154704?check_suite_focus=true
 
 API-Tests -> This job does the following :
+
 1- npm install
+
 2- run the api tests
 
 Run-URL: https://github.com/FadiRazouk/react-shopping-cart/runs/8072154502?check_suite_focus=true
@@ -70,10 +75,14 @@ Run-URL: https://github.com/FadiRazouk/react-shopping-cart/runs/8072154502?check
 
 #####  Why did i use pactumjs to run the API testing
 
-1- its JS, nothing to say here, JS is great
-2- It support json schema testing
-3- Simple as it is super easy to pick up and start working on, in matter of fact this is my 1st time user this tool and i was able to cover any test case that came in mind
-4- Great documentation that helps you with any issue you might face
+1- its JS, nothing to say here, JS is great.
+
+2- It support json schema testing.
+
+3- Simple as it is super easy to pick up and start working on, in matter of fact this is my 1st time user this tool and i was able to cover any test case that came in mind.
+
+4- Great documentation that helps you with any issue you might face.
+
 5- its a npm package.
 
 **For more info about pactumjs please refer to https://pactumjs.github.io/**
