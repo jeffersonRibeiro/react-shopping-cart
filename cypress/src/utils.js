@@ -1,14 +1,17 @@
+import { cart, mainPage } from '../locators/index';
+
 /**
- * Wait for a request to be done successfully
+ * add items in the cart
  *
- * @param {object} alias request data object
+ * @param {object} index items that should be added to cart
  */
 
-const waitForSuccessfulStatus = (alias, waitTimeout = 60000) => {
-  cy.wait(alias, { timeout: waitTimeout }).then(({ response }) => {
-    expect(response.statusCode).to.match(/^2\d{2}/);
+const addItemsToCart = (index) => {
+  index.forEach(element => {
+    cy.GetByTestId(mainPage.addToCart).eq(element).click();
+    cy.GetByTestId('closeCartButton').click();
   });
 };
 module.exports = {
-  waitForSuccessfulStatus,
+  addItemsToCart,
 };

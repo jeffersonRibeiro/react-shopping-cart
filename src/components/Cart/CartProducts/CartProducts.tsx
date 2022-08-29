@@ -13,7 +13,8 @@ const CartProducts = ({ products }: IProps) => {
       {products?.length ? (
         products.map((p) => <CartProduct product={p} key={p.sku} />)
       ) : (
-        <S.CartProductsEmpty>
+        <S.CartProductsEmpty
+        data-testid = "emptyCart">
           Add some products in the cart <br />
           :)
         </S.CartProductsEmpty>

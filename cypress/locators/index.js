@@ -1,13 +1,19 @@
 export default {
-  loginPage: {
-    userNameInput: '#user_login',
-    passwordInput: '#user_password',
-    loginButton: '.login-submit > .btn',
+  cart: {
+    checkOutButton: 'checkOutButton',
+    removeItemFromCart: '[title="remove product from cart"]',
+    subTotal: 'subTotal',
+    increaseQuatity: 'increaseQuatity',
+    decreaseQuatity: 'decreaseQuatity',
+    emptyCartText: 'emptyCart',
+    cartIconButton: 'cartIcon',
+    numberOfItemsInCart: 'CartQuantity'
   },
-  userPage: {
-    allLinks: "li > a[href^='/en/']",
-    snackbar: '.message',
-    settingsDropdown: '.dropdown-menu__collapse',
-    logoutButton: '[data-method="delete"]',
+  mainPage: {
+    addToCart: "addToCart",
+    openCartButton: "cartIcon",
+    mainHeader: "mainHeader",
+    filterBySize : (size) => `[value="${size}"]`,
+    allInstallments: 'installments'
   },
 };

@@ -26,11 +26,11 @@ const Cart = () => {
 
   return (
     <S.Container isOpen={isOpen}>
-      <S.CartButton onClick={handleToggleCart(isOpen)}>
+      <S.CartButton data-testid="closeCartButton" onClick={handleToggleCart(isOpen)}>
         {isOpen ? (
           <span>X</span>
         ) : (
-          <S.CartIcon>
+          <S.CartIcon data-testid="cartIcon">
             <S.CartQuantity title="Products in cart quantity">
               {total.productQuantity}
             </S.CartQuantity>
@@ -42,7 +42,7 @@ const Cart = () => {
         <S.CartContent>
           <S.CartContentHeader>
             <S.CartIcon large>
-              <S.CartQuantity>{total.productQuantity}</S.CartQuantity>
+              <S.CartQuantity data-testid="CartQuantity">{total.productQuantity}</S.CartQuantity>
             </S.CartIcon>
             <S.HeaderTitle>Cart</S.HeaderTitle>
           </S.CartContentHeader>
@@ -51,12 +51,13 @@ const Cart = () => {
 
           <S.CartFooter>
             <S.Sub>SUBTOTAL</S.Sub>
-            <S.SubPrice>
-              <S.SubPriceValue>{`${total.currencyFormat} ${formatPrice(
+            <S.SubPrice >
+              <S.SubPriceValue
+              data-testid= "subTotal">{`${total.currencyFormat} ${formatPrice(
                 total.totalPrice,
                 total.currencyId
               )}`}</S.SubPriceValue>
-              <S.SubPriceInstallment>
+              <S.SubPriceInstallment data-testid="installments">
                 {total.installments ? (
                   <span>
                     {`OR UP TO ${total.installments} x ${
@@ -69,7 +70,7 @@ const Cart = () => {
                 ) : null}
               </S.SubPriceInstallment>
             </S.SubPrice>
-            <S.CheckoutButton onClick={handleCheckout} autoFocus>
+            <S.CheckoutButton data-testid = "checkOutButton" onClick={handleCheckout} autoFocus>
               Checkout
             </S.CheckoutButton>
           </S.CartFooter>

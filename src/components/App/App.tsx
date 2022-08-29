@@ -27,7 +27,7 @@ function App() {
           <GithubStarButton />
         </S.Side>
         <S.Main>
-          <S.MainHeader>
+          <S.MainHeader data-testid ="mainHeader">
             <p>{products?.length} Product(s) found</p>
           </S.MainHeader>
           <Products products={products} />
