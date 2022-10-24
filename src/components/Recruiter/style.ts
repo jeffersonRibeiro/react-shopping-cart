@@ -8,7 +8,7 @@ export const Container = styled.div`
   border-radius: 4px;
   position: fixed;
   display: flex;
-  bottom: -5px;
+  bottom: 10px;
   left: 0;
   right: 0;
   margin: 0 auto;
