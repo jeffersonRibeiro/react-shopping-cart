@@ -11,6 +11,7 @@ export const TwoColumnGrid = styled.main`
   @media only screen and (min-width: ${({ theme: { breakpoints } }) =>
       breakpoints.tablet}) {
     grid-template-columns: 1fr 4fr;
+    margin-top: 80px;
   }
 `;
 
