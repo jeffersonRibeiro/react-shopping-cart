@@ -13,12 +13,13 @@ export const Container = styled.div`
   right: 0;
   margin: 0 auto;
   width: 370px;
-  height: 90px;
+  height: 100px;
   z-index: 9;
 
   @media only screen and (min-width: ${({ theme: { breakpoints } }) =>
       breakpoints.tablet}) {
     top: -5px;
+    height: 90px;
     position: absolute;
   }
 `;
@@ -49,8 +50,13 @@ export const Flag = styled.span`
 `;
 
 export const Description = styled.div`
-  padding: 10px 5px 0 0px;
+  padding: 10px 10px 0 0px;
   width: 80%;
+
+  @media only screen and (min-width: ${({ theme: { breakpoints } }) =>
+      breakpoints.tablet}) {
+    padding: 10px 5px 0 0px;
+  }
 
   h4 {
     font-size: 12px;
