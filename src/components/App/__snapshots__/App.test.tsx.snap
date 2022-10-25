@@ -43,8 +43,41 @@ Object {
             />
           </svg>
         </a>
+        <div
+          class="Recruiter__Container-sc-joc36b-0 kBiQYf"
+        >
+          <div
+            class="Recruiter__Thumbnail-sc-joc36b-1 kjTKfY"
+          >
+            <img
+              alt="Jeremy Akeze - Doghouse IT Recruitment"
+              src="jeremy-akeze-doghouse-it-recruitment.jpg"
+            />
+          </div>
+          <div
+            class="Recruiter__Description-sc-joc36b-3 cHLwtY"
+          >
+            <h4>
+              Work in the Netherlands
+              <span
+                class="Recruiter__Flag-sc-joc36b-2 eJBRMS"
+              />
+            </h4>
+            <p>
+              Hi! I'm Jeremy Akeze from Doghouse IT Recruitment and I'm looking for skilled Software Engineers like you. If you wish to move abroad,
+               
+              <a
+                href="https://www.linkedin.com/in/jeremy-akeze-9542b396/"
+              >
+                <b>
+                  follow me on Linkedin.
+                </b>
+              </a>
+            </p>
+          </div>
+        </div>
         <main
-          class="App__TwoColumnGrid-sc-ebmerl-1 buOrsR"
+          class="App__TwoColumnGrid-sc-ebmerl-1 hularM"
         >
           <div
             class="App__Side-sc-ebmerl-2 dnqiC"
@@ -267,8 +300,41 @@ Object {
           />
         </svg>
       </a>
+      <div
+        class="Recruiter__Container-sc-joc36b-0 kBiQYf"
+      >
+        <div
+          class="Recruiter__Thumbnail-sc-joc36b-1 kjTKfY"
+        >
+          <img
+            alt="Jeremy Akeze - Doghouse IT Recruitment"
+            src="jeremy-akeze-doghouse-it-recruitment.jpg"
+          />
+        </div>
+        <div
+          class="Recruiter__Description-sc-joc36b-3 cHLwtY"
+        >
+          <h4>
+            Work in the Netherlands
+            <span
+              class="Recruiter__Flag-sc-joc36b-2 eJBRMS"
+            />
+          </h4>
+          <p>
+            Hi! I'm Jeremy Akeze from Doghouse IT Recruitment and I'm looking for skilled Software Engineers like you. If you wish to move abroad,
+             
+            <a
+              href="https://www.linkedin.com/in/jeremy-akeze-9542b396/"
+            >
+              <b>
+                follow me on Linkedin.
+              </b>
+            </a>
+          </p>
+        </div>
+      </div>
       <main
-        class="App__TwoColumnGrid-sc-ebmerl-1 buOrsR"
+        class="App__TwoColumnGrid-sc-ebmerl-1 hularM"
       >
         <div
           class="App__Side-sc-ebmerl-2 dnqiC"
