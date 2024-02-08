@@ -16,7 +16,7 @@
     "axios": "^0.26.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.3",
     "typescript": "^4.6.3"
   },
@@ -34,7 +34,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/src/index.tsx",
+      "!<rootDir>/src/index.jsx",
       "!<rootDir>/node_modules/"
     ],
     "coverageThreshold": {

@@ -1,5 +1,7 @@
 import { StrictMode } from 'react';
 import * as ReactDOMClient from 'react-dom/client';
+import Counter from 'counter';
+import "css/App.css"
 
 /* Theme */
 import { ThemeProvider } from 'commons/style/styled-components';

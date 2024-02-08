@@ -1,9 +1,10 @@
 import { KeyboardEvent } from 'react';
-
+import React from 'react';
 import formatPrice from 'utils/formatPrice';
 import { IProduct } from 'models';
 
 import { useCart } from 'contexts/cart-context';
+import Counter from 'counter';
 
 import * as S from './style';
 
@@ -13,6 +14,7 @@ interface IProps {
 
 const Product = ({ product }: IProps) => {
   const { openCart, addProduct } = useCart();
+  const[flag,setFlag]=React.useState(false)
   const {
     sku,
     title,
@@ -40,9 +42,12 @@ const Product = ({ product }: IProps) => {
     );
   }
 
+
+
   const handleAddProduct = () => {
-    addProduct({ ...product, quantity: 1 });
-    openCart();
+ setFlag(true)
+    // addProduct({ ...product, quantity: 1 });
+    // openCart();
   };
 
   const handleAddProductWhenEnter = (event: KeyboardEvent) => {
@@ -68,6 +73,7 @@ const Product = ({ product }: IProps) => {
       <S.BuyButton onClick={handleAddProduct} tabIndex={-1}>
         Add to cart
       </S.BuyButton>
+      {flag && <Counter/>}
     </S.Container>
   );
 };

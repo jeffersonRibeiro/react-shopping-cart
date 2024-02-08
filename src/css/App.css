@@ -1,0 +1,36 @@
+.box{
+    border-radius: 3px;
+    background: whitesmoke;
+    padding: 2px;
+    width: 20px;
+    height: 29px;
+    text-align: center;
+    font: 1.8em sans-serif;
+    border: 2px solid #73AD21;
+    cursor: pointer;
+}
+.box1{
+    margin: -37px 0px 0px 23px;
+    background: whitesmoke;
+    padding: 2px;
+    width: 20px;
+    height: 29px;
+    text-align: center;
+    font: 1.8em sans-serif;
+    border: 2px solid #73AD21;
+}
+.box2{
+    border-radius: 3px;
+    margin: -37px 0px 0px 49px;
+    background: whitesmoke;
+    padding: 2px;
+    width: 20px;
+    height: 29px;
+    text-align: center;
+    font: 1.8em sans-serif;
+    border: 2px solid #73AD21;
+    cursor: pointer;
+}
+.container{
+    margin:9px 0 0 49px;
+}
