@@ -3,6 +3,11 @@ import styled from 'styled-components/macro';
 export const OctoArm = styled.path``;
 
 export const Container = styled.a`
+  svg {
+    fill: ${({ theme }) => theme.colors.cornerFill};
+    color: ${({ theme }) => theme.colors.cornerIcon};
+  }
+
   &:hover ${OctoArm} {
     animation: octocat-wave 560ms ease-in-out;
   }

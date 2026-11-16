@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
+import { renderWithThemeProvider } from 'utils/test/test-utils';
 
 import GithubCorner from '.';
 
 describe('[components] - GithubCorner', () => {
   const setup = () => {
-    return render(<GithubCorner />);
+    return renderWithThemeProvider(<GithubCorner />);
   };
 
   test('should render correctly', () => {

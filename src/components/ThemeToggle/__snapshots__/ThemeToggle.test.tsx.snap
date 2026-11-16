@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[components] - ThemeToggle should render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        aria-label="Dark mode"
+        aria-pressed="false"
+        class="ThemeToggle__ToggleButton-sc-1jbdinj-0 gZhrxB"
+        title="Switch to dark mode"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          height="22"
+          viewBox="0 0 24 24"
+          width="22"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            fill="currentColor"
+            r="4.5"
+          />
+          <g
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="2"
+          >
+            <path
+              d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      aria-label="Dark mode"
+      aria-pressed="false"
+      class="ThemeToggle__ToggleButton-sc-1jbdinj-0 gZhrxB"
+      title="Switch to dark mode"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        height="22"
+        viewBox="0 0 24 24"
+        width="22"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          fill="currentColor"
+          r="4.5"
+        />
+        <g
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-width="2"
+        >
+          <path
+            d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"
+          />
+        </g>
+      </svg>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`[components] - ThemeToggle should render correctly in dark mode 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        aria-label="Dark mode"
+        aria-pressed="true"
+        class="ThemeToggle__ToggleButton-sc-1jbdinj-0 gxJA-DX"
+        title="Switch to light mode"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          height="22"
+          viewBox="0 0 24 24"
+          width="22"
+        >
+          <path
+            d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      aria-label="Dark mode"
+      aria-pressed="true"
+      class="ThemeToggle__ToggleButton-sc-1jbdinj-0 gxJA-DX"
+      title="Switch to light mode"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        height="22"
+        viewBox="0 0 24 24"
+        width="22"
+      >
+        <path
+          d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

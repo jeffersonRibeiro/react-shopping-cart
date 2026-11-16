@@ -5,7 +5,7 @@ export const CartButton = styled.button`
   padding: 0;
   width: 50px;
   height: 50px;
-  color: #ececec;
+  color: ${({ theme }) => theme.colors.onPrimary};
   background-color: ${({ theme }) => theme.colors.primary};
   text-align: center;
   line-height: 50px;
@@ -41,8 +41,7 @@ export const Container = styled.div<IContainer>`
 
   ${CartButton} {
     left: ${({ isOpen }) => (isOpen ? '0' : '-50px')};
-    background-color: ${({ theme, isOpen }) =>
-      isOpen ? theme.colors.black : theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.primary};
   }
 
   @media only screen and (min-width: ${({ theme: { breakpoints } }) =>
@@ -78,7 +77,7 @@ export const CartQuantity = styled.div`
   display: inline-block;
   width: 18px;
   height: 18px;
-  color: #0c0b10;
+  color: ${({ theme }) => theme.colors.onSecondary};
   font-weight: bold;
   font-size: 0.7em;
   text-align: center;
@@ -99,18 +98,18 @@ export const CartContent = styled.div`
     &::-webkit-scrollbar {
       -webkit-appearance: none;
       width: 10px;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: ${({ theme }) => theme.colors.divider};
       padding: 10px;
     }
     &::-webkit-scrollbar-thumb {
       border-radius: 4px;
-      background-color: #0c0b10;
+      background-color: ${({ theme }) => theme.colors.primaryDark};
     }
   }
 `;
 
 export const CartContentHeader = styled.div`
-  color: #ececec;
+  color: ${({ theme }) => theme.colors.onPrimary};
   box-sizing: border-box;
   text-align: center;
   padding: 45px 0;
@@ -124,7 +123,7 @@ export const HeaderTitle = styled.span`
 
 export const Sub = styled.p`
   width: 20%;
-  color: #5b5a5e;
+  color: ${({ theme }) => theme.colors.onPrimaryMuted};
   vertical-align: middle;
   display: inline-block;
 `;
@@ -132,7 +131,7 @@ export const Sub = styled.p`
 export const SubPrice = styled.div`
   width: 80%;
   text-align: right;
-  color: #5b5a5e;
+  color: ${({ theme }) => theme.colors.onPrimaryMuted};
   vertical-align: middle;
   display: inline-block;
 `;
@@ -150,9 +149,9 @@ export const SubPriceInstallment = styled.p`
 export const CheckoutButton = styled.button`
   width: 100%;
   border: 0;
-  color: #ececec;
+  color: ${({ theme }) => theme.colors.onPrimary};
   text-transform: uppercase;
-  background-color: #0c0b10;
+  background-color: ${({ theme }) => theme.colors.primaryDark};
   text-align: center;
   padding: 15px 0;
   margin-top: 40px;
@@ -166,7 +165,7 @@ export const CheckoutButton = styled.button`
   }
 
   &:hover {
-    background-color: #000;
+    background-color: ${({ theme }) => theme.colors.primaryDarker};
   }
 `;
 
@@ -188,6 +187,10 @@ export const CartFooter = styled.div`
     position: absolute;
     top: -20px;
     left: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    background: linear-gradient(
+      to top,
+      ${({ theme }) => theme.colors.divider},
+      transparent
+    );
   }
 `;

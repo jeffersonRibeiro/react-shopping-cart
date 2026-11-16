@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="CartProduct__Container-sc-11uohgb-0 iFEDVZ"
+        class="CartProduct__Container-sc-11uohgb-0 WNDwK"
       >
         <button
           class="CartProduct__DeleteButton-sc-11uohgb-5 fZpMUH"
@@ -21,12 +21,12 @@ Object {
           class="CartProduct__Details-sc-11uohgb-1 dWfwVY"
         >
           <p
-            class="CartProduct__Title-sc-11uohgb-2 jVsMjn"
+            class="CartProduct__Title-sc-11uohgb-2 bYYxLo"
           >
             Cropped Stay Groovy off white
           </p>
           <p
-            class="CartProduct__Desc-sc-11uohgb-3 bRgwLG"
+            class="CartProduct__Desc-sc-11uohgb-3 jawlfZ"
           >
             S | White T-shirt
              
@@ -43,13 +43,13 @@ Object {
           </p>
           <div>
             <button
-              class="CartProduct__ChangeQuantity-sc-11uohgb-6 JoGgi"
+              class="CartProduct__ChangeQuantity-sc-11uohgb-6 ajQRi"
               disabled=""
             >
               -
             </button>
             <button
-              class="CartProduct__ChangeQuantity-sc-11uohgb-6 JoGgi"
+              class="CartProduct__ChangeQuantity-sc-11uohgb-6 ajQRi"
             >
               +
             </button>
@@ -60,7 +60,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="CartProduct__Container-sc-11uohgb-0 iFEDVZ"
+      class="CartProduct__Container-sc-11uohgb-0 WNDwK"
     >
       <button
         class="CartProduct__DeleteButton-sc-11uohgb-5 fZpMUH"
@@ -75,12 +75,12 @@ Object {
         class="CartProduct__Details-sc-11uohgb-1 dWfwVY"
       >
         <p
-          class="CartProduct__Title-sc-11uohgb-2 jVsMjn"
+          class="CartProduct__Title-sc-11uohgb-2 bYYxLo"
         >
           Cropped Stay Groovy off white
         </p>
         <p
-          class="CartProduct__Desc-sc-11uohgb-3 bRgwLG"
+          class="CartProduct__Desc-sc-11uohgb-3 jawlfZ"
         >
           S | White T-shirt
            
@@ -97,13 +97,13 @@ Object {
         </p>
         <div>
           <button
-            class="CartProduct__ChangeQuantity-sc-11uohgb-6 JoGgi"
+            class="CartProduct__ChangeQuantity-sc-11uohgb-6 ajQRi"
             disabled=""
           >
             -
           </button>
           <button
-            class="CartProduct__ChangeQuantity-sc-11uohgb-6 JoGgi"
+            class="CartProduct__ChangeQuantity-sc-11uohgb-6 ajQRi"
           >
             +
           </button>

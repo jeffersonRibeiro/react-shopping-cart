@@ -6,6 +6,7 @@ import Recruiter from 'components/Recruiter';
 import Filter from 'components/Filter';
 import Products from 'components/Products';
 import Cart from 'components/Cart';
+import ThemeToggle from 'components/ThemeToggle';
 
 import { useProducts } from 'contexts/products-context';
 
@@ -35,6 +36,7 @@ function App() {
           <Products products={products} />
         </S.Main>
       </S.TwoColumnGrid>
+      <ThemeToggle />
       <Cart />
     </S.Container>
   );

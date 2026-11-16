@@ -10,8 +10,6 @@ const GithubCorner = () => (
       height="80"
       viewBox="0 0 250 250"
       style={{
-        fill: '#151513',
-        color: '#fff',
         position: 'absolute',
         top: '0',
         border: '0',

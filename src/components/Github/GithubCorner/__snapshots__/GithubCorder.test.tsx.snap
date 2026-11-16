@@ -7,13 +7,13 @@ Object {
     <div>
       <a
         aria-label="View source on Github"
-        class="GithubCorner__Container-sc-15lbmbx-1 ilzGAu"
+        class="GithubCorner__Container-sc-15lbmbx-1 jlfbLL"
         href="https://github.com/jeffersonRibeiro/react-shopping-cart"
       >
         <svg
           aria-hidden="true"
           height="80"
-          style="fill: #151513; color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; left: 0px; transform: scale(-1, 1);"
+          style="position: absolute; top: 0px; border: 0px; left: 0px; transform: scale(-1, 1);"
           viewBox="0 0 250 250"
           width="80"
         >
@@ -37,13 +37,13 @@ Object {
   "container": <div>
     <a
       aria-label="View source on Github"
-      class="GithubCorner__Container-sc-15lbmbx-1 ilzGAu"
+      class="GithubCorner__Container-sc-15lbmbx-1 jlfbLL"
       href="https://github.com/jeffersonRibeiro/react-shopping-cart"
     >
       <svg
         aria-hidden="true"
         height="80"
-        style="fill: #151513; color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; left: 0px; transform: scale(-1, 1);"
+        style="position: absolute; top: 0px; border: 0px; left: 0px; transform: scale(-1, 1);"
         viewBox="0 0 250 250"
         width="80"
       >

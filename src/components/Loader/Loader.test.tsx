@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
+import { renderWithThemeProvider } from 'utils/test/test-utils';
 
 import Loader from '.';
 
 describe('[components] - Loader', () => {
   const setup = () => {
-    return render(<Loader />);
+    return renderWithThemeProvider(<Loader />);
   };
 
   test('should render correctly', () => {

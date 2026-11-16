@@ -70,6 +70,25 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Typescript React Shopping cart</title>
+    <!--
+      Applies the saved theme before the app loads, so a returning visitor
+      who chose dark mode never sees a flash of the light page.
+    -->
+    <style>
+      html[data-theme='dark'] {
+        color-scheme: dark;
+      }
+      html[data-theme='dark'] body {
+        background-color: #121214;
+      }
+    </style>
+    <script>
+      try {
+        if (window.localStorage.getItem('theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

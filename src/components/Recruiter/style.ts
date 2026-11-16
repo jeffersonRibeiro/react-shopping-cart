@@ -3,8 +3,8 @@ import flag from './nl-flag.png';
 
 export const Container = styled.div`
   box-sizing: border-box;
-  background-color: #fff;
-  border: 2px solid #eee;
+  background-color: ${({ theme }) => theme.colors.surface};
+  border: 2px solid ${({ theme }) => theme.colors.border};
   border-radius: 4px;
   position: fixed;
   display: flex;
@@ -71,6 +71,6 @@ export const Description = styled.div`
 
   a:link,
   a:visited {
-    color: #000;
+    color: ${({ theme }) => theme.colors.link};
   }
 `;

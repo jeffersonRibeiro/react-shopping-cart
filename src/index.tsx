@@ -2,11 +2,10 @@ import { StrictMode } from 'react';
 import * as ReactDOMClient from 'react-dom/client';
 
 /* Theme */
-import { ThemeProvider } from 'commons/style/styled-components';
-import { theme } from 'commons/style/theme';
 import GlobalStyle from 'commons/style/global-style';
 
 /* Context Providers */
+import { AppThemeProvider } from 'contexts/theme-context';
 import { ProductsProvider } from 'contexts/products-context';
 import { CartProvider } from 'contexts/cart-context';
 
@@ -17,13 +16,13 @@ const container = ReactDOMClient.createRoot(root);
 
 container.render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
+    <AppThemeProvider>
       <GlobalStyle />
       <ProductsProvider>
         <CartProvider>
           <App />
         </CartProvider>
       </ProductsProvider>
-    </ThemeProvider>
+    </AppThemeProvider>
   </StrictMode>
 );
