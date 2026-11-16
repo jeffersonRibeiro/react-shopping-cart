@@ -1,0 +1,62 @@
+name: Deploy to test environment
+
+# Triggered by the Port workflow "Submit feature request" (stage 6) after the
+# deployment approval. Builds the default branch and publishes it to GitHub
+# Pages, which serves as the test environment.
+#
+# One-time setup: repository Settings > Pages > Source: "GitHub Actions".
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and publish
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Build
+        run: npm run build
+        env:
+          CI: 'false'
+          # GitHub Pages serves the site under /<repository-name>/
+          PUBLIC_URL: /${{ github.event.repository.name }}
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Summary
+        run: |
+          {
+            echo "## Deployed to the test environment"
+            echo ""
+            echo "- URL: ${{ steps.deployment.outputs.page_url }}"
+            echo "- Commit: \`$(git rev-parse --short HEAD)\`"
+          } >> "$GITHUB_STEP_SUMMARY"

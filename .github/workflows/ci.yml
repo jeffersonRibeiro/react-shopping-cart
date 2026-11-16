@@ -1,0 +1,86 @@
+name: CI - tests and security
+
+# Triggered by the Port workflow "Submit feature request" (stage 5), which
+# passes the feature branch to check. Can also be run by hand from the
+# Actions tab.
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch, tag or commit to check (defaults to the branch the run was started from)
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Tests, coverage and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Run tests with coverage thresholds
+        run: npm test -- --coverage --watchAll=false
+        env:
+          CI: 'true'
+
+      - name: Build
+        run: npm run build
+        env:
+          # Existing lint warnings should not fail the build
+          CI: 'false'
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Tests and build"
+            echo ""
+            echo "- Ref checked: \`${{ inputs.ref || github.ref_name }}\`"
+            echo "- Commit: \`$(git rev-parse --short HEAD)\`"
+            echo "- Result: ${{ job.status }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  security:
+    name: Dependency audit (report only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Report only: the project's inherited dependencies have known
+      # advisories, so this step lists them without failing the run.
+      - name: Audit production dependencies
+        run: |
+          {
+            echo "## Dependency audit (production dependencies, report only)"
+            echo ""
+            echo '```'
+            npm audit --omit=dev --audit-level=high || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Check the change adds no secrets-like strings
+        run: |
+          if git grep -nIE '(api[_-]?key|secret|password|token)[[:space:]]*[:=][[:space:]]*["'"'"'][A-Za-z0-9_\-]{16,}' -- src public; then
+            echo "Possible hard-coded credential found" >&2
+            exit 1
+          fi
+          echo "No hard-coded credentials found in src/ or public/"
