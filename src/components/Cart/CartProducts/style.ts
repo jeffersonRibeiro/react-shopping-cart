@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const CartProductsEmpty = styled.p`
-  color: #ececec;
+  color: ${({ theme }) => theme.colors.onPrimary};
   text-align: center;
   line-height: 40px;
 `;

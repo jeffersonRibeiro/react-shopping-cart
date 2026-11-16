@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 export const BuyButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.buttonText};
   padding: 15px 0;
   margin-top: 10px;
   cursor: pointer;
@@ -51,7 +51,7 @@ export const Container = styled.div<IContainer>`
       content: '';
       display: block;
       position: absolute;
-      background: #eee;
+      background: ${({ theme }) => theme.colors.imagePlaceholder};
       width: 100%;
       height: 100%;
       z-index: -1;
@@ -77,7 +77,7 @@ export const Container = styled.div<IContainer>`
 
 export const Stopper = styled.div`
   position: absolute;
-  color: #ececec;
+  color: ${({ theme }) => theme.colors.onPrimary};
   top: 10px;
   right: 10px;
   padding: 5px;
@@ -125,5 +125,5 @@ export const Val = styled.p`
 
 export const Installment = styled.p`
   margin: 0;
-  color: #9c9b9b;
+  color: ${({ theme }) => theme.colors.textMuted};
 `;

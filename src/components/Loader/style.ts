@@ -10,7 +10,7 @@ export const Container = styled.div`
   height: 64px;
   z-index: 10;
   border-radius: 5px;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.loaderBackground};
 
   div {
     box-sizing: border-box;
@@ -19,10 +19,11 @@ export const Container = styled.div`
     width: 51px;
     height: 51px;
     margin: 6px;
-    border: 6px solid #fff;
+    border: 6px solid ${({ theme }) => theme.colors.loaderRing};
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
+    border-color: ${({ theme }) => theme.colors.loaderRing} transparent transparent
+      transparent;
     &:nth-child(1) {
       animation-delay: -0.45s;
     }

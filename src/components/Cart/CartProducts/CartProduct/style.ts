@@ -11,7 +11,7 @@ export const Container = styled.div`
     content: '';
     width: 90%;
     height: 2px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: ${({ theme }) => theme.colors.divider};
     position: absolute;
     top: 0;
     left: 5%;
@@ -25,12 +25,12 @@ export const Details = styled.div`
 `;
 
 export const Title = styled.p`
-  color: #ececec;
+  color: ${({ theme }) => theme.colors.onPrimary};
   margin: 0;
 `;
 
 export const Desc = styled.p`
-  color: #5b5a5e;
+  color: ${({ theme }) => theme.colors.onPrimaryMuted};
   margin: 0;
 `;
 
@@ -67,9 +67,9 @@ export const DeleteButton = styled.button`
 `;
 
 export const ChangeQuantity = styled.button`
-  color: #b7b7b7;
+  color: ${({ theme }) => theme.colors.quantityText};
   border: 0;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.primaryDarker};
   width: 25px;
   height: 25px;
 

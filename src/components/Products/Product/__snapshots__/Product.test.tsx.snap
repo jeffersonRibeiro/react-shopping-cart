@@ -6,11 +6,11 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Product__Container-sc-124al1g-2 kgHzaj"
+        class="Product__Container-sc-124al1g-2 rMbjs"
         tabindex="1"
       >
         <div
-          class="Product__Stopper-sc-124al1g-3 iirFfh"
+          class="Product__Stopper-sc-124al1g-3 hRzIsu"
         >
           Free shipping
         </div>
@@ -40,7 +40,7 @@ Object {
             </span>
           </p>
           <p
-            class="Product__Installment-sc-124al1g-7 hBZpTG"
+            class="Product__Installment-sc-124al1g-7 bYNqFR"
           >
             <span>
               or 
@@ -54,7 +54,7 @@ Object {
           </p>
         </div>
         <button
-          class="Product__BuyButton-sc-124al1g-0 jCZDKU"
+          class="Product__BuyButton-sc-124al1g-0 cNZtKn"
           tabindex="-1"
         >
           Add to cart
@@ -64,11 +64,11 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Product__Container-sc-124al1g-2 kgHzaj"
+      class="Product__Container-sc-124al1g-2 rMbjs"
       tabindex="1"
     >
       <div
-        class="Product__Stopper-sc-124al1g-3 iirFfh"
+        class="Product__Stopper-sc-124al1g-3 hRzIsu"
       >
         Free shipping
       </div>
@@ -98,7 +98,7 @@ Object {
           </span>
         </p>
         <p
-          class="Product__Installment-sc-124al1g-7 hBZpTG"
+          class="Product__Installment-sc-124al1g-7 bYNqFR"
         >
           <span>
             or 
@@ -112,7 +112,7 @@ Object {
         </p>
       </div>
       <button
-        class="Product__BuyButton-sc-124al1g-0 jCZDKU"
+        class="Product__BuyButton-sc-124al1g-0 cNZtKn"
         tabindex="-1"
       >
         Add to cart

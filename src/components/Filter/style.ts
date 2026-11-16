@@ -29,7 +29,7 @@ export const Checkbox = styled(CB)`
 
     /* On mouse-over, add a border with the primary color */
     &:hover input ~ .checkmark {
-      border: 1px solid ${({ theme }) => theme.colors.primary};
+      border: 1px solid ${({ theme }) => theme.colors.chipHoverBorder};
     }
 
     input:focus-visible ~ .checkmark {
@@ -40,8 +40,8 @@ export const Checkbox = styled(CB)`
 
     /* When the checkbox is checked, add the primary color to background */
     & input:checked ~ .checkmark {
-      background-color: ${({ theme }) => theme.colors.primary};
-      color: #ececec;
+      background-color: ${({ theme }) => theme.colors.chipActiveBackground};
+      color: ${({ theme }) => theme.colors.chipActiveText};
     }
 
     /* Show the checkmark when checked */
@@ -67,8 +67,8 @@ export const Checkbox = styled(CB)`
       box-sizing: border-box;
       line-height: 35px;
       text-align: center;
-      color: ${({ theme }) => theme.colors.primary};
-      background-color: #ececec;
+      color: ${({ theme }) => theme.colors.chipText};
+      background-color: ${({ theme }) => theme.colors.chipBackground};
 
       border: 1px solid transparent;
     }
